@@ -15,67 +15,76 @@
 # misread each other's data with no error. The repo version is the master.
 # =============================================================================
 #----------------------------------------------------------------------
-#DEFINE THE FORMAT (the fixed facts both sides agree on)
+# DEFINE THE FORMAT (fixed on both sides)
 #----------------------------------------------------------------------
 
-MARKER        = the two bytes "PP"        // identifies a Pear Pie packet
-VERSION       = 1                         // this packet format is version 1
-LAYOUT        = order and size of fields after the marker:
-                  pod_id    (1 byte)
-                  version   (1 byte)
-                  presence  (1 byte)
-                  unusual   (1 byte)
-                  sequence  (1 byte)
-PACKET_SIZE   = size of marker + size of all fields   // = 7 bytes total
+MARKER  = b"PP"     # identifies a Pear Pie packet; hub ignores anything else
+VERSION = 1         # version of THIS packet layout (bump when format changes)
+
+# struct layout for the fields after the marker:
+#   B = version   (1 byte)
+#   B = pod_id    (1 byte, 1-255)
+#   B = presence  (1 byte, 0 or 1)
+#   B = unusual   (1 byte, 0 or 1)
+#   B = sequence  (1 byte, 0-255, wraps)
+# "<" = little-endian, fixed so both sides agree on byte order.
+
+_LAYOUT = "<BBBBB"
+
+PACKET_SIZE = len(MARKER) + struct.calcsize(_LAYOUT)   # = 7 bytes
 
 
 #----------------------------------------------------------------------
 #PACK  (used by the POD: turn its state into bytes to broadcast)
 #----------------------------------------------------------------------
 
-FUNCTION pack(pod_id, presence, unusual, sequence):
-    take the MARKER
-    append pod_id
-    append VERSION
-    append presence
-    append unusual
-    append sequence
-    return the combined bytes
-
+def pack(pod_id, presence, unusual, sequence):
+    """Build the bytes a pod broadcasts. Used by gossip.py on the pod."""
+    return MARKER + struct.pack(_LAYOUT, VERSION, pod_id, presence, unusual, sequence)
 
 #----------------------------------------------------------------------
 #UNPACK  (used by the HUB: turn received bytes back into values)
 #----------------------------------------------------------------------
 
-FUNCTION unpack(data):
+def unpack(data):
+    """Read received bytes back into values. Used by observer.py on the hub.
+    Returns None for anything that isn't a readable Pear Pie packet, so the
+    hub can ignore all the other BLE devices in range."""
+    if not data:
+        return None
+    if len(data) != PACKET_SIZE:
+        return None
+    if data[:len(MARKER)] != MARKER:
+        return None
 
-    IF data is empty:
-        return nothing            // ignore, not a pod
+    version, pod_id, presence, unusual, sequence = struct.unpack(
+        _LAYOUT, data[len(MARKER):])
 
-    IF length of data is not PACKET_SIZE:
-        return nothing            // wrong size, not our packet
+    if version != VERSION:
+        return None     # a packet format this code doesn't understand
 
-    IF the first bytes are not the MARKER:
-        return nothing            // not a Pear Pie packet, ignore it
-
-    read the fields after the marker:
-        pod_id, version, presence, unusual, sequence
-
-    IF version is not one we understand:
-        return nothing            // a future packet format we can't read
-
-    return (pod_id, version, presence, unusual, sequence)
-
+    return {
+        "version":  version,
+        "pod_id":   pod_id,
+        "presence": presence,
+        "unusual":  unusual,
+        "sequence": sequence,
+    }
 
 #----------------------------------------------------------------------
 #SELF-TEST  (runs only if this file is run on its own; needs no BLE)
 #----------------------------------------------------------------------
 
-IF this file is run directly:
+if __name__ == "__main__":
     packet = pack(pod_id=3, presence=1, unusual=0, sequence=5)
-    print the packed bytes and the packet size
+    print("packed bytes:", packet)
+    print("packet size :", PACKET_SIZE)
+
     result = unpack(packet)
-    print the unpacked values
-    check result matches what went in    // proves round-trip works
-    check unpack(random rubbish) returns nothing   // proves the filter works
-    print "self-test passed"
+    print("unpacked    :", result)
+
+    assert result == {"version": 1, "pod_id": 3, "presence": 1,
+                      "unusual": 0, "sequence": 5}, "round-trip failed!"
+
+    print("rubbish data:", unpack(b"\x00\x01\x02"))   # should print None
+    print("self-test passed")
