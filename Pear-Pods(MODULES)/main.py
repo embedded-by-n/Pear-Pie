@@ -16,6 +16,7 @@
 import time
 from machine import Pin
 import led
+import gossip
 
 # =============================================================================
 # LED light chase behaviour of pods
@@ -58,5 +59,8 @@ while True:
             b = 1.0 - (elapsed_s / FADE_SECONDS)
             led.set_trail(b)
             print("presence:", reading, " brightness: %.2f" % b)
-            
+
+    # broadcast this pod's state (non-blocking, radio handles it)
+    gossip.broadcast(POD_ID, reading, 0)
+    
     time.sleep_ms(100)
