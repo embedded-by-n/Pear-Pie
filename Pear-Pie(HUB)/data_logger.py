@@ -7,14 +7,14 @@
 # timestamp from its own clock, so all pods share one consistent time base
 # (needed for dwell-time and movement-between-spaces analysis later).
 #
-# Runs on the hub (full Python on the Pi). Needs BLE_packet_format.py present.
+# Runs on the hub (full Python on the Pi). Needs uplink_packet.py present.
 # =============================================================================
 
 import bluetooth
 import time
 import csv
 import os
-from BLE_packet_format import unpack
+from uplink_packet import unpack
 
 _IRQ_SCAN_RESULT = 5
 

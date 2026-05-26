@@ -6,11 +6,11 @@
 # shared packet contract, and ignores everything that isn't a Pear Pie packet.
 # Scanning runs in the background; received adverts arrive via a callback.
 #
-# Needs BLE_packet_format.py present (the same file the pods use).
+# Needs uplink_packet.py present (the same file the pods use).
 # =============================================================================
 
 import bluetooth
-from BLE_packet_format import unpack, MARKER
+from uplink_packet import unpack, MARKER
 
 _IRQ_SCAN_RESULT = 5
 _IRQ_SCAN_DONE   = 6

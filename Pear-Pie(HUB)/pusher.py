@@ -5,7 +5,7 @@
 # the hub so pods can hear them and adjust the rules they follow.
 # Mirror of the pods' gossip - hub advertises, pods scan.
 #
-# Needs a shared update-packet format (like BLE_packet_format, but for updates).
+# Needs a shared update-packet format (like uplink_packet, but for updates).
 # Build last - depends on rules.py producing real updates to send.
 # =============================================================================
 

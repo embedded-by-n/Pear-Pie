@@ -5,12 +5,12 @@
 # and the hub can hear it. Advertising runs in the BLE hardware in the
 # background, so calling start_advertising() does NOT block the main loop.
 #
-# Uses the shared packet contract in BLE_packet_format.py (must be on the Pico).
+# Uses the shared packet contract in uplink_packet.py (must be on the Pico).
 # =============================================================================
 
 import bluetooth
 import struct
-from BLE_packet_format import pack, MARKER   # the shared packet format
+from uplink_packet import pack, MARKER   # the shared packet format
 
 # Bluetooth SIG "manufacturer specific data" advert type.
 _ADV_TYPE_MFG = 0xFF

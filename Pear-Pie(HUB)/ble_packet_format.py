@@ -1,5 +1,5 @@
 # =============================================================================
-# BLE_packet_format.py
+# uplink_packet.py
 # =============================================================================
 # Defines the Pear Pie BLE packet: the agreed byte layout that pods use to
 # broadcast their state and the hub uses to read it.
