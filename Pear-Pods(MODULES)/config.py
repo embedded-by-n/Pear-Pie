@@ -13,3 +13,7 @@ LED_PIN      = 0       # GPIO for the lorikeet data line
 NUM_LEDS     = 5
 
 FADE_SECONDS = 30      # how long the light trail takes to fade to off
+
+# --- learning parameters: Adaptive Baseline (Exponentially Weighted Moving Average) ---
+ALPHA     = 0.01       # learning rate: smaller = slower, steadier adaptation
+THRESHOLD = 0.5        # how far above normal counts as "unusual"
