@@ -1,0 +1,1 @@
+#per-pod settings: POD_ID, pins, alpha, threshold.

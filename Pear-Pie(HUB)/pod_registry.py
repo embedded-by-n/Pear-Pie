@@ -1,0 +1,1 @@
+#static map: pod_id in space/location.

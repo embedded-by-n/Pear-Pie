@@ -1,0 +1,1 @@
+# compute parameter updates (alpha, threshold, r) and broadcast them back down down to pods.
