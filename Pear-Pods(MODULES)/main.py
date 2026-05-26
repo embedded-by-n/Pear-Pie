@@ -17,6 +17,10 @@ import time
 from machine import Pin
 import led
 
+# =============================================================================
+# LED light chase behaviour of pods
+# =============================================================================
+
 PRESENCE_PIN = 11      # radar OT2
 FADE_SECONDS = 30      # how long the glow takes to fade to off
 
