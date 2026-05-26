@@ -16,9 +16,10 @@
 import machine
 import neopixel
 import time
+import config
 
 NUM = 5
-_np = neopixel.NeoPixel(machine.Pin(0), NUM)   # lorikeet data on GP0
+_np = neopixel.NeoPixel(machine.Pin(config.LED_PIN), config.NUM_LEDS)   # lorikeet data on GP0
 
 # Colours kept dim to limit current draw over USB. (r, g, b), 0-255.
 BLUE   = (0, 0, 60)      # arrival sweep
@@ -27,7 +28,7 @@ PURPLE = (60, 0, 60)     # presence trail at full strength
 
 def clear():
     """All LEDs off."""
-    for i in range(NUM):
+    for i in range(config.NUM_LEDS):
         _np[i] = (0, 0, 0)
     _np.write()
 
@@ -35,11 +36,11 @@ def clear():
 def arrival_sweep():
     """Quick blue sweep up the chain then off. Briefly blocks (~0.4s),
     which is fine for a one-off arrival flourish."""
-    for i in range(NUM):
+    for i in range(config.NUM_LEDS):
         _np[i] = BLUE
         _np.write()
         time.sleep_ms(40)
-    for i in range(NUM - 1, -1, -1):
+    for i in range(config.NUM_LEDS - 1, -1, -1):
         _np[i] = (0, 0, 0)
         _np.write()
         time.sleep_ms(40)
@@ -53,6 +54,6 @@ def set_trail(brightness):
     r = int(PURPLE[0] * brightness)
     g = int(PURPLE[1] * brightness)
     b = int(PURPLE[2] * brightness)
-    for i in range(NUM):
+    for i in range(config.NUM_LEDS):
         _np[i] = (r, g, b)
     _np.write()
