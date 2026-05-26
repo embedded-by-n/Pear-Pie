@@ -35,6 +35,7 @@ while True:
 
     # NEW arrival (presence just turned on): play the sweep
     if reading == 1 and prev_presence == 0:
+        print("ARRIVAL - sweep")
         led.arrival_sweep()
 
     # while someone is present, keep the glow at full (reset the timer)
@@ -46,12 +47,16 @@ while True:
     # set the trail brightness from time since last seen
     if last_seen is None:
         led.set_trail(0.0)
+        print("presence:", reading, " brightness: 0.0 (off)")
     else:
         elapsed_s = time.ticks_diff(time.ticks_ms(), last_seen) / 1000
         if elapsed_s >= FADE_SECONDS:
             led.set_trail(0.0)
             last_seen = None
+            print("presence:", reading, " faded out")
         else:
-            led.set_trail(1.0 - (elapsed_s / FADE_SECONDS))
-
+            b = 1.0 - (elapsed_s / FADE_SECONDS)
+            led.set_trail(b)
+            print("presence:", reading, " brightness: %.2f" % b)
+            
     time.sleep_ms(100)
