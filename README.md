@@ -5,6 +5,9 @@ Inspired by W. Ross Ashby's homeostat (1948) and designed by a neurodivergent pe
 First-order learning happens on the BLE mesh as pods regulate the home through peer-to-peer broadcast; second-order learning happens at the hub, which observes the network's behaviour over days and weeks and updates the rules the pods follow, so the system fits each user's homeostasis as it changes.
 Particular care is given to PDA-profile (Persistent Drive for Autonomy) neurodivergent users, supporting executive functioning and working memory by externalising cognitive load. Asking who we unconsciously see as viable users of cutting-edge technology: the Pear Pie embodies the curb-cut effect. Design affordances for disability as a priority, and everyone benefits.
 
+<img width="1440" height="1520" alt="image" src="https://github.com/user-attachments/assets/4dcc8783-aefc-49a5-9b68-2c56da2a0fee" />
+
+
 # Overview
 
 The Pear Pie is a distributed cyber-physical system inspired by W. Ross Ashby's homeostat (1948), built in Python (hub) and MicroPython (pods). It is an off-grid modular home system designed to support executive functioning and working memory for neurodivergent users with fluctuating capacity, while remaining useful to anyone.
