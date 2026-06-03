@@ -1,18 +1,27 @@
 # =============================================================================
-# rule_listener.py  (POD)
+# rule_listener.py  (POD)  -  the pod's single BLE scanner
 # =============================================================================
-# The pod scans for parameter updates from the hub and APPLIES them to its
-# live baseline. Mirror of the hub's observer. Pairs with pusher.py.
+# The pod has ONE BLE radio and ONE scan callback, so this one listener handles
+# everything the pod overhears and sorts it by packet type:
 #
-# The apply step lives here: when an update addressed to THIS pod arrives,
-# the listener swaps the new alpha into the running AdaptiveBaseline and stores
-# the new threshold, which main.py reads each loop via get_threshold().
+#   "PU" (downlink) -> a parameter update from the hub. If it's for THIS pod,
+#                      apply the new alpha/threshold to the live baseline.
+#   "PP" (uplink)   -> another POD's state broadcast. Log its RSSI into the
+#                      neighbour table (neighbours.py) so this pod builds a
+#                      sense of relative proximity to its neighbours. The pod
+#                      ignores its own broadcasts.
 #
-# Needs downlink_packet.py present on the pod (byte-identical to the hub copy).
+# This is the relational layer of the simplex mesh: each pod hears the others
+# directly (no relaying) and learns who is near from signal strength, while
+# still receiving the hub's second-order updates, all on one shared scan.
+#
+# Needs downlink_packet.py and uplink_packet.py present on the pod.
 # =============================================================================
 
 import bluetooth
 from downlink_packet import unpack_update
+from uplink_packet import unpack as unpack_state, MARKER as STATE_MARKER
+import neighbours
 import config
 
 _IRQ_SCAN_RESULT = 5
@@ -26,7 +35,6 @@ _learner = None        # the AdaptiveBaseline instance, set by start()
 
 
 def get_threshold():
-    """main.py reads this each loop instead of config.THRESHOLD."""
     return _state["threshold"]
 
 
@@ -35,8 +43,7 @@ def get_alpha():
 
 
 def _extract_payload(adv_data):
-    """Pull our packet out of the advert's manufacturer-data block - same walk
-    as the hub's observer."""
+    """Pull our packet out of the advert's manufacturer-data block."""
     i = 0
     data = bytes(adv_data)
     while i < len(data):
@@ -51,30 +58,45 @@ def _extract_payload(adv_data):
 
 
 def _apply(alpha, threshold):
-    """The apply step: swap new parameters into the live baseline + state."""
+    """Apply hub parameters to the live baseline + state."""
     _state["alpha"] = alpha
     _state["threshold"] = threshold
     if _learner is not None:
-        _learner.alpha = alpha                   # live baseline adapts immediately
+        _learner.alpha = alpha
     print("applied update -> alpha", alpha, "threshold", threshold)
 
 
 def _on_event(event, data):
-    if event == _IRQ_SCAN_RESULT:
-        addr_type, addr, adv_type, rssi, adv_data = data
-        payload = _extract_payload(adv_data)
-        if payload is None:
+    if event != _IRQ_SCAN_RESULT:
+        return
+    addr_type, addr, adv_type, rssi, adv_data = data
+    payload = _extract_payload(adv_data)
+    if payload is None:
+        return
+
+    # ---- is it a hub UPDATE? (downlink "PU") ----
+    update = unpack_update(payload)
+    if update is not None:
+        if update["target_pod_id"] == config.POD_ID:
+            _apply(update["alpha"], update["threshold"])
+        return
+
+    # ---- is it another POD's STATE? (uplink "PP") ----
+    if payload[:len(STATE_MARKER)] == STATE_MARKER:
+        reading = unpack_state(payload)
+        if reading is None:
             return
-        update = unpack_update(payload)          # None if not an update packet
-        if update is None:
-            return
-        if update["target_pod_id"] != config.POD_ID:
-            return                               # not for this pod
-        _apply(update["alpha"], update["threshold"])
+        other_id = reading["pod_id"]
+        if other_id == config.POD_ID:
+            return                               # ignore our own broadcast
+        # log this neighbour's RSSI -> relative proximity
+        shifted = neighbours.record(other_id, rssi)
+        if shifted:
+            print("neighbour", other_id, "proximity shift  rssi", rssi)
 
 
 def start(learner=None):
-    """Begin scanning for updates. Pass the pod's AdaptiveBaseline so applied
+    """Begin the single shared scan. Pass the pod's AdaptiveBaseline so applied
     alpha changes take effect on the live baseline."""
     global _learner
     _learner = learner
