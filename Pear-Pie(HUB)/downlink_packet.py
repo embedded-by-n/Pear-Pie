@@ -3,7 +3,7 @@
 # =============================================================================
 # Shared contract for the DOWN-path packets: the hub broadcasts parameter
 # updates (alpha, threshold, target) and pods read them. Mirror of
-# BLE_packet_format.py, but for updates instead of presence.
+# uplink_packet.py, but for updates instead of presence.
 #
 # -----------------------------------------------------------------------------
 # !!! REPLICATED FILE - lives on BOTH the pods and the hub !!!
@@ -14,39 +14,60 @@
 import struct
 
 # --- Fixed format facts ------------------------------------------------------
-MARKER  = b"PU"     # "Pear Update" - distinguishes updates from "PP" state packets
+MARKER = b"PU"   # "Pear Update" - distinguishes updates from "PP" state packets
 VERSION = 1
 
+# Encoding decision: alpha and threshold are fractional, BLE packets are bytes.
+# We scale to integers (compact, matches uplink_packet's integer style):
+#   alpha     0.0..1.0   -> alpha * 1000  as unsigned short (0..1000)
+#   threshold 0.0..2.55  -> threshold * 100 as unsigned byte (0..255)
+ALPHA_SCALE = 1000
+THRESHOLD_SCALE = 100
+
 # struct layout for the fields after the marker:
-#   B = version       (1 byte)
-#   B = target_pod_id (1 byte) - which pod this update is for
-#   ? = alpha         (TODO: how to encode - it's a float 0..1)
-#   ? = threshold     (TODO: how to encode)
-# _LAYOUT = "<..."   # TODO: decide encoding once fields are settled
+# B = version        (1 byte)
+# B = target_pod_id  (1 byte)
+# H = alpha * 1000   (2 bytes, unsigned short, little-endian)
+# B = threshold*100  (1 byte)
+_LAYOUT = "<BBHB"
 
-# Note: alpha and threshold are fractional (e.g. 0.01). BLE packets are bytes,
-# so a float needs encoding - either scale to an int (e.g. alpha*1000 -> 10)
-# and send as a byte/short, or pack a real float. Decide when filling this in.
-
+PACKET_SIZE = len(MARKER) + struct.calcsize(_LAYOUT)  # = 7 bytes
 
 # --- Pack (HUB side: update -> bytes) ---------------------------------------
 def pack_update(target_pod_id, alpha, threshold):
-    """Build the bytes the hub broadcasts. Used by pusher.py.
-    TODO: encode alpha/threshold (scale-to-int or struct float) and pack."""
-    pass  # TODO
-
+    """Build the bytes the hub broadcasts. Used by pusher.py."""
+    a = int(round(alpha * ALPHA_SCALE))
+    t = int(round(threshold * THRESHOLD_SCALE))
+    a = 0 if a < 0 else (65535 if a > 65535 else a)
+    t = 0 if t < 0 else (255 if t > 255 else t)
+    return MARKER + struct.pack(_LAYOUT, VERSION, target_pod_id, a, t)
 
 # --- Unpack (POD side: bytes -> update) -------------------------------------
 def unpack_update(data):
-    """Read received bytes back into (target_pod_id, alpha, threshold).
-    Used by rule_listener.py. Returns None if not a valid update packet
-    or not addressed to a recognised pod.
-    TODO: check MARKER, check VERSION, unpack, decode alpha/threshold."""
-    pass  # TODO
+    """Read received bytes back into a dict. Used by rule_listener.py.
+    Returns None if not a valid update packet."""
+    if not data or len(data) != PACKET_SIZE:
+        return None
+    if data[:len(MARKER)] != MARKER:
+        return None
+    version, target_pod_id, a, t = struct.unpack(_LAYOUT, data[len(MARKER):])
+    if version != VERSION:
+        return None
+    return {
+        "version": version,
+        "target_pod_id": target_pod_id,
+        "alpha": a / ALPHA_SCALE,
+        "threshold": t / THRESHOLD_SCALE,
+    }
 
-
-# --- Self-test (fill in once pack/unpack are written) -----------------------
+# --- Self-test ---------------------------------------------------------------
 if __name__ == "__main__":
-    # TODO: pack an update, unpack it, assert round-trip, like
-    # BLE_packet_format's self-test.
-    pass
+    pkt = pack_update(target_pod_id=2, alpha=0.01, threshold=0.5)
+    print("packed bytes:", pkt, "size:", PACKET_SIZE)
+    got = unpack_update(pkt)
+    print("unpacked:", got)
+    assert got["target_pod_id"] == 2
+    assert abs(got["alpha"] - 0.01) < 1e-6
+    assert abs(got["threshold"] - 0.5) < 1e-6
+    assert unpack_update(b"\x00\x01") is None
+    print("self-test passed")
