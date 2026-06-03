@@ -1,0 +1,96 @@
+# =============================================================================
+#   -  run this on the Pico to test the whole pod chain.
+#
+# It runs four timed tests in sequence and prints clear instructions for each.
+# Watch the Shell, do what it says, and read the results. This tells us exactly
+# where the "lights won't trigger" problem is.
+#
+# Put this on the Pico alongside the other pod files and run it in Thonny.
+# =============================================================================
+
+import time
+import led
+import sensors
+import config
+from baseline import AdaptiveBaseline
+
+
+def countdown(msg, secs):
+    print(msg)
+    for s in range(secs, 0, -1):
+        print("   ...", s)
+        time.sleep(1)
+
+
+print("=" * 50)
+print("POD DIAGNOSTIC - follow the instructions")
+print("=" * 50)
+
+# -----------------------------------------------------------------------------
+# TEST 1: LEDs work at all
+# -----------------------------------------------------------------------------
+print("\n[TEST 1] LED test - watch the lorikeet strip.")
+time.sleep(1)
+print("  -> blue arrival sweep now:")
+led.arrival_sweep()
+time.sleep(0.5)
+print("  -> solid purple now (2 seconds):")
+led.set_trail(1.0)
+time.sleep(2)
+print("  -> off now:")
+led.clear()
+print("  RESULT: did you see blue sweep, then purple, then off?")
+time.sleep(2)
+
+# -----------------------------------------------------------------------------
+# TEST 2: radar presence + distance, walk-away
+# -----------------------------------------------------------------------------
+sensors.begin()
+print("\n[TEST 2] RADAR test - 12 seconds.")
+print("  STAND CLOSE (within 1m) for the first 6 seconds,")
+print("  then WALK AWAY and stay back for the last 6 seconds.")
+countdown("  starting in:", 3)
+for i in range(24):                      # ~12s at 0.5s
+    p = sensors.read_presence()
+    print("   present:", p, " distance_cm:", sensors.last_distance_cm)
+    time.sleep(0.5)
+print("  RESULT: did 'present' go 1 when close and 0 when you left?")
+print("          did distance_cm show real numbers?")
+time.sleep(2)
+
+# -----------------------------------------------------------------------------
+# TEST 3: the baseline -> 'unusual' chain (the likely culprit)
+# -----------------------------------------------------------------------------
+print("\n[TEST 3] LEARNING test - 20 seconds.")
+print("  This shows whether presence is being flagged as 'unusual'")
+print("  (which is what triggers the lights).")
+print("  Stay AWAY for the first 8 seconds (let it learn 'empty'),")
+print("  then WALK UP CLOSE for the rest and watch for ARRIVAL.")
+learner = AdaptiveBaseline(config.ALPHA)
+prev_unusual = 0
+countdown("  starting in:", 3)
+for i in range(40):                      # ~20s
+    reading = sensors.read_presence()
+    learner.update(reading)
+    unusual = 1 if learner.is_unusual(reading, config.THRESHOLD) else 0
+    tag = ""
+    if unusual == 1 and prev_unusual == 0:
+        tag = "  <<< ARRIVAL! lights would fire here"
+        led.arrival_sweep()
+    if unusual == 1:
+        led.set_trail(1.0)
+    else:
+        led.set_trail(0.0)
+    prev_unusual = unusual
+    print("   reading:", reading,
+          " baseline:", round(learner.mean, 3) if learner.mean is not None else None,
+          " unusual:", unusual, tag)
+    time.sleep(0.5)
+led.clear()
+
+print("\n" + "=" * 50)
+print("DONE. Tell Claude:")
+print(" 1. Test 1: did the LEDs light (blue, purple, off)?")
+print(" 2. Test 2: did 'present' flip 1->0, and distance show numbers?")
+print(" 3. Test 3: did 'unusual' ever become 1 / did ARRIVAL fire?")
+print("=" * 50)
