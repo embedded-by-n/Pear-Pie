@@ -1,59 +1,108 @@
-# Drives the Lorikeet LED baord.
 # =============================================================================
-# led.py  (POD)
+# led.py  (POD)  -  the Pear Pie "living light"
 # =============================================================================
-# Drives the pod's 5-LED lorikeet strip: the arrival sweep and the fading
-# trail.
+# Five behaviours from brightness + colour + gentle randomness:
+#   1. arrival_sweep()      slow blue chain up then down (a beat per LED)
+#   2. set_purple(phase)    settled purple with a soft breathing fluctuation
+#   3. set_decay(frac)      heatmap fade: warm+bright -> deep blue+dim, twinkly
+#   4. set_proximity(cm)    hand 60->5cm climbs hotter to red, fire crackle
+#   5. clear()              off
 #
-# -----------------------------------------------------------------------------
-# !!! REPLICATED BEHAVIOUR - must match on every pod !!!
-# The colours and timing here are the user's visual language (blue = just
-# arrived, purple = you were here, brightness = how recently). For the trail
-# to be readable across the home, every pod must use the SAME colours and
-# fade. If you change them, change them on all pods.
+# The flicker/twinkle/breath are time-smoothed so they shimmer, not strobe.
+# Brightness 0..1, colours (r,g,b) 0..255.
 # =============================================================================
 
-import machine
-import neopixel
 import time
+import random
+import math
+from machine import Pin
+import neopixel
 import config
 
-NUM = 5
-_np = neopixel.NeoPixel(machine.Pin(config.LED_PIN), config.NUM_LEDS)   # lorikeet data on GP0
+NUM = config.NUM_LEDS
+_np = neopixel.NeoPixel(Pin(config.LED_PIN), NUM)
 
-# Colours kept dim to limit current draw over USB. (r, g, b), 0-255.
-BLUE   = (0, 0, 60)      # arrival sweep
-PURPLE = (60, 0, 60)     # presence trail at full strength
+BLUE_COOL  = (0, 30, 120)
+PURPLE     = (120, 0, 160)
+RED_HOT    = (255, 0, 0)
+SWEEP_BLUE = (0, 40, 90)
 
+# per-LED smoothed flicker values, so crackle/twinkle ease instead of jumping
+_flick = [1.0] * NUM
+
+
+def _scale(rgb, b):
+    return (int(rgb[0] * b), int(rgb[1] * b), int(rgb[2] * b))
+
+def _fill(rgb):
+    for i in range(NUM):
+        _np[i] = rgb
+    _np.write()
 
 def clear():
-    """All LEDs off."""
-    for i in range(config.NUM_LEDS):
-        _np[i] = (0, 0, 0)
+    _fill((0, 0, 0))
+
+
+# --- 1. slow arrival sweep ---------------------------------------------------
+def arrival_sweep(step_ms=140):
+    for i in range(NUM):
+        for j in range(NUM):
+            _np[j] = SWEEP_BLUE if j <= i else (0, 0, 0)
+        _np.write()
+        time.sleep_ms(step_ms)
+    for i in range(NUM - 1, -1, -1):
+        for j in range(NUM):
+            _np[j] = SWEEP_BLUE if j <= i else (0, 0, 0)
+        _np.write()
+        time.sleep_ms(step_ms)
+    clear()
+
+
+# --- 2. breathing purple -----------------------------------------------------
+def set_purple(phase):
+    wave = 0.7 + 0.15 * math.sin(phase * 1.0)      # slow, gentle
+    _fill(_scale(PURPLE, wave))
+
+
+# --- 3. heatmap decay (eased twinkle) ----------------------------------------
+def set_decay(frac):
+    frac = 0.0 if frac < 0 else (1.0 if frac > 1 else frac)
+    r = int(PURPLE[0] * frac + BLUE_COOL[0] * (1 - frac))
+    g = int(PURPLE[1] * frac + BLUE_COOL[1] * (1 - frac))
+    b = int(PURPLE[2] * frac + BLUE_COOL[2] * (1 - frac))
+    base_b = 0.15 + 0.75 * frac
+    twinkle = (1.0 - frac) * 0.5                    # more twinkle as it cools
+    for i in range(NUM):
+        # ease each LED toward a gently wandering target (no hard strobe)
+        target = 1.0 - random.random() * twinkle
+        _flick[i] += (target - _flick[i]) * 0.25
+        bri = base_b * _flick[i]
+        _np[i] = (int(r * bri), int(g * bri), int(b * bri))
     _np.write()
 
 
-def arrival_sweep():
-    """Quick blue sweep up the chain then off. Briefly blocks (~0.4s),
-    which is fine for a one-off arrival flourish."""
-    for i in range(config.NUM_LEDS):
-        _np[i] = BLUE
-        _np.write()
-        time.sleep_ms(40)
-    for i in range(config.NUM_LEDS - 1, -1, -1):
-        _np[i] = (0, 0, 0)
-        _np.write()
-        time.sleep_ms(40)
-
-
-def set_trail(brightness):
-    """Hold the purple trail at a given brightness (0.0 = off, 1.0 = full).
-    All 5 LEDs. Called every loop with a decreasing value to make the fade."""
-    if brightness < 0:
-        brightness = 0
-    r = int(PURPLE[0] * brightness)
-    g = int(PURPLE[1] * brightness)
-    b = int(PURPLE[2] * brightness)
-    for i in range(config.NUM_LEDS):
-        _np[i] = (r, g, b)
+# --- 4. proximity heat + eased fire crackle ----------------------------------
+def set_proximity(distance_cm):
+    NEAR, FAR = 5, 60
+    if distance_cm is None or distance_cm > FAR:
+        return False
+    d = NEAR if distance_cm < NEAR else distance_cm
+    heat = 1.0 - (d - NEAR) / (FAR - NEAR)
+    r = int(PURPLE[0] + (RED_HOT[0] - PURPLE[0]) * heat)
+    g = int(PURPLE[1] + (RED_HOT[1] - PURPLE[1]) * heat)
+    b = int(PURPLE[2] + (RED_HOT[2] - PURPLE[2]) * heat)
+    base_b = 0.5 + 0.5 * heat
+    crackle = heat * 0.85                            # stronger flicker, more fire
+    for i in range(NUM):
+        target = 1.0 - random.random() * crackle
+        _flick[i] += (target - _flick[i]) * 0.7      # snappier = vivid crackle
+        f = _flick[i]
+        _np[i] = (int(r * base_b * f),
+                  int(g * base_b * f),
+                  int(b * base_b * f))
     _np.write()
+    return True
+
+
+def set_trail(b):
+    _fill(_scale(PURPLE, b))
