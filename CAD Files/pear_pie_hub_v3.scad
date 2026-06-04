@@ -27,7 +27,7 @@ ORB_DIA = 190;     // max diameter (prints in one piece on MK3/MK4)
 ORB_H   = 150;     // total orb height (squashed sphere = rounded but not too tall)
 WALL    = 3;
 SPLIT_Z = 96;      // where the base bowl ends and the clear dome begins (the rim)
-DECK_Z  = 58;      // height of the internal mounting deck
+DECK_Z  = 80;      // deck raised so contents sit high, near the dome
 DECK_T  = 4;       // deck thickness
 
 ORB_CZ = ORB_H/2;  // orb centre height
