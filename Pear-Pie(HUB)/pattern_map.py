@@ -29,14 +29,14 @@ FULLSCREEN = "--full" in sys.argv
 # Map each POD_ID to a room name and a rough position (0..1 of the screen).
 # Lay these out like your home. Position is for the picture, not measured.
 ROOMS = {
-    1: {"name": "Hallway",                  "pos": (0.15, 0.12)},
-    2: {"name": "Kitchen (cooking)",        "pos": (0.50, 0.12)},
-    3: {"name": "Kitchen island / walkway", "pos": (0.50, 0.45)},
-    4: {"name": "Office",                   "pos": (0.85, 0.12)},
-    5: {"name": "Lounge / couch",           "pos": (0.82, 0.72)},
-    6: {"name": "Bedroom doorway",          "pos": (0.55, 0.66)},
-    7: {"name": "Bathroom",                 "pos": (0.15, 0.88)},
-    8: {"name": "Bedroom",                  "pos": (0.50, 0.88)},
+    1: {"name": "Hallway",                  "pos": (0.22, 0.20)},
+    2: {"name": "Kitchen (cooking)",        "pos": (0.50, 0.18)},
+    3: {"name": "Kitchen island / walkway", "pos": (0.50, 0.46)},
+    4: {"name": "Office",                   "pos": (0.78, 0.20)},
+    5: {"name": "Lounge / couch",           "pos": (0.74, 0.74)},
+    6: {"name": "Bedroom doorway",          "pos": (0.50, 0.64)},
+    7: {"name": "Bathroom",                 "pos": (0.24, 0.80)},
+    8: {"name": "Bedroom",                  "pos": (0.50, 0.86)},
 }
 
 # --- BRAND PALETTE ------------------------------------------------------------
@@ -51,6 +51,13 @@ DIM     = (255, 248, 231)
 PRESENT_SECS = 4      # how long after the last ping a room counts as "present"
 TRAIL_SECS   = 45     # how long a room keeps a fading glow (the walked trail)
 LINK_SECS    = 6      # transitions within this window draw a move line
+
+# The radar centres on the real centre of the house: roughly a metre below the
+# kitchen island, between the island and the bedroom doorway. In map (0..1)
+# coords that is here. Rooms are placed around this point, and the radar rings
+# are drawn from it, so the whole thing is anchored to one real spot.
+HOUSE_CENTRE = (0.50, 0.55)
+MAP_FRAC = 0.70       # the map uses the left 70% of the screen (panel takes the rest)
 
 
 def lerp(a, b, t):
@@ -136,22 +143,33 @@ class PatternMap:
         """The learned 'normal' for a room: fraction of readings it was occupied."""
         return (self.present_n[pid] / self.total[pid]) if self.total[pid] else 0.0
 
+    def map_xy(self, px, py):
+        """Map a (0..1, 0..1) home position into the on-screen map area
+        (the left MAP_FRAC of the screen), leaving the right side for the panel."""
+        return int(px * self.W * MAP_FRAC), int(py * self.H * 0.92 + self.H * 0.04)
+
     def node_xy(self, pid):
         px, py = ROOMS[pid]["pos"]
-        # keep nodes in the left ~70% so they don't hide behind the right panel
-        return int(px * self.W * 0.70), int(py * self.H * 0.92 + self.H * 0.04)
+        return self.map_xy(px, py)
 
     def draw(self):
         now = time.time()
         self.screen.fill(BG)
-        cx, cy = self.W // 2, int(self.H * 0.5)
+        # radar centres on the real house centre (shared with the rooms)
+        cx, cy = self.map_xy(*HOUSE_CENTRE)
+
+        # size the rings so the FULL circle fits in the map area and never
+        # touches the right panel: radius = the largest that stays clear.
+        map_right = int(self.W * MAP_FRAC)
+        max_r = min(cx, cy, map_right - cx, self.H - cy) - 16
+        max_r = max(max_r, 60)
 
         # radar rings + sweep
         for i in range(1, 6):
-            pygame.draw.circle(self.screen, (40, 38, 44), (cx, cy), i * int(self.H * 0.11), 1)
+            pygame.draw.circle(self.screen, (40, 38, 44), (cx, cy), int(max_r * i / 5), 1)
         self.sweep += 0.012
-        ex = cx + math.cos(self.sweep) * self.W
-        ey = cy + math.sin(self.sweep) * self.W
+        ex = cx + math.cos(self.sweep) * max_r
+        ey = cy + math.sin(self.sweep) * max_r
         sweep_surf = pygame.Surface((self.W, self.H), pygame.SRCALPHA)
         pygame.draw.line(sweep_surf, (46, 196, 241, 60), (cx, cy), (ex, ey), 36)
         self.screen.blit(sweep_surf, (0, 0))
