@@ -98,4 +98,3 @@ if __name__ == "__main__":
         for pod_id, vals in sorted(ups.items()):
             print("pod %d -> alpha %.4f, threshold %.3f"
                   % (pod_id, vals["alpha"], vals["threshold"]))
-                  % (pod_id, vals["alpha"], vals["threshold"]))
