@@ -29,14 +29,14 @@ FULLSCREEN = "--full" in sys.argv
 # Map each POD_ID to a room name and a rough position (0..1 of the screen).
 # Lay these out like your home. Position is for the picture, not measured.
 ROOMS = {
-    1: {"name": "Hallway (front door)", "pos": (0.50, 0.12)},
-    2: {"name": "Kitchen",              "pos": (0.22, 0.30)},
-    3: {"name": "Office",               "pos": (0.78, 0.30)},
-    4: {"name": "Laundry",              "pos": (0.12, 0.52)},
-    5: {"name": "Lounge room",          "pos": (0.40, 0.55)},
-    6: {"name": "Bedroom doorway",      "pos": (0.66, 0.62)},
-    7: {"name": "Bedroom",              "pos": (0.80, 0.80)},
-    8: {"name": "Bathroom",             "pos": (0.40, 0.85)},
+    1: {"name": "Hallway",                  "pos": (0.15, 0.12)},
+    2: {"name": "Kitchen (cooking)",        "pos": (0.50, 0.12)},
+    3: {"name": "Kitchen island / walkway", "pos": (0.50, 0.45)},
+    4: {"name": "Office",                   "pos": (0.85, 0.12)},
+    5: {"name": "Lounge / couch",           "pos": (0.82, 0.72)},
+    6: {"name": "Bedroom doorway",          "pos": (0.55, 0.66)},
+    7: {"name": "Bathroom",                 "pos": (0.15, 0.88)},
+    8: {"name": "Bedroom",                  "pos": (0.50, 0.88)},
 }
 
 # --- BRAND PALETTE ------------------------------------------------------------
@@ -77,8 +77,17 @@ class PatternMap:
         self._last_size = 0
         self._last_mtime = 0
         self.sweep = 0.0
+        # --- learning stats (the "what it has learned" panel) ----------------
+        # occupancy rate per room = the learned sense of "normal" for that space.
+        # unusual flag = the pod's AdaptiveBaseline said "present when usually empty".
+        self.total       = {pid: 0 for pid in ROOMS}   # readings seen for this pod
+        self.present_n   = {pid: 0 for pid in ROOMS}   # how many were "present"
+        self.unusual_last = {pid: 0 for pid in ROOMS}  # latest unusual flag (0/1)
+        self.unusual_n   = {pid: 0 for pid in ROOMS}   # times flagged unusual
+        self.obs_total   = 0                           # total readings logged
+        self._rows_done  = 0                           # rows already counted
 
-    # --- read new rows from the CSV without re-reading the whole file --------
+    # --- read NEW rows from the CSV and update movement + learning stats -----
     def poll_log(self):
         try:
             mtime = os.path.getmtime(LOG_PATH)
@@ -90,17 +99,29 @@ class PatternMap:
         except (FileNotFoundError, OSError):
             return
         now = time.time()
-        for row in rows[-200:]:                  # only the tail matters
+        # only the rows we have not counted yet (so stats don't double-count)
+        new_rows = rows[self._rows_done:]
+        self._rows_done = len(rows)
+        for row in new_rows:
             if len(row) < 6:
                 continue
             try:
-                ts = float(row[0]); pid = int(row[1]); present = int(row[2])
-            except ValueError:
+                ts = float(row[0]); pid = int(row[1])
+                present = int(row[2]); unusual = int(row[3])
+            except (ValueError, IndexError):
                 continue
-            if pid not in ROOMS or present != 1:
+            if pid not in ROOMS:
                 continue
-            # treat a fresh present-ping as activity in that room
-            if ts > self.last_seen[pid]:
+            # --- learning stats: every reading counts toward "normal" --------
+            self.total[pid]   += 1
+            self.obs_total    += 1
+            if present == 1:
+                self.present_n[pid] += 1
+            self.unusual_last[pid] = unusual
+            if unusual == 1:
+                self.unusual_n[pid] += 1
+            # --- movement: only a present-ping lights/traces a room ----------
+            if present == 1 and ts > self.last_seen[pid]:
                 if now - self.last_seen[pid] > PRESENT_SECS and pid != self.cur:
                     self.prev = self.cur
                     self.cur = pid
@@ -111,9 +132,14 @@ class PatternMap:
                 self.last_seen[pid] = now
                 self.dwell[pid] += 1
 
+    def occupancy(self, pid):
+        """The learned 'normal' for a room: fraction of readings it was occupied."""
+        return (self.present_n[pid] / self.total[pid]) if self.total[pid] else 0.0
+
     def node_xy(self, pid):
         px, py = ROOMS[pid]["pos"]
-        return int(px * self.W), int(py * self.H * 0.92 + self.H * 0.04)
+        # keep nodes in the left ~70% so they don't hide behind the right panel
+        return int(px * self.W * 0.70), int(py * self.H * 0.92 + self.H * 0.04)
 
     def draw(self):
         now = time.time()
@@ -178,7 +204,46 @@ class PatternMap:
         self.screen.blit(self.fontsm.render("LAST MOVE   " + self.last_move, True, (150, 146, 138)), (panel_x, self.H - 78))
         self.screen.blit(self.fontsm.render("MOST ACTIVE   " + hot_name, True, (150, 146, 138)), (panel_x, self.H - 54))
 
+        self.draw_learning_panel()
         pygame.display.flip()
+
+    # --- the "what Pear Pie has learned" panel -------------------------------
+    def draw_learning_panel(self):
+        # a translucent panel down the right edge
+        pw = int(self.W * 0.28)
+        px = self.W - pw
+        panel = pygame.Surface((pw, self.H), pygame.SRCALPHA)
+        panel.fill((30, 28, 34, 180))
+        self.screen.blit(panel, (px, 0))
+
+        x = px + 22
+        self.screen.blit(self.fontsm.render("WHAT PEAR PIE HAS LEARNED", True, GOLD), (x, 24))
+        self.screen.blit(self.fontsm.render("%d readings observed" % self.obs_total, True, (150, 146, 138)), (x, 50))
+
+        # per-room: learned occupancy ("normal") as a bar + live unusual flag
+        bar_w = pw - 64
+        y = 92
+        row_h = (self.H - 140) / max(len(ROOMS), 1)
+        for pid in ROOMS:
+            occ = self.occupancy(pid)
+            name = ROOMS[pid]["name"]
+            flagged = self.unusual_last[pid] == 1
+
+            # room name (lights gold if currently flagged unusual)
+            self.screen.blit(self.fontsm.render(name, True, GOLD if flagged else CREAM), (x, int(y)))
+
+            # learned-normal bar (how often this space is usually occupied)
+            by = int(y) + 24
+            pygame.draw.rect(self.screen, (60, 58, 64), (x, by, bar_w, 10), border_radius=4)
+            pygame.draw.rect(self.screen, CYAN, (x, by, int(bar_w * occ), 10), border_radius=4)
+            self.screen.blit(self.fontsm.render("normal occupancy %d%%" % round(occ * 100), True, (150, 146, 138)), (x, by + 14))
+
+            # live "unusual" tag from the pod's baseline
+            if flagged:
+                tag = self.fontsm.render("UNUSUAL", True, MAGENTA)
+                self.screen.blit(tag, (px + pw - tag.get_width() - 22, int(y)))
+
+            y += row_h
 
     def run(self):
         running = True
