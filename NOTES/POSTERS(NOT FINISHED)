@@ -1,0 +1,39 @@
+ROW 1 , Theory background (the three white landscape sheets, built)
+
+1.1 The peg leg. Arbib paraphrased, support versus support that responds, deficit versus capability. (built: sheet1_prosthesis)
+1.2 Affordance and the curb-cut effect. Design for the edge, everyone gains. (built: sheet2_affordance_curbcut)
+1.3 A neurodivergent frontier. Disabled innovators, dignity, "Pear Pie is my example." (built: sheet3_frontier)
+
+ROW 2 , The pain points (lived experience, the WHY)
+
+2.1 Everything is a demand. The executive load of an ordinary day, why a PDA brain feels each prompt as a barrier. (text drafted; pairs with the load-inversion diagram, left side)
+2.2 Who gets left out. The late-diagnosed and undiagnosed, tools built for a brain a lot of us don't have. (text drafted)
+2.3 What it costs. Capability locked out, the price of the wrong fit. (text drafted; two stat gaps still to fill with real cited numbers)
+
+ROW 3 , The solution and the cybernetics (the HOW)
+
+3.1 The inversion. The system absorbs the load instead of handing it back. (built: load_inversion, this is the centrepiece)
+3.2 The orders. Two-tier homeostat, pods first order, hub second order, the regulated variable is the fit. (built: orders_comparison, or causal_loop)
+3.3 Regulating the fit. Three balancing loops plus the healthy-range safeguard, with set notation as the "I can formalise this" proof. (built: causal_loop + set_notation)
+
+ROW 4 , The tech inside it (CPSness and built-by-me)
+
+4.1 Two kinds of pod. Sensor pods that feel the room, tool pods that do something useful. (built: row4_tech_simple 4.1)
+4.2 Sense, compute, act. The CPS loop with photos of your actual hardware (radar, Pi, LED, the timer pod). (diagram built: row4_tech_simple 4.2; needs your hardware photos added)
+4.3 Why it is different, and what learns where. Decentralised, offline, scalable, plus the honest ML-by-tier line: live adaptive learning on the pods, second-order control on the hub, neural net as the named frontier. (diagram built: row4_tech_simple 4.3; the ML inventory I just wrote slots in here)
+
+How it covers the marking criteria:
+
+CPSness, named first by the rubric: Row 4 (especially 4.2) plus the live map.
+Built yourself, over 60%: Row 4.3, with your photos and the built-versus-designed line.
+Functionality: Row 4 plus the live demo running beside the boards.
+Cybernetic thinking: Row 3.
+Motivation and engagement: Rows 1 and 2.
+Aesthetics and overall demonstration: the whole board design, which is itself scored.
+
+What's left to actually finish:
+
+Row 2's three panels need laying out as sheets (text is written, just needs the same treatment as Row 1).
+Row 2.3's two stat gaps need real cited figures.
+Row 4.2 needs your hardware photos dropped in.
+Print, mount, done.
