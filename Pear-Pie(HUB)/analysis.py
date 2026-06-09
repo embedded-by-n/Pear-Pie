@@ -1,19 +1,19 @@
 # derive dwell-time and movement-between-spaces from the logs.
-# (AKA "how long, which spaces" etc etc)
 import pandas as pd
 
 import dataset
 import pod_registry
 
 def load_log(path=None):
-    """Read the CSV into a dataframe, map pod_id -> space."""
     return dataset.load(path)
 
 def _presence_runs(df):
-    """Collapse the per-broadcast rows into continuous presence 'runs' per
-    space: (space, start_ts, end_ts). A run breaks when the space changes."""
+    """Collapse per-broadcast rows into continuous presence runs per space:
+    (space, start_ts, end_ts). A run breaks when the space changes or a gap
+    opens. Built from actual PRESENCE now, not the rare 'unusual' flag, so
+    real captured data produces usable runs."""
     runs = []
-    active = df[df["unusual"] == 1].sort_values("timestamp")
+    active = df[df["presence"] == 1].sort_values("timestamp")
     if active.empty:
         return pd.DataFrame(columns=["space", "start", "end", "duration_s"])
 
@@ -37,7 +37,6 @@ def _presence_runs(df):
     return out
 
 def dwell_times(df):
-    """How long presence stayed in each space (total + per-visit stats)."""
     runs = _presence_runs(df)
     if runs.empty:
         return pd.DataFrame(columns=["space", "visits", "total_s", "mean_s"])
@@ -49,7 +48,6 @@ def dwell_times(df):
     }).reset_index()
 
 def movements(df):
-    """Sequence of space-to-space transitions, with timing."""
     runs = _presence_runs(df).sort_values("start").reset_index(drop=True)
     moves = []
     for i in range(1, len(runs)):
