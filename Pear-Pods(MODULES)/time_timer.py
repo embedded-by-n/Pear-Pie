@@ -1,5 +1,5 @@
 # =============================================================================
-# main.py  (OFFICE POD WITH TIME TIMER USE THIS AS MAIN.PY)  -  living light + learning Time Timer (fully local)
+# main.py  (OFFICE POD)  -  living light + learning Time Timer (fully local)
 # =============================================================================
 import time
 import led
@@ -15,30 +15,39 @@ try:
     import json
 except ImportError:
     import ujson as json
+try:
+    import random
+except ImportError:
+    import urandom as random
 
 # ---------- TIMER CONFIG ----------
 T_W, T_H = 128, 160
 T_RADIUS = 58
-T_FACE_MIN = 60          # whole disk = 60 minutes (real Time Timer face)
+T_FACE_MIN = 60
 T_MAX_MINUTES = 60
 T_MIN_MINUTES = 1
-T_CONFIRM_SECS = 3       # 3-2-1 before it starts
-T_RESET_AFTER = 60       # gone this many seconds -> abandon + reset
-T_BREAK_MIN = 10         # pomodoro break length
-AVG_ALPHA = 0.3          # how strongly recent choices pull the learned average
+T_CONFIRM_SECS = 3
+T_RESET_AFTER = 60
+T_BREAK_MIN = 10
+T_END_SPARKLE_SECS = 10
+AVG_ALPHA = 0.3
 DATA_FILE = "/timer_data.json"
-T_REDRAW_SECS = 60       # redraw the shrinking pie at most this often
+DIR_CW = False     # False = wind on anticlockwise, drain clockwise. flip to True if mirrored
 
 def _rgb(r, g, b):
     c = ((r & 0xF8) << 8) | ((g & 0xFC) << 3) | (b >> 3)
     return ((c << 8) | (c >> 8)) & 0xFFFF
-T_RED   = _rgb(0xE0, 0x30, 0x30)   # study pie (classic red)
-T_BREAK = _rgb(0x2E, 0xC4, 0xF1)   # break pie (cyan)
+T_RED   = _rgb(0xE0, 0x30, 0x30)
+T_BREAK = _rgb(0x2E, 0xC4, 0xF1)
 T_FACE  = _rgb(0xFF, 0xFF, 0xFF)
 T_RING  = _rgb(0x14, 0x12, 0x16)
 T_BG    = _rgb(0xFF, 0xFF, 0xFF)
 T_TEXT  = _rgb(0x14, 0x12, 0x16)
-T_MADCTL = 0xC0                    # red/blue swapped? use 0xC8
+T_DARK  = _rgb(0x14, 0x12, 0x16)
+T_WHITE = _rgb(0xFF, 0xFF, 0xFF)
+SPARKLE = [_rgb(0xC8,0xF0,0x2C), _rgb(0x2E,0xC4,0xF1), _rgb(0xE9,0x1F,0xEC),
+           _rgb(0xFF,0xC0,0x00), _rgb(0xFF,0xFF,0xFF)]
+T_MADCTL = 0xC0    # red/blue swapped? use 0xC8
 
 _spi = SPI(0, baudrate=20_000_000, polarity=0, phase=0, sck=Pin(6), mosi=Pin(7))
 _CS  = Pin(5, Pin.OUT); _DC = Pin(4, Pin.OUT)
@@ -83,28 +92,68 @@ class _LCD(framebuf.FrameBuffer):
 _lcd = _LCD()
 _CX, _CY = T_W // 2, T_H // 2
 
-def _draw(a_lo, a_hi, fill, big=None, word=None):
+# precompute disk: per-pixel angle (0..255 clockwise from 12) + mask (0 out,1 face,2 ring)
+_SIZE = 2 * T_RADIUS + 1
+_angmap = bytearray(_SIZE * _SIZE)
+_mask = bytearray(_SIZE * _SIZE)
+_r2 = T_RADIUS * T_RADIUS
+_rin2 = (T_RADIUS - 2) * (T_RADIUS - 2)
+_i = 0
+for _dy in range(-T_RADIUS, T_RADIUS + 1):
+    for _dx in range(-T_RADIUS, T_RADIUS + 1):
+        _d2 = _dx*_dx + _dy*_dy
+        if _d2 > _r2:
+            _mask[_i] = 0
+        elif _d2 >= _rin2:
+            _mask[_i] = 2
+        else:
+            _mask[_i] = 1
+            _a = math.atan2(_dx, -_dy)
+            if _a < 0:
+                _a += 2 * math.pi
+            _angmap[_i] = int(_a / (2 * math.pi) * 255) & 0xFF
+        _i += 1
+
+def _ang(minutes):
+    return (minutes / T_FACE_MIN) * 2 * math.pi
+
+def _sweep_q(sweep):
+    return int(sweep / (2 * math.pi) * 255)
+
+def _draw(sweep, fill, big=None, word=None):
     _lcd.fill(T_BG)
-    r2, rin2 = T_RADIUS*T_RADIUS, (T_RADIUS-2)*(T_RADIUS-2)
-    for dy in range(-T_RADIUS, T_RADIUS+1):
+    sq = _sweep_q(sweep)
+    i = 0
+    for dy in range(-T_RADIUS, T_RADIUS + 1):
         yy = _CY + dy
-        for dx in range(-T_RADIUS, T_RADIUS+1):
-            d2 = dx*dx + dy*dy
-            if d2 > r2: continue
-            if d2 >= rin2:
-                _lcd.pixel(_CX+dx, yy, T_RING)
-            else:
-                a = math.atan2(dx, -dy)
-                if a < 0: a += 2*math.pi
-                _lcd.pixel(_CX+dx, yy, fill if (a_lo <= a <= a_hi) else T_FACE)
+        for dx in range(-T_RADIUS, T_RADIUS + 1):
+            m = _mask[i]
+            if m == 2:
+                _lcd.pixel(_CX + dx, yy, T_RING)
+            elif m == 1:
+                ang = _angmap[i]
+                on = (ang <= sq) if DIR_CW else (ang >= 255 - sq)
+                _lcd.pixel(_CX + dx, yy, fill if on else T_FACE)
+            i += 1
     if big is not None:
         s = str(big); _lcd.text(s, _CX - len(s)*4, _CY - 4, T_TEXT)
     if word is not None:
         _lcd.text(word, _CX - len(word)*4, _CY + 12, T_TEXT)
     _lcd.show()
 
-def _ang(minutes):
-    return (minutes / T_FACE_MIN) * 2 * math.pi
+def _rnd(n):
+    return random.getrandbits(16) % n
+
+def _sparkle(word):
+    _lcd.fill(T_DARK)
+    for _ in range(30):
+        x = _rnd(T_W); y = _rnd(T_H)
+        col = SPARKLE[_rnd(len(SPARKLE))]
+        _lcd.pixel(x, y, col)
+        _lcd.pixel(x+1, y, col); _lcd.pixel(x-1, y, col)
+        _lcd.pixel(x, y+1, col); _lcd.pixel(x, y-1, col)
+    _lcd.text(word, _CX - len(word)*4, _CY - 4, T_WHITE)
+    _lcd.show()
 
 def _pot_minutes():
     raw = _POT.read_u16()
@@ -141,28 +190,24 @@ _confirm_start = 0
 _total = 0
 _run_start = 0
 _pause_start = 0
+_end_start = 0
 _locked_pot = _pot_minutes()
 _prev_present = 0
 _last_key = None
-_last_redraw = time.ticks_ms()
-
-def _ang_total():
-    return (_total / 60) * 2 * math.pi if _total else 0
 
 def _go_idle():
     global _mode, _locked_pot, _last_key
     _mode = IDLE; _locked_pot = _pot_minutes(); _last_key = None
-    _draw(0, 0, T_RED, word="ready")
+    _draw(0, T_RED, word="ready")
 
 def _start_running(mins):
-    global _mode, _total, _run_start, _locked_pot, _last_key, _last_redraw
+    global _mode, _total, _run_start, _locked_pot, _last_key
     _total = mins * 60; _run_start = time.ticks_ms()
-    _locked_pot = _pot_minutes(); _mode = RUNNING
-    _last_key = None; _last_redraw = time.ticks_ms()
+    _locked_pot = _pot_minutes(); _mode = RUNNING; _last_key = None
 
 def _timer_tick(present):
     global _mode, _setmin, _still_ms, _confirm_start, _total, _run_start
-    global _pause_start, _locked_pot, _prev_present, _last_key, _last_redraw
+    global _pause_start, _end_start, _locked_pot, _prev_present, _last_key
     now = time.ticks_ms(); pot = _pot_minutes()
 
     if _mode in (IDLE, RUNNING, ENDED, BREAK, RETURN_DUE) and abs(pot - _locked_pot) >= 2:
@@ -175,7 +220,7 @@ def _timer_tick(present):
     elif _mode == SETTING:
         if pot != _setmin:
             _setmin = pot; _still_ms = now
-            _draw(0, _ang(pot), T_RED, big=pot)
+            _draw(_ang(pot), T_RED, big=pot)
         elif time.ticks_diff(now, _still_ms) / 1000 >= 1:
             _mode = CONFIRM; _confirm_start = now; _last_key = None
 
@@ -184,24 +229,22 @@ def _timer_tick(present):
         if left <= 0:
             _learn_duration(_setmin); _start_running(_setmin)
         elif left != _last_key:
-            _draw(0, _ang(_setmin), T_RED, big=left, word="start"); _last_key = left
+            _draw(_ang(_setmin), T_RED, big=left, word="start"); _last_key = left
 
     elif _mode == RUNNING:
         if present == 0:
             _mode = PAUSED; _pause_start = now
-            consumed = 1 - (max(0, _total - time.ticks_diff(now, _run_start)/1000) / _total) if _total else 0
-            _draw(consumed*_ang_total(), _ang_total(), T_RED, word="paused")
+            remaining = max(0, _total - time.ticks_diff(now, _run_start)/1000)
+            _draw(_ang(remaining/60.0), T_RED, word="paused")
         else:
             remaining = max(0, _total - time.ticks_diff(now, _run_start) / 1000)
             if remaining <= 0:
                 _data["completed"] += 1; _save(_data)
-                _mode = ENDED; _draw(0, 0, T_RED, word="done")
+                _mode = ENDED; _end_start = now; _last_key = None
             else:
-                key = int(remaining / T_REDRAW_SECS)
-                if key != _last_key or time.ticks_diff(now, _last_redraw)/1000 >= T_REDRAW_SECS:
-                    consumed = 1 - (remaining / _total)
-                    _draw(consumed*_ang_total(), _ang_total(), T_RED)
-                    _last_key = key; _last_redraw = now
+                key = _sweep_q(_ang(remaining/60.0))
+                if key != _last_key:
+                    _draw(_ang(remaining/60.0), T_RED); _last_key = key
 
     elif _mode == PAUSED:
         if present == 1:
@@ -211,21 +254,22 @@ def _timer_tick(present):
             _data["abandoned"] += 1; _save(_data); _go_idle()
 
     elif _mode == ENDED:
-        _total = T_BREAK_MIN * 60; _run_start = now
-        _mode = BREAK; _last_key = None; _last_redraw = now
+        _sparkle("done")
+        if time.ticks_diff(now, _end_start) / 1000 >= T_END_SPARKLE_SECS:
+            _total = T_BREAK_MIN * 60; _run_start = now
+            _mode = BREAK; _last_key = None
 
     elif _mode == BREAK:
         remaining = max(0, _total - time.ticks_diff(now, _run_start) / 1000)
         if remaining <= 0:
-            _mode = RETURN_DUE; _draw(0, 0, T_BREAK, word="back?")
+            _mode = RETURN_DUE; _last_key = None
         else:
-            key = int(remaining / T_REDRAW_SECS)
+            key = _sweep_q(_ang(remaining/60.0))
             if key != _last_key:
-                consumed = 1 - (remaining / _total)
-                _draw(consumed*_ang(T_BREAK_MIN), _ang(T_BREAK_MIN), T_BREAK, word="break")
-                _last_key = key
+                _draw(_ang(remaining/60.0), T_BREAK, word="break"); _last_key = key
 
     elif _mode == RETURN_DUE:
+        _sparkle("back")
         if present == 1:
             _data["good_breaks"] += 1; _save(_data); _go_idle()
 
