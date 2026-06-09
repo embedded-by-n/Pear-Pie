@@ -29,11 +29,14 @@ FULLSCREEN = "--full" in sys.argv
 # Map each POD_ID to a room name and a rough position (0..1 of the screen).
 # Lay these out like your home. Position is for the picture, not measured.
 ROOMS = {
-    1: {"name": "Kitchen",     "pos": (0.22, 0.24)},
-    2: {"name": "Hallway",     "pos": (0.50, 0.42)},
-    3: {"name": "Living room", "pos": (0.22, 0.74)},
-    4: {"name": "Bedroom",     "pos": (0.78, 0.24)},
-    5: {"name": "Bathroom",    "pos": (0.80, 0.74)},
+    1: {"name": "Hallway (front door)", "pos": (0.50, 0.12)},
+    2: {"name": "Kitchen",              "pos": (0.22, 0.30)},
+    3: {"name": "Office",               "pos": (0.78, 0.30)},
+    4: {"name": "Laundry",              "pos": (0.12, 0.52)},
+    5: {"name": "Lounge room",          "pos": (0.40, 0.55)},
+    6: {"name": "Bedroom doorway",      "pos": (0.66, 0.62)},
+    7: {"name": "Bedroom",              "pos": (0.80, 0.80)},
+    8: {"name": "Bathroom",             "pos": (0.40, 0.85)},
 }
 
 # --- BRAND PALETTE ------------------------------------------------------------
