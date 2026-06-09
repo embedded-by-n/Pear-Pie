@@ -1,0 +1,70 @@
+
+**Hardware components**
+
+Hub:
+- Raspberry Pi 5, runs full Python (confirm it's the 5 and not the Zero 2 W, I'm going off your locked architecture)
+- Inky Impression 7-colour e-ink, the calm always-on face
+- Projector, runs the live pattern map full-screen
+- PiSugar 3 UPS HAT, battery + clean shutdown
+- Bluetooth (built-in), receives pod broadcasts via bleak
+
+Pods (Raspberry Pi Pico 2 W, one per room, eight total):
+- HiLink LD2410C mmWave radar + PIR, presence sensing (sensor fusion)
+- NeoPixel LED ring (the Lorikeet board), the ambient light response
+- LiPo battery per pod
+- Bluetooth (built-in), advertise-and-scan gossip
+
+Office tool pod adds:
+- Waveshare 1.8" ST7735S LCD, the Time Timer face
+- DFRobot 10k potentiometer (PART0244), sets the time by turning
+
+**Communication**
+- Peer-to-peer BLE, advertise and scan, no pairing, no central authority
+- Up path (pods to hub): `uplink_packet.py`, marker "PP", carries pod_id, presence, unusual, sequence
+- Down path (hub to pods): `downlink_packet.py`, marker "PU", carries per-pod alpha and threshold updates
+- Graceful degradation: if the hub goes, pods keep running on last-known parameters
+
+**The learning, by tier (honest live vs designed)**
+
+First order, on each pod, LIVE:
+- Adaptive baseline (EWMA) learns that room's "normal" presence and flags "unusual" when you're present where you usually aren't. Unsupervised, online, on-device. This is your real, running machine learning.
+- Office pod also: a running average (EWMA) that learns your preferred timer duration and saves it to `timer_data.json`, so it auto-starts at your learned time. Local learning on the pod, survives reboot.
+
+Second order, on the hub:
+- `rules.py` is a live data-driven controller (runs hourly). It reads the logged network, measures how busy each space is, and retunes each pod's alpha and threshold, clamped to safe bounds, then pushes the updates down. This is real and running, but it's deterministic control, not ML. Call it that.
+- Decision tree (scikit-learn) in `learn.py`: trained on movement transitions, given hour, day, current space, predict the next space. Now wired into `rules.py` so it pre-warms the pod you're likely to head to. Live in the loop after tonight's changes. Honest caveat: it needs enough movement data, so the demo uses simulated history to show it working; on sparse real data it's weak.
+
+Third order, DESIGNED frontier, not built:
+- Edge Impulse tiny neural network. Designed, not built.
+- The system regulating its own fit to you: the slow baseline-drift watch, the personalised "unusual for you" check, and the healthy-range reference shown as gentle info. Designed safeguards against the system reinforcing an unhealthy drift.
+
+**The cybernetic layers**
+- First order: pods sense and act to hold spatial homeostasis. Each pod is a homeostat keeping its room's "normal."
+- Second order: the hub observes the pod network over time and adjusts the rules the pods follow (Ashby's uniselector, but informed by data, not random). It never commands, it retunes.
+- Third order (designed): the system regulating the fit between you and your space, learning whether its response helped, with safeguards so it doesn't normalise a decline. The regulated variable is the fit, never your behaviour.
+- Graceful degradation across timescales: remove the hub and the network degrades from a learning homeostat to a stable one, no loss of function at the level you actually experience.
+
+**Software map**
+
+Pod files: `main.py`, `sensors.py`, `led.py`, `baseline.py`, `gossip.py`, `rule_listener.py`, `config.py`, `uplink_packet.py`, `downlink_packet.py`. Office pod adds the ST7735S Time Timer code and `timer_data.json`.
+
+Hub files: `main.py`, `hub_ble_logger.py` / `data_logger.py`, `observer.py`, `dataset.py`, `analysis.py`, `learn.py`, `model.py`, `rules.py`, `pusher.py`, `pod_registry.py`, `config.py`, `simulator.py`, `pattern_map.py`, `inky_face.py`, `uplink_packet.py`, `downlink_packet.py`.
+
+**Data and representation**
+- `pod_log.csv`: timestamp, pod_id, presence, unusual, sequence, rssi (hub stamps one shared clock)
+- `model.pkl`: the trained decision tree
+- `timer_data.json`: the office pod's learned average duration plus completed / abandoned / good-break counts
+
+**Sense, compute, actuate (the CPS spine, at every tier)**
+- Pod: radar + PIR (sense), adaptive baseline (compute), LED ring + timer face (actuate)
+- Hub: BLE log of the network (sense), rules + tree (compute), parameter push + e-ink + map (actuate)
+
+**Theory it rests on**
+- Ashby: homeostat, requisite variety, the uniselector
+- Foerster: first and second order cybernetics
+- Okai-Ugbaje: the Cybernetic Wheel (your design framework)
+- Davis & Chouinard: affordance continuum; the curb-cut effect
+- Arbib (1964): the peg leg replacing one function, your support-vs-feedback analogy
+- Abdilla & Fitch: systems of systems, non-deficit relational design (cited as influence, not as Indigenous-led work)
+
+Two things to confirm so this is exact: the hub board (Pi 5 or Zero 2 W), and whether you want me to fold this straight into the documentation's "Materials and tools" plus "List of functions" sections, which is where the rubric wants it. Want that?
