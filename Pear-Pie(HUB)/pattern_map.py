@@ -2,32 +2,32 @@
 # =============================================================================
 # pattern_map.py  -  Pear Pie walked-pattern map (demo visualiser)
 # =============================================================================
-# Runs full-screen on the hub Pi and projects the emergent movement pattern:
-# which rooms lit up, in what order, how recently (the walked trail), and where
-# you are dwelling. It reads pod_log.csv that hub_ble_logger.py writes, so the
-# drawing process never competes with the BLE radio.
+# Shows: the walked trail + dwell, the learned "normal" per room, AND the
+# second-order loop: the predicted next room, the per-pod parameters the hub
+# is pushing, and a rolling log of second-order activity.
 #
-# HONEST SCOPE: this is a RELATIONAL map (which room, in what order, how recent),
-# not a GPS position. The radars sense the human, not each other, so there is no
-# true (x, y). Place the nodes yourself in ROOMS below to match your home.
-#
-# RUN:  python3 pattern_map.py            (windowed, for testing)
-#       python3 pattern_map.py --full     (full-screen, for the projector)
-# DEPS: pip install pygame
-# CSV schema expected (from hub_ble_logger.py):
-#   timestamp,pod_id,presence,unusual,sequence,rssi
+# READ-ONLY: it re-runs the hub's own model + rules to SHOW what the hub is
+# deciding. It never pushes anything and never touches the pods.
 # =============================================================================
 
-import sys, time, csv, math, os
+import sys, time, csv, math, os, threading
 
 import pygame
 
+# --- optional ML overlay (degrades gracefully if libs/model missing) ---------
+try:
+    import model
+    import rules
+    import pod_registry
+    _ML = True
+except Exception as e:
+    print("ML overlay off (%s). Map still runs." % e)
+    _ML = False
+
 # --- CONFIG -------------------------------------------------------------------
-LOG_PATH = os.path.expanduser("~/Pear-Pie/Pear-Pie(HUB)/pod_log.csv")  # adjust if needed
+LOG_PATH = os.path.expanduser("~/Pear-Pie/Pear-Pie(HUB)/pod_log.csv")
 FULLSCREEN = "--full" in sys.argv
 
-# Map each POD_ID to a room name and a rough position (0..1 of the screen).
-# Lay these out like your home. Position is for the picture, not measured.
 ROOMS = {
     1: {"name": "Hallway",                  "pos": (0.22, 0.20)},
     2: {"name": "Kitchen (cooking)",        "pos": (0.50, 0.18)},
@@ -40,24 +40,22 @@ ROOMS = {
 }
 
 # --- BRAND PALETTE ------------------------------------------------------------
-BG      = (20, 18, 22)        # #141216
-MAGENTA = (233, 31, 236)      # #E91FEC
-LIME    = (200, 240, 44)      # #C8F02C
-CYAN    = (46, 196, 241)      # #2EC4F1
-GOLD    = (255, 192, 0)       # #FFC000
-CREAM   = (255, 248, 231)     # #FFF8E7
+BG      = (20, 18, 22)
+MAGENTA = (233, 31, 236)
+LIME    = (200, 240, 44)
+CYAN    = (46, 196, 241)
+GOLD    = (255, 192, 0)
+CREAM   = (255, 248, 231)
 DIM     = (255, 248, 231)
 
-PRESENT_SECS = 4      # how long after the last ping a room counts as "present"
-TRAIL_SECS   = 45     # how long a room keeps a fading glow (the walked trail)
-LINK_SECS    = 6      # transitions within this window draw a move line
+PRESENT_SECS = 4
+TRAIL_SECS   = 45
+LINK_SECS    = 6
 
-# The radar centres on the real centre of the house: roughly a metre below the
-# kitchen island, between the island and the bedroom doorway. In map (0..1)
-# coords that is here. Rooms are placed around this point, and the radar rings
-# are drawn from it, so the whole thing is anchored to one real spot.
 HOUSE_CENTRE = (0.50, 0.55)
-MAP_FRAC = 0.70       # the map uses the left 70% of the screen (panel takes the rest)
+MAP_FRAC = 0.70
+
+SECONDORDER_EVERY = 30   # seconds between read-only model/rules recomputes
 
 
 def lerp(a, b, t):
@@ -75,26 +73,62 @@ class PatternMap:
         self.font   = pygame.font.SysFont("Trebuchet MS", 22)
         self.fontbig = pygame.font.SysFont("Trebuchet MS", 40)
         self.fontsm = pygame.font.SysFont("Courier New", 18)
-        self.last_seen = {pid: -1e9 for pid in ROOMS}   # last time present
-        self.dwell     = {pid: 0 for pid in ROOMS}       # accumulated activity
-        self.order     = []                              # recent (pid, time) sequence
+        self.fonttiny = pygame.font.SysFont("Courier New", 14)
+        self.last_seen = {pid: -1e9 for pid in ROOMS}
+        self.dwell     = {pid: 0 for pid in ROOMS}
+        self.order     = []
         self.cur = None
         self.prev = None
         self.last_move = ""
-        self._last_size = 0
         self._last_mtime = 0
         self.sweep = 0.0
-        # --- learning stats (the "what it has learned" panel) ----------------
-        # occupancy rate per room = the learned sense of "normal" for that space.
-        # unusual flag = the pod's AdaptiveBaseline said "present when usually empty".
-        self.total       = {pid: 0 for pid in ROOMS}   # readings seen for this pod
-        self.present_n   = {pid: 0 for pid in ROOMS}   # how many were "present"
-        self.unusual_last = {pid: 0 for pid in ROOMS}  # latest unusual flag (0/1)
-        self.unusual_n   = {pid: 0 for pid in ROOMS}   # times flagged unusual
-        self.obs_total   = 0                           # total readings logged
-        self._rows_done  = 0                           # rows already counted
+        self.total       = {pid: 0 for pid in ROOMS}
+        self.present_n   = {pid: 0 for pid in ROOMS}
+        self.unusual_last = {pid: 0 for pid in ROOMS}
+        self.unusual_n   = {pid: 0 for pid in ROOMS}
+        self.obs_total   = 0
+        self._rows_done  = 0
+        # --- second-order overlay state (filled by the background worker) ----
+        self.params = {}            # pod_id -> {"alpha":, "threshold":}
+        self.param_flash = {}       # pod_id -> time a param last changed
+        self.predicted_pid = None   # pod the model predicts you'll go to next
+        self.predicted_name = None
+        self.events = []            # rolling (time, text) second-order log
+        if _ML:
+            t = threading.Thread(target=self._secondorder_worker, daemon=True)
+            t.start()
 
-    # --- read NEW rows from the CSV and update movement + learning stats -----
+    # --- background: re-run the hub's model + rules (read-only) --------------
+    def _secondorder_worker(self):
+        while True:
+            try:
+                updates = rules.compute_updates()
+                now = time.time()
+                for pid, vals in updates.items():
+                    old = self.params.get(pid)
+                    if old and (old["threshold"] != vals["threshold"]
+                                or old["alpha"] != vals["alpha"]):
+                        self.param_flash[pid] = now
+                        self.events.append((now, "pod %d retuned  thr %.2f"
+                                            % (pid, vals["threshold"])))
+                self.params = updates
+                # prediction from the current room's space
+                if self.cur is not None:
+                    from_space = pod_registry.get_space(self.cur)
+                    lt = time.localtime()
+                    pred = model.predict_next_space(lt.tm_hour, lt.tm_wday, from_space)
+                    if pred:
+                        pid = pod_registry.get_pod_for_space(pred)
+                        if pid != self.predicted_pid:
+                            self.events.append((now, "predicts next: %s" % pred))
+                        self.predicted_pid = pid
+                        self.predicted_name = pred
+                self.events = self.events[-6:]
+            except Exception as e:
+                self.events.append((time.time(), "2nd-order skipped"))
+                self.events = self.events[-6:]
+            time.sleep(SECONDORDER_EVERY)
+
     def poll_log(self):
         try:
             mtime = os.path.getmtime(LOG_PATH)
@@ -106,7 +140,6 @@ class PatternMap:
         except (FileNotFoundError, OSError):
             return
         now = time.time()
-        # only the rows we have not counted yet (so stats don't double-count)
         new_rows = rows[self._rows_done:]
         self._rows_done = len(rows)
         for row in new_rows:
@@ -119,7 +152,6 @@ class PatternMap:
                 continue
             if pid not in ROOMS:
                 continue
-            # --- learning stats: every reading counts toward "normal" --------
             self.total[pid]   += 1
             self.obs_total    += 1
             if present == 1:
@@ -127,7 +159,6 @@ class PatternMap:
             self.unusual_last[pid] = unusual
             if unusual == 1:
                 self.unusual_n[pid] += 1
-            # --- movement: only a present-ping lights/traces a room ----------
             if present == 1 and ts > self.last_seen[pid]:
                 if now - self.last_seen[pid] > PRESENT_SECS and pid != self.cur:
                     self.prev = self.cur
@@ -140,12 +171,9 @@ class PatternMap:
                 self.dwell[pid] += 1
 
     def occupancy(self, pid):
-        """The learned 'normal' for a room: fraction of readings it was occupied."""
         return (self.present_n[pid] / self.total[pid]) if self.total[pid] else 0.0
 
     def map_xy(self, px, py):
-        """Map a (0..1, 0..1) home position into the on-screen map area
-        (the left MAP_FRAC of the screen), leaving the right side for the panel."""
         return int(px * self.W * MAP_FRAC), int(py * self.H * 0.92 + self.H * 0.04)
 
     def node_xy(self, pid):
@@ -155,16 +183,12 @@ class PatternMap:
     def draw(self):
         now = time.time()
         self.screen.fill(BG)
-        # radar centres on the real house centre (shared with the rooms)
         cx, cy = self.map_xy(*HOUSE_CENTRE)
 
-        # size the rings so the FULL circle fits in the map area and never
-        # touches the right panel: radius = the largest that stays clear.
         map_right = int(self.W * MAP_FRAC)
         max_r = min(cx, cy, map_right - cx, self.H - cy) - 16
         max_r = max(max_r, 60)
 
-        # radar rings + sweep
         for i in range(1, 6):
             pygame.draw.circle(self.screen, (40, 38, 44), (cx, cy), int(max_r * i / 5), 1)
         self.sweep += 0.012
@@ -174,7 +198,6 @@ class PatternMap:
         pygame.draw.line(sweep_surf, (46, 196, 241, 60), (cx, cy), (ex, ey), 36)
         self.screen.blit(sweep_surf, (0, 0))
 
-        # walked-trail move lines (recent transitions)
         for k in range(1, len(self.order)):
             pid_a, ta = self.order[k]
             pid_b, tb = self.order[k - 1]
@@ -186,13 +209,27 @@ class PatternMap:
                 pygame.draw.line(ls, (233, 31, 236, alpha), a, b, 4)
                 self.screen.blit(ls, (0, 0))
 
-        # nodes
         for pid in ROOMS:
             x, y = self.node_xy(pid)
             age = now - self.last_seen[pid]
             present = age < PRESENT_SECS
             glow = max(0.0, 1 - age / TRAIL_SECS) if age < TRAIL_SECS else 0.0
             r = 16 + min(self.dwell[pid], 40) * 0.7
+
+            # --- predicted-next room: pulsing gold ring -----------------------
+            if pid == self.predicted_pid and not present:
+                pulse = 0.5 + 0.5 * math.sin(now * 3)
+                ps = pygame.Surface((self.W, self.H), pygame.SRCALPHA)
+                pygame.draw.circle(ps, GOLD + (int(120 * pulse),), (x, y),
+                                   int(r + 14 + 8 * pulse), 3)
+                self.screen.blit(ps, (0, 0))
+
+            # --- param-update flash: brief gold halo --------------------------
+            if pid in self.param_flash and now - self.param_flash[pid] < 2.0:
+                fa = int(160 * (1 - (now - self.param_flash[pid]) / 2.0))
+                fs = pygame.Surface((self.W, self.H), pygame.SRCALPHA)
+                pygame.draw.circle(fs, GOLD + (fa,), (x, y), int(r + 26))
+                self.screen.blit(fs, (0, 0))
 
             if glow > 0:
                 gs = pygame.Surface((self.W, self.H), pygame.SRCALPHA)
@@ -212,7 +249,14 @@ class PatternMap:
             label = self.font.render(ROOMS[pid]["name"], True, CREAM if present else (150, 146, 138))
             self.screen.blit(label, (x - label.get_width() // 2, y + int(r) + 8))
 
-        # info panel
+            # --- per-pod pushed parameters readout ----------------------------
+            if pid in self.params:
+                p = self.params[pid]
+                txt = "thr %.2f  a %.3f" % (p["threshold"], p["alpha"])
+                col = GOLD if (pid in self.param_flash and now - self.param_flash[pid] < 2.0) else (140, 136, 128)
+                pr = self.fonttiny.render(txt, True, col)
+                self.screen.blit(pr, (x - pr.get_width() // 2, y + int(r) + 30))
+
         panel_x = int(self.W * 0.04)
         cur_name = ROOMS[self.cur]["name"] if self.cur else "waiting for presence"
         hot = max(self.dwell, key=lambda k: self.dwell[k]) if any(self.dwell.values()) else None
@@ -221,13 +265,13 @@ class PatternMap:
         self.screen.blit(self.fontbig.render(cur_name, True, CREAM), (panel_x, self.H - 130))
         self.screen.blit(self.fontsm.render("LAST MOVE   " + self.last_move, True, (150, 146, 138)), (panel_x, self.H - 78))
         self.screen.blit(self.fontsm.render("MOST ACTIVE   " + hot_name, True, (150, 146, 138)), (panel_x, self.H - 54))
+        if self.predicted_name:
+            self.screen.blit(self.fontsm.render("PREDICTS NEXT   " + self.predicted_name, True, GOLD), (panel_x, self.H - 30))
 
         self.draw_learning_panel()
         pygame.display.flip()
 
-    # --- the "what Pear Pie has learned" panel -------------------------------
     def draw_learning_panel(self):
-        # a translucent panel down the right edge
         pw = int(self.W * 0.28)
         px = self.W - pw
         panel = pygame.Surface((pw, self.H), pygame.SRCALPHA)
@@ -238,30 +282,38 @@ class PatternMap:
         self.screen.blit(self.fontsm.render("WHAT PEAR PIE HAS LEARNED", True, GOLD), (x, 24))
         self.screen.blit(self.fontsm.render("%d readings observed" % self.obs_total, True, (150, 146, 138)), (x, 50))
 
-        # per-room: learned occupancy ("normal") as a bar + live unusual flag
         bar_w = pw - 64
-        y = 92
-        row_h = (self.H - 140) / max(len(ROOMS), 1)
+        y = 88
+        # leave room at the bottom for the second-order activity log
+        log_h = 150
+        row_h = (self.H - 120 - log_h) / max(len(ROOMS), 1)
         for pid in ROOMS:
             occ = self.occupancy(pid)
             name = ROOMS[pid]["name"]
             flagged = self.unusual_last[pid] == 1
 
-            # room name (lights gold if currently flagged unusual)
             self.screen.blit(self.fontsm.render(name, True, GOLD if flagged else CREAM), (x, int(y)))
+            by = int(y) + 22
+            pygame.draw.rect(self.screen, (60, 58, 64), (x, by, bar_w, 9), border_radius=4)
+            pygame.draw.rect(self.screen, CYAN, (x, by, int(bar_w * occ), 9), border_radius=4)
+            self.screen.blit(self.fonttiny.render("normal %d%%" % round(occ * 100), True, (150, 146, 138)), (x, by + 12))
 
-            # learned-normal bar (how often this space is usually occupied)
-            by = int(y) + 24
-            pygame.draw.rect(self.screen, (60, 58, 64), (x, by, bar_w, 10), border_radius=4)
-            pygame.draw.rect(self.screen, CYAN, (x, by, int(bar_w * occ), 10), border_radius=4)
-            self.screen.blit(self.fontsm.render("normal occupancy %d%%" % round(occ * 100), True, (150, 146, 138)), (x, by + 14))
-
-            # live "unusual" tag from the pod's baseline
             if flagged:
-                tag = self.fontsm.render("UNUSUAL", True, MAGENTA)
+                tag = self.fonttiny.render("UNUSUAL", True, MAGENTA)
                 self.screen.blit(tag, (px + pw - tag.get_width() - 22, int(y)))
-
             y += row_h
+
+        # --- second-order activity log -------------------------------------
+        ly = self.H - log_h
+        pygame.draw.line(self.screen, (60, 58, 64), (x, ly - 8), (px + pw - 22, ly - 8))
+        self.screen.blit(self.fontsm.render("SECOND-ORDER ACTIVITY", True, GOLD), (x, ly))
+        if not _ML:
+            self.screen.blit(self.fonttiny.render("overlay off (model not loaded)", True, (150, 146, 138)), (x, ly + 24))
+        ey = ly + 26
+        for ts, txt in reversed(self.events):
+            stamp = time.strftime("%H:%M", time.localtime(ts))
+            self.screen.blit(self.fonttiny.render("%s  %s" % (stamp, txt), True, (180, 176, 168)), (x, ey))
+            ey += 18
 
     def run(self):
         running = True
