@@ -1,33 +1,39 @@
 # load the trained model and make predictions.
-#
-# Thin wrapper so rules.py and any status display can ask the trained model
-# questions without knowing how it was stored.
-
 import os
 import joblib
 
 import config
+import pod_registry
 
-_cache = {"model": None, "path": None}
+_cache = {"model": None, "path": None, "mtime": None}
 
 def load(path=None):
-    """Load the persisted model from disk (cached)."""
+    """Load the persisted model, reloading automatically if the file changed
+    (so the hub uses the freshly retrained model each cycle)."""
     path = path or config.MODEL_FILE
-    if _cache["model"] is not None and _cache["path"] == path:
-        return _cache["model"]
     if not os.path.exists(path):
         return None
+    mtime = os.path.getmtime(path)
+    if (_cache["model"] is not None and _cache["path"] == path
+            and _cache["mtime"] == mtime):
+        return _cache["model"]
     model = joblib.load(path)
-    _cache["model"], _cache["path"] = model, path
+    _cache.update(model=model, path=path, mtime=mtime)
     return model
 
-def predict_next_space(hour, dow, from_code, path=None):
-    """Predict the next space given time + current space code."""
+def predict_next_space(hour, dow, from_space, path=None):
+    """Predict the next space name given time + current space NAME.
+    Encodes the space with the same stable map used in training."""
     model = load(path)
     if model is None:
         return None
-    return model.predict([[hour, dow, from_code]])[0]
+    code = pod_registry.space_code(from_space)
+    if code < 0:
+        return None
+    try:
+        return model.predict([[hour, dow, code]])[0]
+    except Exception:
+        return None
 
 def is_ready(path=None):
-    """True if a trained model exists on disk."""
     return load(path) is not None
