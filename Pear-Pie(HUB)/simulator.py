@@ -1,9 +1,8 @@
-# Generates realistic fake movement data into the CSV,
-# so analysis and learning can be built/tested before the radar works.
-#
-# Writes rows in the SAME schema data_logger.py uses, so analysis.py and
-# learn.py can't tell simulated data from real pod data.
-# Run directly:  python simulator.py --minutes 240
+# Generates realistic fake movement data into the CSV, so analysis and
+# learning can be built/tested before/alongside the real radar data.
+# Writes the SAME schema as data_logger.py, so analysis.py and learn.py
+# can't tell simulated from real. Matched to the eight-pod layout.
+# Run:  python simulator.py --minutes 240   (optionally --days-ago N)
 
 import csv
 import os
@@ -16,22 +15,31 @@ import pod_registry
 
 COLUMNS = ["timestamp", "pod_id", "presence", "unusual", "sequence", "rssi"]
 
-# Plausible adjacency: which space a person tends to move to next.
-# Keyed by space name (from pod_registry), values are likely next spaces.
+# Plausible adjacency for the real home: where a person tends to go next.
+# Keys/values are space names from pod_registry. Repeats bias the random pick.
 _TRANSITIONS = {
-    "hallway":  ["lounge", "kitchen", "bedroom", "hallway"],
-    "lounge":   ["hallway", "kitchen", "lounge", "lounge"],
-    "kitchen":  ["hallway", "lounge", "kitchen"],
-    "bedroom":  ["hallway", "bedroom", "bedroom"],
+    "hallway":         ["kitchen_cooking", "kitchen_island", "office", "hallway"],
+    "kitchen_cooking": ["kitchen_island", "hallway", "kitchen_cooking"],
+    "kitchen_island":  ["kitchen_cooking", "lounge", "bedroom_doorway", "office", "hallway"],
+    "office":          ["hallway", "kitchen_island", "office", "office"],
+    "lounge":          ["kitchen_island", "bedroom_doorway", "lounge", "lounge"],
+    "bedroom_doorway": ["bedroom", "bathroom", "kitchen_island", "lounge"],
+    "bathroom":        ["bedroom_doorway", "bedroom", "bathroom"],
+    "bedroom":         ["bedroom_doorway", "bathroom", "bedroom", "bedroom"],
 }
 
-# Rough dwell time (seconds) ranges per space - how long a person lingers.
+# Rough dwell time (seconds) per space - how long a person lingers.
 _DWELL = {
-    "hallway":  (5, 30),
-    "lounge":   (300, 5400),
-    "kitchen":  (120, 1800),
-    "bedroom":  (1800, 28800),
+    "hallway":         (5, 30),
+    "kitchen_cooking": (120, 1800),
+    "kitchen_island":  (30, 600),
+    "office":          (600, 7200),     # study sessions (the Time Timer pod)
+    "lounge":          (300, 5400),
+    "bedroom_doorway": (3, 20),
+    "bathroom":        (60, 900),
+    "bedroom":         (1800, 28800),   # sleep
 }
+
 
 def _space_to_pod():
     """Invert pod_registry: space name -> pod_id (first match wins)."""
@@ -40,23 +48,27 @@ def _space_to_pod():
         out.setdefault(meta["space"], pod_id)
     return out
 
+
 def _time_of_day_bias(hour):
-    """Return a likely starting space given the hour, to make days realistic."""
+    """A likely starting space given the hour, to make days realistic."""
     if 0 <= hour < 7:
         return "bedroom"
     if 7 <= hour < 9:
-        return "kitchen"
+        return "kitchen_cooking"
+    if 9 <= hour < 17:
+        return "office"
+    if 17 <= hour < 19:
+        return "kitchen_cooking"
+    if 19 <= hour < 22:
+        return "lounge"
     if 22 <= hour < 24:
         return "bedroom"
-    return random.choice(["lounge", "kitchen", "hallway"])
+    return random.choice(["lounge", "kitchen_island", "office"])
+
 
 def simulate(minutes, start_time=None, log_file=None):
     """Produce rows of a person moving between spaces with realistic timing.
-
-    Appends to the CSV (creating header if needed). Returns the number of
-    rows written. Timestamps are real epoch seconds so the off-grid clock
-    assumptions downstream still hold.
-    """
+    Appends to the CSV (creating header if needed). Returns rows written."""
     log_file = log_file or config.LOG_FILE
     space_to_pod = _space_to_pod()
     spaces = list(space_to_pod.keys())
@@ -86,30 +98,27 @@ def simulate(minutes, start_time=None, log_file=None):
             low, high = _DWELL.get(current, (60, 600))
             dwell = random.randint(low, high)
 
-            # While present in this space, emit periodic "unusual" readings
-            # (mirrors a pod broadcasting every ~loop while someone's there).
             step = 10  # seconds between logged broadcasts while present
             elapsed = 0
             while elapsed < dwell and t < end_time:
-                # presence reading: 1 while here. unusual: 1 (above baseline).
                 writer.writerow([
                     round(t, 3),
                     pod_id,
-                    1,          # presence
-                    1,          # unusual (person is here, above normal)
+                    1,                                  # presence
+                    1 if random.random() < 0.03 else 0, # unusual: occasional
                     sequence % 256,
-                    random.randint(-85, -45),  # plausible RSSI
+                    random.randint(-85, -45),           # plausible RSSI
                 ])
                 rows_written += 1
                 sequence += 1
                 t += step
                 elapsed += step
 
-            # transition to next space
             nxt = random.choice(_TRANSITIONS.get(current, spaces))
             current = nxt if nxt in space_to_pod else random.choice(spaces)
 
     return rows_written
+
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description="Simulate pod movement data.")
