@@ -8,10 +8,11 @@ The Pear Pie is an affordable, high-privacy, ultra-low power, scalable solution 
 # WHO is it for:
 The Pear Pie has been designed for neurodivergent community members as priority users.
 As the system was developed by and for a person with lived-experience of neurodivergence, it has been developed specifically for an individual with Autism, ADHD and a Personal Drive for Autonomy profile. 
-Additionally, the function of the device is well suited to individuals experiencing challenges with interrelated brain systems such people with Alzheimer's, Traumatic Brain Injury, Developmental Topolographical Disorientation
-# WHERE is it used:
+Additionally, the function of the device is well suited to individuals experiencing challenges with interrelated brain functions such people with Alzheimer's, Traumatic Brain Injury as well as Developmental Topolographical Disorientation (Kaiko et. al, 2026).
+
 # WHY is it needed:
 
+# WHERE is it used:
 # HOW does it work:
 # WHAT hardware:
 
