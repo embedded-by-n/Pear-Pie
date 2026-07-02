@@ -9,7 +9,7 @@ my Dad for his technical advice
 my Mum for all the veggie soup 
 and my boyfriend Barnabas for helping me to remember to take breaks and offering emotional support when I have been stuck.
 
-# WHAT is it:
+# WHAT is it:  (A general overview)
 The Pear Pie is a reimagining of what a smart home system can be and who it is designed to serve.
 It is an affordable, high-privacy, ultra-low power and scalable solution for the home, that aims to find a practical, grass roots way to assist with a miriad of existing and future challenges faced by socioeconomically disadvantaged and marginalised members of our communities. 
 
