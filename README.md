@@ -1,17 +1,28 @@
-# Pear-Pie
+# Pear-Pie Design Brief
+
+# Acknowledgement 
+This project aims to demonstrate the culmination of applied technical and theoretical skills acquired across Semester 1 of the Master of Applied Cybernetics at the Australian National University. 
+I would like to thank my Professors, Safiya, Ash, Gabby, Songyuen, Paul, Jessamy, Andrew, Kathrin Daniels, Tom Biederman
+And fellow cohort Katrina, etc.etc.
+and senior students Sui Jackson, Kevin D, 
+my Dad for his technical advice
+my Mum for all the veggie soup 
+and my boyfriend Barnabas for helping me to remember to take breaks and offering emotional support when I have been stuck.
 
 # WHAT is it:
 The Pear Pie is a reimagining of what a smart home system can be and who it is designed to serve.
-It is an affordable, high-privacy, ultra-low power and scalable solution that aims to find a practical, grass roots way to assist with a miriad of existing and future challenges faced by socioeconomically disadvantaged and marginalised members of community. 
-
-that demonstrates the untapped innovation potential of designing with affordance of marginalised community members, in this case neurodivergent people, as priority. 
-
-The Pear Pie is an  that utulises the Cybernetic Wheel principles of SARS (Safe, Affordable, Responsible, Sustainable) (Okai-Ugbaje, S. (forthcoming)) and the PADE methodology (Duval et al, 2022) by including the intended user throughout the design process. 
+It is an affordable, high-privacy, ultra-low power and scalable solution for the home, that aims to find a practical, grass roots way to assist with a miriad of existing and future challenges faced by socioeconomically disadvantaged and marginalised members of our communities. 
 
 # WHO is it for:
 The Pear Pie has been designed for neurodivergent community members as priority users.
 As the system was developed by and for a person with lived-experience of neurodivergence, it has been developed specifically for an individual with Autism, ADHD and a Personal Drive for Autonomy profile. 
 Additionally, the function of the device is well suited to individuals experiencing challenges with interrelated brain functions such people with Alzheimer's, Traumatic Brain Injury as well as Developmental Topolographical Disorientation (Kaiko et. al, 2026).
+
+Tdemonstrates the untapped innovation potential of designing with affordance of marginalised community members, in this case neurodivergent people, as priority. 
+
+The Pear Pie is an  that utulises the Cybernetic Wheel principles of SARS (Safe, Affordable, Responsible, Sustainable) (Okai-Ugbaje, S. (forthcoming)) and the PADE methodology (Duval et al, 2022) by including the intended user throughout the design process. 
+
+
 
 # WHY is it needed:
 
