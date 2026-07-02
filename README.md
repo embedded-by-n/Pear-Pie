@@ -6,6 +6,9 @@ The Pear Pie is a reimagining of the smart home system that demonstrates the unt
 The Pear Pie is an affordable, high-privacy, ultra-low power, scalable solution that utulises the Cybernetic Wheel principles of SARS (Safe, Affordable, Responsible, Sustainable) (Okai-Ugbaje, S. (forthcoming)) and the PADE methodology (Duval et al, 2022) by including the intended user throughout the design process. 
 
 # WHO is it for:
+The Pear Pie has been designed for neurodivergent community members as priority users.
+As the system was developed by and for a person with lived-experience of neurodivergence, it has been developed specifically for an individual with Autism, ADHD and a Personal Drive for Autonomy profile. 
+Additionally, the function of the device is well suited to individuals experiencing challenges with interrelated brain systems such people with Alzheimer's, Traumatic Brain Injury, Developmental Topolographical Disorientation
 # WHERE is it used:
 # WHY is it needed:
 
@@ -222,7 +225,7 @@ The hub uses this to translate raw pod IDs into meaningful spaces during analysi
 * Duvall, J., Sivakanthan, S., Daveler, B., Sundaram, S. A., & Cooper, R. A. (2022). "Inventors with disabilities, an opportunity for innovation, inclusion, and economic development." *Technology and Innovation*, 22(3), 315-329. https://doi.org/10.21300/22.3.2022.5
 * Indigenous Protocol and Artificial Intelligence Working Group (2020). *Indigenous Protocol and Artificial Intelligence Position Paper*. Honolulu, Hawai'i.
 * ANUcybernetics. *hendrix-homeostat* (related work, ANU Master of Applied Cybernetics). https://github.com/ANUcybernetics/hendrix-homeostat
-
+* Kaiko I, Ham I van der and Schomaker J (30 June 2026) ‘The condition that causes people to get lost in their own home’, ABC News, accessed 2 July 2026, https://www.abc.net.au/news/2026-07-01/developmental-topographical-disorientation-people-lost-in-home/106863294, accessed 2 July 2026.
 ## Licence
 
 Copyright (c) 2026 Nicola Hall
