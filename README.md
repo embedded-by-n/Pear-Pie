@@ -1,6 +1,25 @@
 # Pear-Pie
 
-The Pear Pie is an off-grid modular home system using a two-tier Raspberry Pi 5 and Pi Pico control system with BLE mesh, RADAR, and edge ML to create a self-regulating feedback loop. 
+# WHAT is it:
+The Pear Pie is a reimagining of the smart home system that demonstrates the untapped innovation potential of designing with affordance of marginalised community members as priority. 
+
+The Pear Pie is an affordable, high-privacy, ultra-low power, scalable solution that utulises the Cybernetic Wheel principles of SARS (Safe, Affordable, Responsible, Sustainable) (Okai-Ugbaje, S. (forthcoming)) and the PADE methodology (Duval et al, 2022) by including the intended user throughout the design process. 
+
+# WHO is it for:
+# WHERE is it used:
+# WHY is it needed:
+
+# HOW does it work:
+# WHAT hardware:
+
+# WHAT software:
+
+
+
+
+
+
+an off-grid modular home system using a two-tier Raspberry Pi 5 and Pi Pico control system with BLE mesh, RADAR, and edge ML to create a self-regulating feedback loop. 
 Inspired by W. Ross Ashby's homeostat (1948) and designed by a neurodivergent person for people with fluctuating capacity, it learns each user's homeostasis over time, adapts its actuation style accordingly, and recognises emergent patterns across the distributed pod network to help users pre-empt capacity shifts. 
 First-order learning happens on the BLE mesh as pods regulate the home through peer-to-peer broadcast; second-order learning happens at the hub, which observes the network's behaviour over days and weeks and updates the rules the pods follow, so the system fits each user's homeostasis as it changes.
 Particular care is given to PDA-profile (Persistent Drive for Autonomy) neurodivergent users, supporting executive functioning and working memory by externalising cognitive load. Asking who we unconsciously see as viable users of cutting-edge technology: the Pear Pie embodies the curb-cut effect. Design affordances for disability as a priority, and everyone benefits.
