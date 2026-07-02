@@ -1,7 +1,7 @@
 # Pear-Pie
 
 # WHAT is it:
-The Pear Pie is a reimagining of the smart home system that demonstrates the untapped innovation potential of designing with affordance of marginalised community members as priority. 
+The Pear Pie is a reimagining of the smart home system that demonstrates the untapped innovation potential of designing with affordance of marginalised community members, in this case neurodivergent people, as priority. 
 
 The Pear Pie is an affordable, high-privacy, ultra-low power, scalable solution that utulises the Cybernetic Wheel principles of SARS (Safe, Affordable, Responsible, Sustainable) (Okai-Ugbaje, S. (forthcoming)) and the PADE methodology (Duval et al, 2022) by including the intended user throughout the design process. 
 
