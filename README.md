@@ -1,7 +1,8 @@
 # Pear-Pie Design Brief
 
-'In theory there is no difference between theory and practice. 
-In practice, there is.'
+_'In theory there is no difference between theory and practice. 
+In practice, there is.'_
+
 (Don Norman, The Design of Everyday Things, 2018)
 
 # Acknowledgement 
