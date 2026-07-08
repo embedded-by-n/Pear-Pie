@@ -25,11 +25,14 @@ Designed to be low-cost, scalable, high-privacy and ultra-low power, utilising R
 
 # WHY is it needed: The problem.
 ## 1 Pervasive Interconnected System Challenges of the Neurodivergent Person.
-- map of the internal system of autistic/ADHD person (lived-experience)
-- interconnected map of the personal system
-- int map of relational landscape/jobs/etc
+    * internal system
+    * personal external system
+    * interpersonal systems
+    * wider welfare system
+    * wider employment systems
+    * national systems (economic losses of potential)
   
-2 Welfare system interplays NDIS etc flow chart
+## 2 Welfare system interplays NDIS etc flow chart
 
 
 Colonial roots of technological function:
