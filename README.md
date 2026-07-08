@@ -1,13 +1,12 @@
 # Pear-Pie Design Brief
 
 # Acknowledgement 
-This project is a demonstration of the applied technical skills and theoretical knowledge acquired across Semester 1 of the Master of Applied Cybernetics at the Australian National University, in combination with my professional experience in the disability sector and lived-expertise in neurodivergence. 
+This project is a culmination of my professional and lived-experience expertise in disability system navigation and a demonstration of the applied technical skills and theoretical knowledge acquired across Semester 1 of the Master of Applied Cybernetics at the Australian National University.
 
-I would like to thank my Professors Safiya, Ash, Gabby, Songyuen, Paul, Jessamy, Andrew, Kathrin, Tom and all the staff of the School of Cybernetics, for their open-mindedness, patience and support. It is not easy to place trust in students with affordance requirements that contradict traditional academic models. The active commitment of the School of Cybernetics to practice diversity inclusion has given me the opportunity to contribute and make a difference, in a way that would not otherwise be possible. 
+I would like to thank my Professors Safiya, Ash, Gabby, Songyuen, Paul, Jessamy, Andrew, Kathrin, Tom and all the staff of the School of Cybernetics, for their open-mindedness, patience and support. 
+It is not easy to place trust in students with affordance requirements that contradict traditional academic models. Thank you for sharing your expertise, time and passion for cybernetics. Thank you for actively practicing inclusion of diversity in the School of Cybernetics, I am inspired every day by your practical optimism about the future and the opportunity that you have given me to have a voice and contribute to making a differene in the world. 
 
-I really believe that there are special world healing things happening in this field and your capacity to think open-mindedly and inclusively has been so encouraging and your wildly diverse knowledge and skills and interests have inspired me to keep trying - thank you.
-
-Thank you also to my fellow cohort of 2026, the comraderies, support, advice and expertise has gotten me through some tough momens, Katrina, Sam, Muhammad, Kane, Yeu, Grace, Jim, Gareth, Jules and Dennis. 
+Thank you also to my fellow cohort of 2026, your comraderie, support, advice and expertise has gotten me through some tough momens, Katrina, Sam, Muhammad, Kane, Yeu, Grace, Jim, Gareth, Jules and Dennis. 
 Also to senior students Sui Jackson for his knowledge on homestats, general encouragement, support and generosity with parts.
 Thank you to my Dad for his technical knowledge and skills and sitting up late to debug with me (we got there in the end).
 Thank you to my Mum for feeding me soup and encouraging me at the 11th hour.
