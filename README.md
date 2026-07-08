@@ -10,7 +10,7 @@ Thank you also to my fellow cohort of 2026, your comraderie, support, advice and
 Also to senior students Sui Jackson for his knowledge on homestats, general encouragement, support and generosity with parts.
 Thank you to my Dad for his technical knowledge and skills and sitting up late to debug with me (we got there in the end).
 Thank you to my Mum for feeding me soup and encouraging me at the 11th hour.
-Thank you to my boyfriend Barnabas for helping me to take breaks, offering emotional support when I have been stuck and being someone to look up to in academia, you inspire me. 
+Thank you to my boyfriend Barnabas for helping me to take breaks, offering emotional support when I have been stuck and being someone I look up to very much in academia, you inspire me every day.
 
 # WHAT is it:  A general overview.
 The Pear Pie is a reimagining of what a smart home system can be and who it is designed to serve.
