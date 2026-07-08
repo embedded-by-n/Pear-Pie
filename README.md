@@ -49,6 +49,10 @@ Where you will be able to face the trials and tribulations of attempting to gain
 The importance of reading through these diagrams carefully cannot be understated, as many of the design features and choices may seem non-sensical to a person without lived-understanding of neurodivergence. 
 Without providing you with an explicit explanation and sense of the scope, complexity and strain that invisible disability places on a neurodivergent person, the gravity of the solutions that the Pear Pie provide are not able to be seen or fully appreciated for the potential positive impact they may have on the life of a person who has had to survive without these afforance requirements being met. 
 
+<iframe src="https://embed.kumu.io/e6a129d9d2837f78e2d4df0fe216861c" width="940" height="600" frameborder="0"></iframe>
+
+
+
     * internal system
     * personal external system
     * interpersonal systems
