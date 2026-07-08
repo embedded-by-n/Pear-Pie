@@ -24,6 +24,19 @@ The Pear Pie is a reimagining of the smart home system.
 Designed to be low-cost, scalable, high-privacy and ultra-low power, utilising RADAR sensing and edge machine learning technologies.
 
 # WHY is it needed: The problem.
+## 1 Pervasive Interconnected System Challenges of the Neurodivergent Person.
+- map of the internal system of autistic/ADHD person (lived-experience)
+- interconnected map of the personal system
+- int map of relational landscape/jobs/etc
+  
+2 Welfare system interplays NDIS etc flow chart
+
+
+Colonial roots of technological function:
+Mass production design:
+
+(designed for mass consumption, optimisation and productivity
+s our society continues to technologically evolve, we are headed in the direction of power and wealth concentration, this naturally includes the concentration of access to technologies, innovations and 
 
 The evolution of technocratic society, wealth inequality we can help people to live better lives and work to minimise the painful inaffordances and catch-22 barriers created by the lived realities of even well-intentioned social welfare system design.
 
