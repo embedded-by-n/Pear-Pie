@@ -14,7 +14,9 @@ Thank you to my boyfriend Barnabas for helping me to take breaks, offering emoti
 
 # WHAT is it:  A general overview.
 The Pear Pie is a reimagining of what a smart home system can be and who it is designed to serve.
-It is an affordable, high-privacy, ultra-low power and scalable solution for the home, that aims to find a practical, grass roots way to assist with a miriad of existing and future challenges faced by socioeconomically disadvantaged and marginalised members of our communities. In particular to find was to bring technological innovations cost effectively to people who are otherwise exclude by capacity, funds or beaurocracy. By mapping the lived-realities of systems and building solutions from the position of those most disenfranchised, I believe that we can help people to live better lives and work to minimise the painful inaffordances and catch-22 barriers created by the lived realities of even well-intentioned social welfare system design.
+It is an affordable, high-privacy, ultra-low power and scalable solution for the home, that aims to find a practical, grass roots way to assist with a miriad of existing and future challenges faced by socioeconomically disadvantaged and marginalised members of our communities. 
+In particular the overarching aim is to find a way to bring high-tech components and bespoke innovations, cost effectively to people who are otherwise exclude by capacity, funds or slow-moving systems of governance. 
+The evolution of technocratic society, wealth inequality we can help people to live better lives and work to minimise the painful inaffordances and catch-22 barriers created by the lived realities of even well-intentioned social welfare system design.
 
 # WHO is it for:
   # The system in question.
