@@ -46,6 +46,9 @@ Following this,
 Diagram B will give the reader the chance to have their very own rapid #*Choose-your-own-unafforded-adventure*!\
 Where you will be able to face the trials and tribulations of attempting to gain welfare system support as a person who is neurodivergent. 
 
+The importance of reading through these diagrams carefully cannot be understated, as many of the design features and choices may seem non-sensical to a person without lived-understanding of neurodivergence. 
+Without providing you with an explicit explanation and sense of the scope, complexity and strain that invisible disability places on a neurodivergent person, the gravity of the solutions that the Pear Pie provide are not able to be seen or fully appreciated for the potential positive impact they may have on the life of a person who has had to survive without these afforance requirements being met. 
+
     * internal system
     * personal external system
     * interpersonal systems
