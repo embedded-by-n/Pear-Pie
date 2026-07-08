@@ -23,6 +23,10 @@ Thank you to my boyfriend Barnabas for helping me to rest and take breaks, offer
 The Pear Pie is a reimagining of the smart home system.
 Designed to be low-cost, scalable, high-privacy and ultra-low power, utilising RADAR sensing and edge machine learning technologies.
 
+# WHY is it needed: The problem.
+
+The evolution of technocratic society, wealth inequality we can help people to live better lives and work to minimise the painful inaffordances and catch-22 barriers created by the lived realities of even well-intentioned social welfare system design.
+
 # WHY is it needed: The GOAL!
 To design a cyber-physical system that functions on a grass-roots level to practically intervene in the cycle of to practically address the interconnected system challenges faced by neurodivergent people. 
 
@@ -38,13 +42,7 @@ neurodivergent people increases the autonomy and dignity of neurodivergent peopl
 
 high-tech components and bespoke technological design, cost effectively to people who are otherwise exclude by capacity, funds or slow-moving systems of governance. , that aims to find a practical, grass roots way to assist low socioeconomic and unafforded(disabled) people
 
-# WHY is it needed: The problem.
 
-
-
-
-
-The evolution of technocratic society, wealth inequality we can help people to live better lives and work to minimise the painful inaffordances and catch-22 barriers created by the lived realities of even well-intentioned social welfare system design.
 
 # WHO is it for:
   # The system in question.
