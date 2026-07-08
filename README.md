@@ -23,12 +23,22 @@ Thank you to my boyfriend Barnabas for helping me to rest and take breaks, offer
 The Pear Pie is a reimagining of the smart home system.
 Designed to be low-cost, scalable, high-privacy and ultra-low power, utilising RADAR sensing and edge machine learning technologies.
 
-WHY is it needed: The GOAL!
-The overarching design goal was to invent a cyber-physical system that practically addresses the limitations and barriers in our current welfare systems that prevent neurodivergent people from receiving access and care necessary to meet their basic, access equitable quality of life and engage to their full potential in community and society.
+# WHY is it needed: The GOAL!
+To design a cyber-physical system that functions on a grass-roots level to practically intervene in the cycle of to practically address the interconnected system challenges faced by neurodivergent people. 
+
+Practically assisting the individual to overcome the catch-22 barriers that exist in our current welfare systems such as the NDIS, DSP and Aged Care Systems. increasing agency, autonomy and quality of life.
+
+at a grassroots level, overcome catch-22 access barriers to welfare systems such as the NDIS.
+
+agency, autonomy and quality of life for neurodivergent people by building a cyber-physical system that practically addresses the daily challenges and catch-22 barriers that interconnect across sytems  invent a cyber-physical system that practically addresses the catch-22 barriers and daily challenges that neurodivergent people face every day. 
+
+neurodivergent people increases the autonomy and dignity of neurodivergent people practically addresses the multi-dimensional, catch-22 barriers faced by neurodivergent people everyday in their personal and professional lives and attempts to access and engage with welfare systems. 
+
+, which prevent neurodivergent people from receiving necessary care and therefore access to an equitable quality of life. 
 
 high-tech components and bespoke technological design, cost effectively to people who are otherwise exclude by capacity, funds or slow-moving systems of governance. , that aims to find a practical, grass roots way to assist low socioeconomic and unafforded(disabled) people
 
-WHY is it needed: The problem.
+# WHY is it needed: The problem.
 
 
 
