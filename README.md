@@ -23,11 +23,12 @@ Thank you to my boyfriend Barnabas for helping me to rest and take breaks, offer
 The Pear Pie is a reimagining of the smart home system.
 Designed to be low-cost, scalable, high-privacy and ultra-low power, utilising RADAR sensing and edge machine learning technologies.
 
-The overarching design goal was to find a way to address existing limitations and barriers in the welfare system that prevent people with neurological unaffordance (disabilities) from receiving access and care
+WHY is it needed: The GOAL!
+The overarching design goal was to invent a cyber-physical system that practically addresses the limitations and barriers in our current welfare systems that prevent neurodivergent people from receiving access and care necessary to meet their basic, access equitable quality of life and engage to their full potential in community and society.
 
 high-tech components and bespoke technological design, cost effectively to people who are otherwise exclude by capacity, funds or slow-moving systems of governance. , that aims to find a practical, grass roots way to assist low socioeconomic and unafforded(disabled) people
 
-
+WHY is it needed: The problem.
 
 
 
