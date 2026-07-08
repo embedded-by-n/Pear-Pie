@@ -38,7 +38,13 @@ these skills and challenges have pervasive interconnected implications across ev
 
 The unique and often paradoxical combination of needs and challenges we face, can lead to confusion, disbelief and even the slowed diagnosis of certain cohorts of neurodivergent people. 
 
-In the following diagrams, I attempt to give a lived-experience impression of the invisible complexity, reinforcing feedback loops faced by a person with their own unique presentation of AuDHD and the interconnected systems that these invisible challenges impact and vice versa. Following this, the next diagram gives the reader a rapid choose-your-own-unafforded-adventure! Where you will be able to face the trials and tribulations of attempting to gain welfare system support as a person who is neurodivergent. 
+In the following diagrams, I provide a lived-experience impression of the invisible complexity and reinforcing feedback loops faced by a person with their own unique presentation of AuDHD and the interconnected systems that these invisible challenges pervasively impact and vice versa.\
+
+Diagram A will show the internal experience and layers of external system relationships, overlayed onto an ecological systems map.
+
+Following this, 
+Diagram B will give the reader the chance to have their very own rapid #*Choose-your-own-unafforded-adventure*!\
+Where you will be able to face the trials and tribulations of attempting to gain welfare system support as a person who is neurodivergent. 
 
     * internal system
     * personal external system
