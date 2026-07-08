@@ -20,13 +20,13 @@ Thank you Dad for your technical knowledge and skills.
 Thank you to my boyfriend Barnabas for helping me to rest and take breaks, offering emotional support when I have been stuck, for believing in my abilities and for being someone I look up to in academia, you inspire me every day. 
 
 # WHAT is it:  A general overview.
-The Pear Pie is a reimagining of what a smart home system can be and who we prioritise as target users. 
+The Pear Pie is a reimagining of the smart home system.
+Designed to be low-cost, scalable, high-privacy and ultra-low power, utilising RADAR sensing and edge machine learning technologies.
 
-The overarching design goal was to find a way to address existing limitations and barriers in the welfare system that prevent people with neurological unaffordance (disabilities), the opportunity to access 
+The overarching design goal was to find a way to address existing limitations and barriers in the welfare system that prevent people with neurological unaffordance (disabilities) from receiving access and care
 
 high-tech components and bespoke technological design, cost effectively to people who are otherwise exclude by capacity, funds or slow-moving systems of governance. , that aims to find a practical, grass roots way to assist low socioeconomic and unafforded(disabled) people
 
-Designed to be low-cost, scalable, high-privacy, ultra-low power with RADAR sensing and edge machine learning.
 
 
 
