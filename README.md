@@ -1,17 +1,18 @@
 # Pear-Pie Design Brief
 
 # Acknowledgement 
-This project aims to demonstrate the culmination of applied technical and theoretical skills acquired across Semester 1 of the Master of Applied Cybernetics at the Australian National University. 
-I would like to thank my Professors, Safiya, Ash, Gabby, Songyuen, Paul, Jessamy, Andrew, Kathrin Daniels, Tom Biederman
-And fellow cohort Katrina, etc.etc.
-and senior students Sui Jackson, Kevin D, 
-my Dad for his technical advice
-my Mum for all the veggie soup 
-and my boyfriend Barnabas for helping me to remember to take breaks and offering emotional support when I have been stuck.
+This project demonstrates the culmination of lived-expertise in disability systems navigation as a person who is unafforded for nerodivergence, with applied technical and theoretical skills acquired across Semester 1 of the Master of Applied Cybernetics at the Australian National University. 
+
+I would like to thank my Professors for their open-mindedness, patience and support. It is not easy to have a spikey neurological profile and also hard for people to place trust in a student with needs that are unusual in comparison with a traditional academic model and it's time frames. Thank you Safiya, Ash, Gabby, Songyuen, Paul, Jessamy, Andrew, Kathrin, Tom and all the staff of the School of Cybernetics. I really believe that there are special world healing things happening in this field and your capacity to think open-mindedly and inclusively has been so encouraging and you wildly diverse knowledge and skills and interests have inspired me to keep trying - thank you.
+Thank you also to my fellow cohort of 2026, the comraderies, support, advice and expertise has gotten me through some tough momens, Katrina, Sam, Muhammad, Kane, Yeu, Grace, Jim, Gareth, Jules and Dennis. 
+Also to senior students Sui Jackson for his knowledge on homestats, general encouragement, support and generosity with parts.
+Thank you to my Dad for his technical knowledge and skills and sitting up late to debug with me )got there in the end.
+Thank you to my Mum for feeding me soup and encouraging me at the 11th hour.
+Thank you to my friend Barnabas for helping me to remember to take breaks and offering emotional support when I have been stuck.
 
 # WHAT is it:  A general overview.
 The Pear Pie is a reimagining of what a smart home system can be and who it is designed to serve.
-It is an affordable, high-privacy, ultra-low power and scalable solution for the home, that aims to find a practical, grass roots way to assist with a miriad of existing and future challenges faced by socioeconomically disadvantaged and marginalised members of our communities. 
+It is an affordable, high-privacy, ultra-low power and scalable solution for the home, that aims to find a practical, grass roots way to assist with a miriad of existing and future challenges faced by socioeconomically disadvantaged and marginalised members of our communities. In particular to find was to bring technological innovations cost effectively to people who are otherwise exclude by capacity, funds or beaurocracy. By mapping the lived-realities of systems and building solutions from the position of those most disenfranchised, I believe that we can help people to live better lives and work to minimise the painful inaffordances and catch-22 barriers created by the lived realities of even well-intentioned social welfare system design.
 
 # WHO is it for:
   # The system in question.
