@@ -1,5 +1,9 @@
 # Pear-Pie Design Brief
 
+'In theory there is no difference between theory and practice. 
+In practice, there is.'
+(Don Norman, The Design of Everyday Things, 2018)
+
 # Acknowledgement 
 This project is a culmination of my professional and lived-experience expertise in disability system navigation and a demonstration of the applied technical skills and theoretical knowledge acquired across Semester 1 of the Master of Applied Cybernetics at the Australian National University.
 
@@ -8,6 +12,7 @@ It is not easy to place trust in students with affordance requirements that cont
 
 Thank you also to my fellow cohort of 2026, your comraderie, support, advice and expertise has gotten me through some tough momens, Katrina, Sam, Muhammad, Kane, Yeu, Grace, Jim, Gareth, Jules and Dennis. 
 Also to senior students Sui Jackson for his knowledge on homestats, general encouragement, support and generosity with parts.
+
 Thank you to my Dad for his technical knowledge and skills and sitting up late to debug with me (we got there in the end).
 Thank you to my Mum for feeding me soup and encouraging me at the 11th hour.
 Thank you to my boyfriend Barnabas for helping me to take breaks, offering emotional support when I have been stuck and being someone I look up to very much in academia, you inspire me every day.
@@ -15,7 +20,9 @@ Thank you to my boyfriend Barnabas for helping me to take breaks, offering emoti
 # WHAT is it:  A general overview.
 The Pear Pie is a reimagining of what a smart home system can be and who it is designed to serve.
 It is an affordable, high-privacy, ultra-low power and scalable solution for the home, that aims to find a practical, grass roots way to assist with a miriad of existing and future challenges faced by socioeconomically disadvantaged and marginalised members of our communities. 
+
 In particular the overarching aim is to find a way to bring high-tech components and bespoke innovations, cost effectively to people who are otherwise exclude by capacity, funds or slow-moving systems of governance. 
+
 The evolution of technocratic society, wealth inequality we can help people to live better lives and work to minimise the painful inaffordances and catch-22 barriers created by the lived realities of even well-intentioned social welfare system design.
 
 # WHO is it for:
