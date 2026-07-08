@@ -25,6 +25,9 @@ Designed to be low-cost, scalable, high-privacy and ultra-low power, utilising R
 
 # WHY is it needed: The problem.
 ## 1 Pervasive Interconnected System Challenges of the Neurodivergent Person.
+The beauty and challenge of being neurodivergent is the unique combination of skills, challenges and affordance requirements we each possess. 
+A common phrase used in our community is
+_ *'If you've met one person with Autism, you've met one person with Autism'*_
     * internal system
     * personal external system
     * interpersonal systems
