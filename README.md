@@ -31,8 +31,8 @@ Designed to be low-cost, scalable, high-privacy and ultra-low power, utilising R
     * wider welfare system
     * wider employment systems
     * national systems (economic losses of potential)
-  
-## 2 Welfare system interplays NDIS etc flow chart
+
+    
 
 
 Colonial roots of technological function:
