@@ -2,7 +2,7 @@
 
 _'In theory there is no difference between theory and practice. 
 In practice, there is.'_\
-(Don Norman, The Design of Everyday Things, 2018)
+(Norman 2018, p.236)
 
 This project is an applied demonstration of the technical skills and theoretical knowledge that I have acquired across Semester 1 of the Master of Applied Cybernetics at the Australian National University, culminating in the Pear Pie Home System, a cyber-physical device informed by my professional career and lived-expertise in social welfare systems navigation and neurodivergence. 
 
