@@ -13,9 +13,10 @@ It is not easy to place trust in students with affordance requirements that cont
 Thank you also to my fellow cohort of 2026, your comraderie, support, advice and expertise has gotten me through some tough momens, Katrina, Sam, Muhammad, Kane, Yeu, Grace, Jim, Gareth, Jules and Dennis. 
 Also to senior students Sui Jackson for his knowledge on homestats, general encouragement, support and generosity with parts.
 
-Thank you to my Dad for his technical knowledge and skills and sitting up late to debug with me (we got there in the end).
-Thank you to my Mum for feeding me soup and encouraging me at the 11th hour.
-Thank you to my boyfriend Barnabas for helping me to take breaks, offering emotional support when I have been stuck and being someone I look up to very much in academia, you inspire me every day.
+Thank you Mum for feeding me midnight soup on Mondays.
+Thank you Dad for your technical knowledge and skills.
+
+Thank you to my boyfriend Barnabas for helping me to rest and take breaks, offering emotional support when I have been stuck, for believing in my abilities and for being someone I look up to in academia, you inspire me every day. 
 
 # WHAT is it:  A general overview.
 The Pear Pie is a reimagining of what a smart home system can be and who it is designed to serve.
