@@ -30,10 +30,10 @@ The beauty and challenge of being neurodivergent is the unique combination of sk
 A common phrase used in our community is:
 *'If you've met one person with Autism, you've met one person with Autism'*
 
-This is to say that the effective support of neurodivergent people *must* be highly individualised to be effective.
-A tool which affords one neurodivergent person, may simultaneously create a barrier for a different neurodivergent person.\ And this is before introducing the complexities of being multiply-neurodivergent. 
+This is to say that the effective affordance of neurodivergent people *must* also be individualised to be effective.
+For example, appropriate communication affordance for one person may be a physical aid with large buttons and for another person, like myself, the best communication aid is predictable format such as an email instead of verbal conversations.\ This is also before introducing the complexities of being multiply-neurodivergent.
 
-Due to the psychosocial nature of neurodivergence, many of the challenges we have personally and the barriers that we face are invisible, hence being called an *'hiddden disability'*.\
+Due to the psychosocial nature of neurodivergence, many of the challenges we have personally and the barriers that we face are invisible, hence being called an *'hiddden disability'*.
 these skills and challenges have pervasive interconnected implications across every avenue of our lives. Not helped by miseducation and stigma across politics, society and economics.
 
 
