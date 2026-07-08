@@ -256,6 +256,7 @@ The hub uses this to translate raw pod IDs into meaningful spaces during analysi
 * Indigenous Protocol and Artificial Intelligence Working Group (2020). *Indigenous Protocol and Artificial Intelligence Position Paper*. Honolulu, Hawai'i.
 * ANUcybernetics. *hendrix-homeostat* (related work, ANU Master of Applied Cybernetics). https://github.com/ANUcybernetics/hendrix-homeostat
 * Kaiko I, Ham I van der and Schomaker J (30 June 2026) ‘The condition that causes people to get lost in their own home’, ABC News, accessed 2 July 2026, https://www.abc.net.au/news/2026-07-01/developmental-topographical-disorientation-people-lost-in-home/106863294, accessed 2 July 2026.
+* Norman D (2013) *The design of everyday things: revised and expanded edition*, Basic Books, New York.
 ## Licence
 
 Copyright (c) 2026 Nicola Hall
