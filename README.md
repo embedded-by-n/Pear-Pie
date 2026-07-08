@@ -1,4 +1,4 @@
-# Pear-Pie Design Brief
+# Pear-Pie Cyber-Physical Home System - Design Brief
 
 _'In theory there is no difference between theory and practice. 
 In practice, there is.'_\
