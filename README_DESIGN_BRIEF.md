@@ -6,7 +6,7 @@ In practice, there is.'_\
 
 This project is an applied demonstration of the technical skills and theoretical knowledge that I have acquired across Semester 1 of the Master of Applied Cybernetics at the Australian National University, culminating in the Pear Pie Home System, a cyber-physical system informed by my professional career and lived-expertise in social welfare systems navigation and neurodivergence. 
 
-Beyond the Master of Applied Cybernetics, I am determined to stay in the field and contribute to the development of humanitarian technologies and systems communication methodologies that practically improve the function of social welfare systems and the understanding of people who work within them.
+Beyond the Master of Applied Cybernetics, I wish to continue in the field and contribute to the development of humanitarian technologies and systems communication methodologies that practically improve the design and function of social welfare systems to more genuinely afford those who rely upon them.
 
 improve the functional realities of social welfare systems for those who access them as well as increase
 
