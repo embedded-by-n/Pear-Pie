@@ -11,13 +11,26 @@ I would like to thank my Professors Safiya, Ash and Gabby in particular, for the
 
 In my experience, the active inclusion of neurodiverse people is not common place. Even less so, are inclusion practices that genuinely listen to and allow neurodivergent people the time and space required to perform to their best abilities. 
 
-The kindness that the staff and students in the School of Cybernetics have shown me, while I have learned to adjust to a new environment and juggle navigating a system that is not designed for someone like me to succeed, with the natural capacity fluctuations of being Autistic, has been incredibly moving.
+The kindness and encouragement that the staff and students in the School of Cybernetics have shown me, while I have learned to adjust to a new environment and juggle Autistic capacity fluctuations with navigating a system that is not designed for someone like me to succeed, has moved me. 
+
+Tom Biedermann - Resources, engouragement about futurism and thinking outside the box.
+Safiya - Resources, considerations of the security/privacy of individuals and for teahcing me about humanitarian engineering. 
+Ash - for helping me to learn about the sensorum which spurred on my considerations around calming technology.
+Gabby - machine learning, coding, words of advice around being a woman in technical areas. I look up to you very much. for helping to communnicate via email when i had no capacity. 
+Songyuen - Inspiration and resources on emergent properties in systems and machine learning 
+Andrew Meares - Resources (Lissek on hwo to communicate which discussed during demo day, also conversations with him about neurodivergence during the term) 
+Kathrin - For her encouragement to pursue autism system communication and improvement and for helping me to realise through her lectures that i am from a lineage of people that brought me here. This was very meaningful.
+Jessamy - teaching me about feminist engineeering and actor-netowrk theory
+Paul - encouragement and inspiration to be myself unapolagetically and what is a critical analysis anyway.. 
+
+
+I am inspired every day by your practical optimism about the future and the opportunity that you have given me to have a voice and contribute to making a difference for unafforded people.
 
 I am inspired every day by the time and resource generosity, expertise and passion of my Professors and fellow cohort. 
 I am determined to continue in the field of cybernetics and contribute my lived-experience practice in systems navigation to the theoretical and applied skills that I will continue to learn in the Masters of Applied Cybernetics. 
 
 
-Thank you for sharing your expertise, time and passion for cybernetics. Thank you for actively practicing inclusion of diversity in the School of Cybernetics, I am inspired every day by your practical optimism about the future and the opportunity that you have given me to have a voice and contribute to making a difference for unafforded people.
+Thank you for sharing your expertise, time and passion for cybernetics. 
 
 Thank you also to my fellow cohort of 2026, your comraderie, support, advice and expertise has gotten me through some tough momens, Katrina, Sam, Muhammad, Kane, Yeu, Grace, Jim, Gareth, Jules and Dennis. 
 Also to senior students Sui Jackson for his knowledge on homestats, general encouragement, support and generosity with parts.
