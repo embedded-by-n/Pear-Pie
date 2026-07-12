@@ -13,6 +13,8 @@ In my experience, the active inclusion of neurodiverse people is not common plac
 
 The kindness and encouragement that the staff and students in the School of Cybernetics have shown me, while I have learned to adjust to a new environment and juggle Autistic capacity fluctuations with navigating a system that is not designed for someone like me to succeed, has moved me. 
 
+Thank you for giving me the opportunity through Cybernetics to make a difference for people with disabilities and help others to understand that even if we need a bit more time and patience, we have so much knowledge and experience that we want to share. <3
+
 Tom Biedermann - Resources, engouragement about futurism and thinking outside the box.
 Safiya - Resources, considerations of the security/privacy of individuals and for teahcing me about humanitarian engineering. 
 Ash - for helping me to learn about the sensorum which spurred on my considerations around calming technology.
@@ -24,7 +26,6 @@ Jessamy - teaching me about feminist engineeering and actor-netowrk theory
 Paul - encouragement and inspiration to be myself unapolagetically and what is a critical analysis anyway.. 
 
 
-I am inspired every day by your practical optimism about the future and the opportunity that you have given me to have a voice and contribute to making a difference for unafforded people.
 
 I am inspired every day by the time and resource generosity, expertise and passion of my Professors and fellow cohort. 
 I am determined to continue in the field of cybernetics and contribute my lived-experience practice in systems navigation to the theoretical and applied skills that I will continue to learn in the Masters of Applied Cybernetics. 
