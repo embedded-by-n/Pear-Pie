@@ -24,9 +24,7 @@ The Pear Pie is a reimagining of the smart home system.
 Designed to be low-cost, scalable, high-privacy and ultra-low power, utilising RADAR sensing and edge machine learning technologies.
 
 # WHY is it needed: The problem.
-*'If you've met one person with Autism, you've met one person with Autism'*\
-- 
-A common phrase in the Autistic community.
+*'If you've met one person with Autism, you've met one person with Autism'*\  ~ A common phrase in the Autistic community.
 
 ## 1 Pervasive Interconnected System Challenges of the Neurodivergent Person.
 The beauty and challenge of being neurodivergent is that the combination of skills, challenges and affordance requirements we each possess, are unique.
