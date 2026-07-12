@@ -4,11 +4,11 @@ _'In theory there is no difference between theory and practice.
 In practice, there is.'_\
 (Norman 2018, p.236)
 
-This project is an applied demonstration of the technical skills and theoretical knowledge that I have acquired across Semester 1 of the Master of Applied Cybernetics at the Australian National University.
+This project is a cyber-physical demonstration of the technical skills and theoretical knowledge that I have acquired across Semester 1 of the Master of Applied Cybernetics at the Australian National University.
 
-The Pear Pie System is informed by lived and professional practice in neurodivergence and social welfare systems navigation.
-E
-, I understand I wanted to develop a device that would device which would equitably bring would increase the privacy, autonomy, dignity and equitable affordance of people with disabilities in everyday life. 
+The Pear Pie System is _informed by lived and professional practice_ in neurodivergence and social welfare systems navigation.
+
+By marrying these I wanted to develop a device that would device which would equitably bring would increase the privacy, autonomy, dignity and equitable affordance of people with disabilities in everyday life. 
 
 I wish to continue in the field beyond the Master of Applied Cybernetics and contribute to the development of humanitarian technologies and systems communication methodologies that practically improve the design and function of systems to more genuinely afford those who rely upon them.
 
