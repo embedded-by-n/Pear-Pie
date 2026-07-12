@@ -4,7 +4,7 @@ _'In theory there is no difference between theory and practice.
 In practice, there is.'_\
 (Norman 2018, p.236)
 
-This is the final solo project for Semester 1 in the Master of Applied Cybernetics, 2026 Cohort at the Australian National University and demonstrates the technical skills and theoretical knowledge acquired across Semester.
+This is the final solo project for Semester 1 in the Master of Applied Cybernetics 2026 Cohort at the Australian National University and demonstrates the technical skills and theoretical knowledge acquired across Semester.
 
 Through lived and professional practice in neurodivergence and social welfare systems navigation, I gained priceless understanding of the difference between well-intentioned policy-in-theory and that same policy-in-practice.
 
