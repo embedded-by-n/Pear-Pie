@@ -12,7 +12,7 @@ Having lived-expertise in neurodivergence and social welfare systems navigation,
 I wish to continue in the field beyond the Master of Applied Cybernetics and contribute to the development of humanitarian technologies and systems communication methodologies that practically improve the design and function of systems to more genuinely afford those who rely upon them.
 
 # Acknowledgement 
-The kindness and encouragement that I have felt in the School of Cybernetics, while learning to navigating a system that is not designed for someone with Autism, has meant a great deal to me. 
+The kindness and encouragement that I have felt in the School of Cybernetics, while learning to navigating an academic system that does not afford Autism, has meant a great deal to me. 
 
 I would like to thank my Professors Safiya, Ash and Gabby in particular, for their open-mindedness and patience.
 
