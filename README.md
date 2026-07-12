@@ -4,7 +4,7 @@ _'In theory there is no difference between theory and practice.
 In practice, there is.'_\
 (Norman 2018, p.236)
 
-This project is an applied demonstration of the technical skills and theoretical knowledge that I have acquired across Semester 1 of the Master of Applied Cybernetics at the Australian National University, culminating in the Pear Pie Home System, a cyber-physical device informed by my professional career and lived-expertise in social welfare systems navigation and neurodivergence. 
+This project is an applied demonstration of the technical skills and theoretical knowledge that I have acquired across Semester 1 of the Master of Applied Cybernetics at the Australian National University, culminating in the Pear Pie Home System, a cyber-physical system of devices informed by my professional career and lived-expertise in social welfare systems navigation and neurodivergence. 
 
 # Acknowledgement 
 
@@ -17,18 +17,20 @@ Also to senior students Sui Jackson for his knowledge on homestats, general enco
 Thank you Mum for feeding me midnight soup on Mondays.
 Thank you Dad for your technical knowledge and skills.
 
-Thank you to my boyfriend Barnabas for helping me to rest and take breaks, offering emotional support when I have been stuck, for believing in my abilities and for being someone I look up to in academia, you inspire me every day. 
+Thank you to my boyfriend Barnabas for helping me to rest and take breaks, offering emotional support when I have been stuck, for believing in me.
 
 # WHAT is it:  A general overview.
 The Pear Pie is a reimagining of the smart home system.
 Designed to be low-cost, scalable, high-privacy and ultra-low power, utilising RADAR sensing and edge machine learning technologies.
 
 # WHY is it needed: The problem.
-## 1 Pervasive Interconnected System Challenges of the Neurodivergent Person.
-The beauty and challenge of being neurodivergent is the unique combination of skills, challenges and affordance requirements we each possess.
+*'If you've met one person with Autism, you've met one person with Autism'*\
+- 
+A common phrase in the Autistic community.
 
-A common phrase used in our community is:
-*'If you've met one person with Autism, you've met one person with Autism'*
+## 1 Pervasive Interconnected System Challenges of the Neurodivergent Person.
+The beauty and challenge of being neurodivergent is that the combination of skills, challenges and affordance requirements we each possess, are unique.
+
 
 This is to say that the effective affordance of neurodivergent people *must* also be individualised to be effective.
 For example, appropriate communication affordance for one person may be a physical aid with large buttons and for another person, like myself, the best communication aid is predictable format such as an email instead of verbal conversations.\ This is also before introducing the complexities of being multiply-neurodivergent.
