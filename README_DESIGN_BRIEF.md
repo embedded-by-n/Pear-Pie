@@ -8,8 +8,12 @@ This project is an applied demonstration of the technical skills and theoretical
 
 # Acknowledgement 
 
+I would like to thank my Professors at the School of Cybernetics, for their encouragement, open-mindedness and patience.
+The active inclusion of diversity and understanding
+It is not easy to place trust in students with affordance requirements that contradict traditional academic models. 
+
 I would like to thank my Professors Safiya, Ash, Gabby, Songyuen, Paul, Jessamy, Andrew, Kathrin, Tom and all the staff of the School of Cybernetics, for their open-mindedness, patience and support. 
-It is not easy to place trust in students with affordance requirements that contradict traditional academic models. Thank you for sharing your expertise, time and passion for cybernetics. Thank you for actively practicing inclusion of diversity in the School of Cybernetics, I am inspired every day by your practical optimism about the future and the opportunity that you have given me to have a voice and contribute to making a difference for unafforded people.
+Thank you for sharing your expertise, time and passion for cybernetics. Thank you for actively practicing inclusion of diversity in the School of Cybernetics, I am inspired every day by your practical optimism about the future and the opportunity that you have given me to have a voice and contribute to making a difference for unafforded people.
 
 Thank you also to my fellow cohort of 2026, your comraderie, support, advice and expertise has gotten me through some tough momens, Katrina, Sam, Muhammad, Kane, Yeu, Grace, Jim, Gareth, Jules and Dennis. 
 Also to senior students Sui Jackson for his knowledge on homestats, general encouragement, support and generosity with parts.
