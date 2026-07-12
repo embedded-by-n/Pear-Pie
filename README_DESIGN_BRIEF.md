@@ -20,15 +20,19 @@ Thank you Dad for your technical knowledge and skills.
 Thank you to my boyfriend Barnabas for helping me to rest and take breaks, offering emotional support when I have been stuck, for believing in me.
 
 # WHAT is it:  A general overview.
-The Pear Pie is a reimagining of the smart home system.
+The Pear Pie is a reimagining of the smart home system, designed for neurodivergent people as the primary user.
+Throughout this project I explored the following questions:
+- Who do we consider as the end user of the technologies that we design?
+- How do we proliferate them as equitably as possible throughout society?
+- How
 Designed to be low-cost, scalable, high-privacy and ultra-low power, utilising RADAR sensing and edge machine learning technologies.
 
 # WHY is it needed: The problem.
-*'If you've met one person with Autism, you've met one person with Autism'*\  ~ A common phrase in the Autistic community.
+*'If you've met one person with Autism, you've met one person with Autism'*  
+~ A common phrase in the Autistic community.
 
 ## 1 Pervasive Interconnected System Challenges of the Neurodivergent Person.
 The beauty and challenge of being neurodivergent is that the combination of skills, challenges and affordance requirements we each possess, are unique.
-
 
 This is to say that the effective affordance of neurodivergent people *must* also be individualised to be effective.
 For example, appropriate communication affordance for one person may be a physical aid with large buttons and for another person, like myself, the best communication aid is predictable format such as an email instead of verbal conversations.\ This is also before introducing the complexities of being multiply-neurodivergent.
