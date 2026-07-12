@@ -6,6 +6,8 @@ In practice, there is.'_\
 
 This project is an applied demonstration of the technical skills and theoretical knowledge that I have acquired across Semester 1 of the Master of Applied Cybernetics at the Australian National University, culminating in the Pear Pie Home System, a cyber-physical system of devices informed by my professional career and lived-expertise in social welfare systems navigation and neurodivergence. 
 
+I am determined to continue in the field of Cybernetics, where I wish to contribute to the development of humanitarian technologies and system communication methodologies that help to improve the functional realities of social welfare systems and equitable access to technologies that increase the privacy, autonomy, dignity and affordance of people with disabilities.
+
 # Acknowledgement 
 The kindness and encouragement that I have felt from the students and staff in the School of Cybernetics, while learning to navigating an academic system that is not designed for someone with Autism to succeed, has meant a great deal to me. 
 
@@ -13,7 +15,11 @@ I would like to thank my Professors Safiya, Ash and Gabby in particular, for the
 
 In my experience, the active inclusion of neurodiverse people is not common place. Even less so, are inclusion practices that genuinely listen to and allow neurodivergent people the time and space required to perform to their best abilities. 
 
-I recognise the challenge that professors and employers face in taking a chance of neurodivergent people, and I am determined to contribute to finding ways to communicate across neurotypes and silos,
+I recognise the challenge that professors and employers face in taking a chance of neurodivergent people, and I am determined to continue in the field of Cybernetics, where I wish to contribute to the development of humanitarian technologies and system communication methodologies that help to improve the functional realities of social welfare systems and equitable access to technologies that increase the privacy, autonomy, dignity and affordance of people with disabilities.
+
+make a difference in the lives of people who are not afforded in their environments.
+
+methodologies to communicate intersectionally about the valuable contribution that we have to offer if we are genuinely afforded. 
 
 the opportunity through Cybernetics to make a difference for people with disabilities and help others to understand that even if we need a bit more time and patience, we have so much knowledge and experience that we want to share. <3
 
