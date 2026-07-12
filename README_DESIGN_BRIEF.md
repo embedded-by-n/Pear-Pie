@@ -4,9 +4,9 @@ _'In theory there is no difference between theory and practice.
 In practice, there is.'_\
 (Norman 2018, p.236)
 
-This project is a cyber-physical demonstration of the technical skills and theoretical knowledge that I have acquired across Semester 1 of the Master of Applied Cybernetics at the Australian National University.
+This project is a cyber-physical demonstration of the technical skills and theoretical knowledge e acquired across Semester 1 of the Master of Applied Cybernetics at the Australian National University.
 
-Through lived and professional practice in neurodivergence and social welfare systems navigation, I gained priceless understanding of the difference between well-intentioned policy in theory and that same policy-in-practice.
+Through lived and professional practice in neurodivergence and social welfare systems navigation, I gained priceless understanding of the difference between well-intentioned policy-in-theory and that same policy-in-practice.
 
 By marrying these I wanted to develop a device that would device which would equitably bring would increase the privacy, autonomy, dignity and equitable affordance of people with disabilities in everyday life. 
 
