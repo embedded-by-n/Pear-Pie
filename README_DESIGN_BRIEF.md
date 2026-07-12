@@ -4,13 +4,12 @@ _'In theory there is no difference between theory and practice.
 In practice, there is.'_\
 (Norman 2018, p.236)
 
-This project is an applied demonstration of the technical skills and theoretical knowledge that I have acquired across Semester 1 of the Master of Applied Cybernetics at the Australian National University, culminating in the Pear Pie Home System, a cyber-physical system informed by my professional career and lived-expertise in social welfare systems navigation and neurodivergence. 
+This project is an applied demonstration of the technical skills and theoretical knowledge that I have acquired across Semester 1 of the Master of Applied Cybernetics at the Australian National University.
 
-Beyond the Master of Applied Cybernetics, I wish to continue in the field and contribute to the development of humanitarian technologies and systems communication methodologies that practically improve the design and function of social welfare systems to more genuinely afford those who rely upon them.
+The Pear Pie System is informed by practice.
+Having lived-expertise in neurodivergence and social welfare systems navigation, I wanted to develop a device which would increase the privacy, autonomy, dignity and equitable affordance of people with disabilities in everyday life. 
 
-improve the functional realities of social welfare systems for those who access them as well as increase
-
-I also wish to continue developing humanitarian technologies that increase  equitable access to technologies that increase the privacy, autonomy, dignity and affordance of people with disabilities.
+I wish to continue in the field beyond the Master of Applied Cybernetics and contribute to the development of humanitarian technologies and systems communication methodologies that practically improve the design and function of systems to more genuinely afford those who rely upon them.
 
 # Acknowledgement 
 The kindness and encouragement that I have felt from the students and staff in the School of Cybernetics, while learning to navigating an academic system that is not designed for someone with Autism to succeed, has meant a great deal to me. 
