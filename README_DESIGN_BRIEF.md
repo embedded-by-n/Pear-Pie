@@ -7,9 +7,10 @@ In practice, there is.'_\
 This project is an applied demonstration of the technical skills and theoretical knowledge that I have acquired across Semester 1 of the Master of Applied Cybernetics at the Australian National University, culminating in the Pear Pie Home System, a cyber-physical system of devices informed by my professional career and lived-expertise in social welfare systems navigation and neurodivergence. 
 
 # Acknowledgement 
+In my experience, the active inclusion of neurodiverse people is not common place. Even less so, is inclusions that goes beyond the bounds of neurotypical 
+I would like to tank my Professors at the School of Cybernetics, for their encouragement, open-mindedness and patience.
+ I am so grateful to have been accepted into an environment where diversity of theoretical and practical knowledge are celebrated. 
 
-I would like to thank my Professors at the School of Cybernetics, for their encouragement, open-mindedness and patience.
-The active inclusion of diversity and understanding
 It is not easy to place trust in students with affordance requirements that contradict traditional academic models. 
 
 I would like to thank my Professors Safiya, Ash, Gabby, Songyuen, Paul, Jessamy, Andrew, Kathrin, Tom and all the staff of the School of Cybernetics, for their open-mindedness, patience and support. 
