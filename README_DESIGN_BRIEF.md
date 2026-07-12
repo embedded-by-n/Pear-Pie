@@ -19,13 +19,16 @@ Thank you Dad for your technical knowledge and skills.
 
 Thank you to my boyfriend Barnabas for helping me to rest and take breaks, offering emotional support when I have been stuck, for believing in me.
 
-# WHAT is it:  A general overview.
+# Definition of Key Terms:
+Affordance
+
+
+- # WHAT is it:  A general overview.
 The Pear Pie is a reimagining of the smart home system, designed for neurodivergent people as the primary user.
-Throughout this project I explored the following questions:
-- Who do we consider as the end user of the technologies that we design?
-- How do we proliferate them as equitably as possible throughout society?
-- How
 Designed to be low-cost, scalable, high-privacy and ultra-low power, utilising RADAR sensing and edge machine learning technologies.
+
+
+
 
 # WHY is it needed: The problem.
 *'If you've met one person with Autism, you've met one person with Autism'*  
