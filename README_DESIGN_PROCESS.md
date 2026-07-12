@@ -9,3 +9,10 @@ Through lived and professional practice in neurodivergence and social welfare sy
 By marrying these I wanted to develop a device that would device which would equitably bring would increase the privacy, autonomy, dignity and equitable affordance of people with disabilities in everyday life. 
 
 
+and I am determined to continue in the field of Cybernetics, where I wish to contribute to the development of humanitarian technologies and system communication methodologies that help to improve the functional realities of social welfare systems and equitable access to technologies that increase the privacy, autonomy, dignity and affordance of people with disabilities.
+
+make a difference in the lives of people who are not afforded in their environments.
+
+methodologies to communicate intersectionally about the valuable contribution that we have to offer if we are genuinely afforded. 
+
+the opportunity through Cybernetics to make a difference for people with disabilities and help others to understand that even if we need a bit more time and patience, we have so much knowledge and experience that we want to share. <3
