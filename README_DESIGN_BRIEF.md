@@ -7,13 +7,16 @@ In practice, there is.'_\
 This project is an applied demonstration of the technical skills and theoretical knowledge that I have acquired across Semester 1 of the Master of Applied Cybernetics at the Australian National University, culminating in the Pear Pie Home System, a cyber-physical system of devices informed by my professional career and lived-expertise in social welfare systems navigation and neurodivergence. 
 
 # Acknowledgement 
-In my experience, the active inclusion of neurodiverse people is not common place. Even less so, is inclusions that goes beyond the bounds of neurotypical 
-I would like to tank my Professors at the School of Cybernetics, for their encouragement, open-mindedness and patience.
- I am so grateful to have been accepted into an environment where diversity of theoretical and practical knowledge are celebrated. 
+I would like to thank my Professors Safiya, Ash and Gabby in particular, for their open-mindedness, patience, continual understanding and belief in my abilities.
 
-It is not easy to place trust in students with affordance requirements that contradict traditional academic models. 
+In my experience, the active inclusion of neurodiverse people is not common place. Even less so, are inclusion practices that genuinely listen to and allow neurodivergent people the time and space required to perform to their best abilities. 
 
-I would like to thank my Professors Safiya, Ash, Gabby, Songyuen, Paul, Jessamy, Andrew, Kathrin, Tom and all the staff of the School of Cybernetics, for their open-mindedness, patience and support. 
+The kindness that the staff and students in the School of Cybernetics have shown me, while I have learned to adjust to a new environment and juggle navigating a system that is not designed for someone like me to succeed, with the natural capacity fluctuations of being Autistic, has been incredibly moving.
+
+I am inspired every day by the time and resource generosity, expertise and passion of my Professors and fellow cohort. 
+I am determined to continue in the field of cybernetics and contribute my lived-experience practice in systems navigation to the theoretical and applied skills that I will continue to learn in the Masters of Applied Cybernetics. 
+
+
 Thank you for sharing your expertise, time and passion for cybernetics. Thank you for actively practicing inclusion of diversity in the School of Cybernetics, I am inspired every day by your practical optimism about the future and the opportunity that you have given me to have a voice and contribute to making a difference for unafforded people.
 
 Thank you also to my fellow cohort of 2026, your comraderie, support, advice and expertise has gotten me through some tough momens, Katrina, Sam, Muhammad, Kane, Yeu, Grace, Jim, Gareth, Jules and Dennis. 
@@ -23,6 +26,8 @@ Thank you Mum for feeding me midnight soup on Mondays.
 Thank you Dad for your technical knowledge and skills.
 
 Thank you to my boyfriend Barnabas for helping me to rest and take breaks, offering emotional support when I have been stuck, for believing in me.
+
+
 
 # Definition of Key Terms:
 Affordance
