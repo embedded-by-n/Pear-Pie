@@ -1,11 +1,14 @@
 # Final Maker Project: Pear-Pie Cyber-Physical Home System - Design Brief
-# CYBN8001 Building Cyber-Physical Systems
-# Master of Applied Cybernetics, 2026 Cohort, Australian National University
+# CYBN8001 Building Cyber-Physical Systems, Master of Applied Cybernetics, 2026 Cohort, Australian National University
 
 _'In theory there is no difference between theory and practice. 
 In practice, there is.'_\
 (Norman 2018, p.236)
 
+# Background: Lived-Experience Practice as the Heart of the Technology
+Night and O'day Information Ecologies and Metropolis the 'heart of the technology'
+Not for us without us  - get quote
+Lived-expertise design
 - my experience = 'practice' (lived-expertise in neurodivergence, professional career for over a decade in psychosocial sector, building devices to help my clients with practical problems)
 - applied cybernetics masters = 'theory'. I see cybernetics losely as the theory of practice. plus other theoretical studies i have undertaken related to them.
 
@@ -13,6 +16,15 @@ In practice, there is.'_\
 
 
 # Acknowledgement 
+- General overview of thanks for affordance of neurodivergent persons
+- More specificly that this is not common.
+- I want to contribute to the voice of people in applied cybernetics and this academis discourse and humanitarian engineering problems.
+- Thanks specifically to convenors and gabby
+- dot points of each professor and how they helped
+- dot points of each student and how they helped.
+- mum and dad
+- barnabas
+  
 The kindness and encouragement that I have felt in the School of Cybernetics, while learning to navigating an academic system that does not afford Autism, has meant a great deal to me. 
 
 I would like to thank my Professors Safiya, Ash and Gabby in particular, for their open-mindedness and patience.
@@ -54,6 +66,10 @@ Affordance Theory:
 Curb Cut Effect:
 Capability Approach:
 
+# Methodological Underpinnings:
+PADE MODEL
+CYBERNETIC WHEEL
+DIAMOND APPROACH
 
 
 
@@ -63,10 +79,10 @@ Designed to be low-cost, scalable, high-privacy and ultra-low power, utilising R
 
 
 
-
 # WHY is it needed: The problem.
 *'If you've met one person with Autism, you've met one person with Autism'*  
 ~ A common phrase in the Autistic community.
+
 
 ## 1 Pervasive Interconnected System Challenges of the Neurodivergent Person.
 The beauty and challenge of being neurodivergent is that the combination of skills, challenges and affordance requirements we each possess, are unique.
