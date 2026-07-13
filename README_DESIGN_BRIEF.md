@@ -6,11 +6,9 @@ _'In theory there is no difference between theory and practice.
 In practice, there is.'_\
 (Norman 2018, p.236)
 
-This project represents the culmination of both theory and practice from my studies in the Master of Applied Cybernetics across Semester 1, my professional career in the psychosocial sector and my lived-expertise in neurodivergence. 
+This project has provided an opportunity to bring together both theory and practice by integrating the knowledge developed throughout Semester 1 of the Master of Applied Cybernetics with my professional experience in the psychosocial disability sector and my lived-expertise navigating our Australian social welfare systems as a neurodivergent person. 
 
-These experiences have given the the opportunity to see the Australian social welfare systems from many different ontological perspectives. 
-
-student of applied cybernetics at the ANU, as a psychosocial professional in the disabiltiy sector and as a person with lived-expertise of neurodivergence. 
+These intersecting perspectives have enabled me to understand the Australian social welfare system through multiple ontological lenses: as a student of applied cybernetics at the Australian National University, as a psychosocial practitioner working within the disability sector, as a person with lived experience of neurodivergence and as a person who has used these systems themselves.. Together, these perspectives have shaped the design of this project and informed a systems-based approach to addressing a complex real-world challenge.
 
 
 
