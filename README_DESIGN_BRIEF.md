@@ -6,10 +6,11 @@ _'In theory there is no difference between theory and practice.
 In practice, there is.'_\
 (Norman 2018, p.236)
 
-This project demonstrates my ability to design and develop a cyber-physical system through the practical application of technical skills and theoretical knowledge acquired during Semester 1 of the Master of Applied Cybernetics. 
-It integrates theoretical concepts, methodologies, and tools from across the semester to address a real-world cybernetic challenge, demonstrating both technical competence and systems thinking in the development of an effective solution.
+This project represents the culmination of both theory and practice from my studies in the Master of Applied Cybernetics across Semester 1, my professional career in the psychosocial sector and my lived-expertise in neurodivergence. 
 
-# Background:
+These experiences have given the the opportunity to see the Australian social welfare systems from many different ontological perspectives. 
+
+student of applied cybernetics at the ANU, as a psychosocial professional in the disabiltiy sector and as a person with lived-expertise of neurodivergence. 
 
 
 
@@ -52,7 +53,9 @@ Thank you to my boyfriend Barnabas for helping me to rest and take breaks, offer
 
 
 # Definition of Key Terms:
-Affordance
+Affordance Theory:
+Curb Cut Effect:
+
 
 
 - # WHAT is it:  A general overview.
