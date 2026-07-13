@@ -15,49 +15,27 @@ Lived-expertise design
 
 
 # Acknowledgement 
-- General overview of thanks for affordance of neurodivergent persons
-- More specificly that this is not common.
-- I want to contribute to the voice of people in applied cybernetics and this academis discourse and humanitarian engineering problems.
-- Thanks specifically to convenors and gabby
-- dot points of each professor and how they helped
-- dot points of each student and how they helped.
-- mum and dad
-- barnabas
-  
-The kindness and encouragement that I have felt in the School of Cybernetics, while learning to navigating an academic system that does not afford Autism, has meant a great deal to me. 
+The kindness, encouragement, and generosity I have experienced within the School of Cybernetics have been deeply meaningful. As a neurodivergent student navigating an academic system that is not always designed to accommodate autistic ways of learning, I have been fortunate to study in a community that has consistently demonstrated patience, curiosity, and a genuine commitment to inclusion.
 
-I would like to thank my Professors Safiya, Ash and Gabby in particular, for their open-mindedness and patience.
+Meaningful inclusion of neurodivergent people remains uncommon, particularly in ways that provide the time, space, and trust needed for people to contribute at their best. It is my hope that this project contributes, in some small way, to amplifying neurodivergent perspectives within applied cybernetics and the broader discourse surrounding humanitarian engineering and systems design.
 
-In my experience, the active inclusion of neurodiverse people is not common place. Even less so, are inclusion practices that genuinely listen to and allow neurodivergent people the time and space required to perform to their best abilities. 
+I would like to sincerely thank the teaching staff who have shaped my thinking throughout this semester:
 
-I recognise the challenge that professors and employers face in taking a chance of neurodivergent people.
+Dr Tom Biedermann – for encouraging imaginative thinking, futurism, and the confidence to think beyond conventional boundaries.
+Dr Safiya Noble – for introducing me to humanitarian engineering and continually emphasising the importance of privacy, security, and human dignity in technical systems.
+Dr Ash Lenton– for introducing the Sensorium and inspiring my exploration of calming technologies.
+Gabby – for her guidance in machine learning and programming, her generosity in supporting me when I was unable to communicate, and for being an inspiring role model for women in technical fields.
+Songyuen – for broadening my understanding of emergent systems and machine learning.
+Andrew Meares – for generous conversations about neurodivergence and for sharing valuable resources on communication.
+Kathrin – for encouraging my interest in improving communication within autism systems and for helping me appreciate the lineage of thinkers and practitioners whose work has brought us here.
+Jessamy – for introducing me to feminist engineering and actor-network theory.
+Paul – for encouraging critical thinking and reminding me to be unapologetically myself.
 
-Tom Biedermann - Resources, engouragement about futurism and thinking outside the box.
-Safiya - Resources, considerations of the security/privacy of individuals and for teahcing me about humanitarian engineering. 
-Ash - for helping me to learn about the sensorum which spurred on my considerations around calming technology.
-Gabby - machine learning, coding, words of advice around being a woman in technical areas. I look up to you very much. for helping to communnicate via email when i had no capacity. 
-Songyuen - Inspiration and resources on emergent properties in systems and machine learning 
-Andrew Meares - Resources (Lissek on hwo to communicate which discussed during demo day, also conversations with him about neurodivergence during the term) 
-Kathrin - For her encouragement to pursue autism system communication and improvement and for helping me to realise through her lectures that i am from a lineage of people that brought me here. This was very meaningful.
-Jessamy - teaching me about feminist engineeering and actor-netowrk theory
-Paul - encouragement and inspiration to be myself unapolagetically and what is a critical analysis anyway.. 
+Thank you to my fellow students—Katrina, Sam, Muhammad, Kane, Yeu, Grace, Jim, Gareth, Jules, and Dennis—for your friendship, encouragement, advice, and willingness to share your knowledge throughout the semester. I am also grateful to senior student Sui Jackson for his generosity with time, technical knowledge, and practical support.
 
+Finally, I would like to thank my family. Mum, thank you for the late-night Monday soup that kept me going. Dad, thank you for sharing your technical knowledge and practical skills. And to Barnabas, thank you for reminding me to rest, for your unwavering emotional support, and for believing in me even when I struggled to believe in myself.
 
-
-I am inspired every day by the time and resource generosity, expertise and passion of my Professors and fellow cohort. 
-I am determined to continue in the field of cybernetics and contribute my lived-experience practice in systems navigation to the theoretical and applied skills that I will continue to learn in the Masters of Applied Cybernetics. 
-
-
-Thank you for sharing your expertise, time and passion for cybernetics. 
-
-Thank you also to my fellow cohort of 2026, your comraderie, support, advice and expertise has gotten me through some tough momens, Katrina, Sam, Muhammad, Kane, Yeu, Grace, Jim, Gareth, Jules and Dennis. 
-Also to senior students Sui Jackson for his knowledge on homestats, general encouragement, support and generosity with parts.
-
-Thank you Mum for feeding me midnight soup on Mondays.
-Thank you Dad for your technical knowledge and skills.
-
-Thank you to my boyfriend Barnabas for helping me to rest and take breaks, offering emotional support when I have been stuck, for believing in me.
-
+To everyone who has shared their expertise, time, encouragement, and passion for cybernetics—thank you. Your generosity has inspired me to continue pursuing applied cybernetics and to contribute my own lived experience of neurodiversity and systems navigation to this emerging field.
 
 
 # Definition of Key Terms:
