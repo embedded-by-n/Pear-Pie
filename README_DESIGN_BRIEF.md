@@ -4,6 +4,9 @@ _'In theory there is no difference between theory and practice.
 In practice, there is.'_\
 (Norman 2018, p.236)
 
+Policy in practice - the gap between the lived experience of system navigation and the well-intended policies and social systems and uphold/reinforce them.
+
+
 In the book Information Ecologies, Nardi and O'Day (1993) reflect upon the important of technology The heart of this project lies  *practice* roots of my career as a psychosocial disability worker and lived-expertise as a neurodivergent person with Autism and ADHD. 
 This project brings together two complementary forms of knowledge: *practice*, grounded in my lived experience as a neurodivergent person and my career in the psychosocial disability sector, and *theory*, developed through the Master of Applied Cybernetics.
 
@@ -41,17 +44,32 @@ Finally, I would like to thank my family. Mum, thank you for the late-night Mond
 To everyone who has shared their expertise, time, encouragement, and passion for cybernetics—thank you. Your generosity has inspired me to continue pursuing applied cybernetics and to contribute my own lived experience of neurodiversity and systems navigation to this emerging field.
 
 
-# Definition of Key Terms:
+# Definition of Key Terms
 Affordance Theory:
+The relationship between a person's capabilities and the opportunities for action provided by their environment.
 Curb Cut Effect:
+Designing for accessibility often benefits everyone.
 Capability Approach:
+Focuses on what people are genuinely able to do, rather than the services or resources available to them.
+Distributed Cognition:
+Cognition is shared across people, technologies, and environments, not confined to the individual.
+Social Model of Disability:
+Disability arises through the interaction between people and environments that are not designed to accommodate diverse needs.
 
-# Methodological Underpinnings:
-PADE MODEL
-CYBERNETIC WHEEL
-DIAMOND APPROACH
+
+# Methodological Underpinnings
+PADE Model:
+Structured the project's problem identification, analysis, design, and evaluation.
+Cybernetic Wheel:
+Guided iterative learning through observation, feedback, and adaptation.
+Double Diamond:
+Supported an iterative process of discovering, defining, developing, and delivering the solution.
 
 
+
+
+
+Rather than intervening in the navigation of social welfare systems themselves, the Pear-Pie Cyber-Physical Home System intervenes further upstream by supporting the sensory, cognitive, and emotional conditions that enable engagement to occur. It recognises that before a person can navigate complex systems, they must first have the capacity to participate in them.
 
 - # WHAT is it:  A general overview.
 The Pear Pie is a reimagining of the smart home system, designed for neurodivergent people as the primary user.
