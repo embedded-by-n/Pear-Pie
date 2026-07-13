@@ -8,15 +8,6 @@ In practice, there is.'_\
 
 - my experience = 'practice' (lived-expertise in neurodivergence, professional career for over a decade in psychosocial sector, building devices to help my clients with practical problems)
 - applied cybernetics masters = 'theory'. I see cybernetics losely as the theory of practice. plus other theoretical studies i have undertaken related to them.
-- 
-- 
-
-This quote perfectly sums the necessary purpose of the cyber-physical system which I have decided to build for this project. 
-I am a neurodivergent and have spent my own personal life and professional career as a psychosocial worker in the social welfare system navigation and a professional career in psychosocial work, I have a keen understand
-
-both theory and practice by integrating the knowledge developed throughout Semester 1 of the Master of Applied Cybernetics with my professional experience in the psychosocial disability sector and lived-expertise of neurodiversity and social welfare system navigation. 
-
-These intersecting perspectives have enabled me to understand the Australian social welfare system through multiple ontological lenses: as a student of applied cybernetics at the Australian National University, as a psychosocial practitioner working within the disability sector, as a person with lived experience of neurodivergence and as a person who has used these systems themselves.. Together, these perspectives have shaped the design of this project and informed a systems-based approach to addressing a complex real-world challenge.
 
 
 
@@ -61,6 +52,8 @@ Thank you to my boyfriend Barnabas for helping me to rest and take breaks, offer
 # Definition of Key Terms:
 Affordance Theory:
 Curb Cut Effect:
+Capability Approach:
+
 
 
 
