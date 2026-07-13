@@ -4,7 +4,10 @@ _'In theory there is no difference between theory and practice.
 In practice, there is.'_\
 (Norman 2018, p.236)
 
-# Background: Lived-Experience Practice as the Heart of the Technology
+In the book Information Ecologies, Nardi and O'Day (1993) reflect upon the important of technology The heart of this project lies  *practice* roots of my career as a psychosocial disability worker and lived-expertise as a neurodivergent person with Autism and ADHD. 
+This project brings together two complementary forms of knowledge: *practice*, grounded in my lived experience as a neurodivergent person and my career in the psychosocial disability sector, and *theory*, developed through the Master of Applied Cybernetics.
+
+
 Night and O'day Information Ecologies and Metropolis the 'heart of the technology'
 Not for us without us  - get quote
 Lived-expertise design
