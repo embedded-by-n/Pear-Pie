@@ -12,7 +12,7 @@ Tool pods are capable of performing a miriad of functions such as reading vital 
 The pods also have a centralised hub which analyses the emergent patterns across the distributed network of pods, which help to learn and predict the movements of the user in the space, sending weighted recommendations back to each pod and displaying the patterns of behaviour of the user in the home on the main hub display. \
 
 
-- # WHAT questions it practically explores: The theoretical underpinnings.
+- # WHAT it explores in practice: Theoretical underpinnings.
 
 QUESTION 1: What if we designed a technology for all people but use a neurodivergent person as the primary user case. What curb cut advantages could come to fruition?\ 
 THEORETICAL BASIS:\ 
