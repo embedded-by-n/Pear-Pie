@@ -14,26 +14,29 @@ The pods also have a centralised hub which analyses the emergent patterns across
 
 - # WHAT questions it practically explores: The theoretical underpinnings.
 
+QUESTION 1: What if we designed a technology for all people but use a neurodivergent person as the primary user case. What curb cut advantages could come to fruition?\ 
+THEORETICAL BASIS:\ 
 1. Affordance Theory\
-People are afforded and unafforded by their environment and technology design. I posit that there is untapped expertise in people whose experiences are not afforded naturally by our environment and current technologies.
-In this case, I am focusing on the experience of neurodivergent people. 
+_Definition:_ People are afforded and unafforded by their environment and technology design. I posit that there is untapped expertise in people whose experiences are not afforded naturally by our environment and current technologies.
+In this case, I am focusing on the experience of neurodivergent people.
 
 2. The Social Model of Disability
-Closely tied to this, is the social model of disability which tells us that the individual is disabled by their environment and inaccommodations that exist within it.
+_Definition:_ Closely tied to this, is the social model of disability which tells us that the individual is disabled by their environment and inaccommodations that exist within it.
 
-4. Curb Cut Theory\ 
-When technologies are designed for/by disabled users, it creates opportunities for others that may not have otherwise been obvious. For example, the sensor door among others, which many people do not realise are actually invented by and for disabled people but also benefit others in wider society. 
+3. Curb Cut Theory\ 
+_Definition:_ When technologies are designed for/by disabled users, it creates opportunities for others that may not have otherwise been obvious. For example, the sensor door among others, which many people do not realise are actually invented by and for disabled people but also benefit others in wider society. 
 Therefore, what greater efficiencies and streamlining can be made by respecting the contributions og those with minority expertise in unaffordance in the environment. 
 
-5. Technological Use/Function Bias\
-Who do we see as a valid user of a technology/innovation.
+4. Technological Use/Function Bias\
+_Definition:_ Who do we see as a valid user of a technology/innovation.
 
-6. Information Ecologies and technology with heart.\
-By designing a piece of technology
+5. Information Ecologies and technology with heart.\
+_Definition:_ By designing a piece of technology
 
-7. Accessability to Security, Privacy and Information Sovereignty
+6. Accessability to Security, Privacy and Information Sovereignty
+_Definition:_
 
-8. 
+7. 
 
 
 - # WHO is it for:
