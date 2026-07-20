@@ -5,7 +5,8 @@ In practice, there is.'_\
 (Norman 2018, p.236)
 
 - # WHAT is it:  A general overview.
-The Pear Pie is a cyber-physical system which reimagines what a smart home system of the future may look like;
+The Pear Pie is a cyber-physical system which reimagines the smart home system of the future as a low-cost, scalable, high-privacy and ultra-low power network of pods which utilise RADAR sensing and edge machine learning to analyse emergent patterns across the distributed network.
+
 by exploring the following theoretical underpinnings:
 
 1. Affordance Theory\
