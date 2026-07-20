@@ -5,17 +5,29 @@ In practice, there is.'_\
 (Norman 2018, p.236)
 
 - # WHAT is it:  A general overview.
-The Pear Pie is a cyber-physical system which reimagines the smart home system of the future;
-by exploring the following theoretical underpinnings.
+The Pear Pie is a cyber-physical system which reimagines what a smart home system of the future may look like;
+by exploring the following theoretical underpinnings:
 
-1. Curb Cut Theory
-When technologies are designed for/by disabled users, it creates opportunities for others that may not have otherwise been obvious.
+1. Affordance Theory\
+People are afforded and unafforded by their environment and technology design. I posit that there is untapped expertise in people whose experiences are not afforded naturally by our environment and current technologies.
+In this case, I am focusing on the experience of neurodivergent people. 
 
-1. Affordance Theory
-Tying 
+2. The Social Model of Disability
+Closely tied to this, is the social model of disability which tells us that the individual is disabled by their environment and inaccommodations that exist within it.
 
-Who technology is designed for as the primary user.
-What technologies do we not typically associate as 
+4. Curb Cut Theory\ 
+When technologies are designed for/by disabled users, it creates opportunities for others that may not have otherwise been obvious. For example, the sensor door among others, which many people do not realise are actually invented by and for disabled people but also benefit others in wider society. 
+Therefore, what greater efficiencies and streamlining can be made by respecting the contributions og those with minority expertise in unaffordance in the environment. 
+
+5. Technological Use/Function Bias\
+Who do we see as a valid user of a technology/innovation.
+
+6. Information Ecologies and technology with heart.\
+By designing a piece of technology
+
+7. Accessability to Security, Privacy and Information Sovereignty
+
+8. 
 
 
 - # WHO is it for:
