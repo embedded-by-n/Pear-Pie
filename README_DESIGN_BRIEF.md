@@ -11,7 +11,7 @@ Sensor pods primary function is to learn and respond to movement in the environm
 Tool pods are capable of performing a miriad of functions such as reading vital signs and sleep tracking (Vital Pods).\
 The pods also have a centralised hub which analyses the emergent patterns across the distributed network of pods, which help to learn and predict the movements of the user in the space, sending weighted recommendations back to each pod and displaying the patterns of behaviour of the user in the home on the main hub display. \
 
-# WHAT it explores in practice: The applied theories.
+# WHAT questions it explores: The applied theory.
 <img width="10080" height="3555" alt="image" src="https://github.com/user-attachments/assets/91cb47f8-d5df-4532-b401-bd7cf42e80b7" />
 
 QUESTION 1: What if we designed a technology for all people but use a neurodivergent person as the primary user case. What curb cut advantages could come to fruition?\
