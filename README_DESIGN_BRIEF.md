@@ -4,8 +4,16 @@ _'In theory there is no difference between theory and practice.
 In practice, there is.'_\
 (Norman 2018, p.236)
 
+This project is a demonstion of the applied cybernetic theory and technical skills acquired across Semester 1 of the Master of Applied Cybernetics at the Australian National University, 2026 Cohort. 
+In addition it also represent the culmination of my preexisting and continually evolving knowledge and skills in embedded systems design, specifically by and for the use of people whose needs are not afforded in everyday environments. 
+As a person with lived-expertise in the experience of neurodivergence and a professional career in the psychosocial support and education sectors, I have brought all of my skills together in this project.
+My future aim is to continue to contribute to academic discourse in the field of cybernetics through theoretical and applied technical cybernetic projects.
+I hope to help improve communication between people in systems across the welfare and education sectors, to contribute positively to understanding what policy can look like in practice for those on the real-world end of systems design and to demystify these systems for those impacted by them. 
+To create tools which practically solve challenges in the design of systems from the grass roots and to make technologies with heart and contribute to equitable access to technologies for low-socioeconomic members of our communities through practical grass-roots innovations. 
+
 # WHAT is it:  A general overview.
-The Pear Pie is a cyber-physical system which reimagines the smart home system of the future as a low-cost, scalable, high-privacy and ultra-low power distributed network of pods with edge machine learning capability.\
+The Pear Pie is a cyber-physical system that reimagines what a smart home system of the future could be like and who it could be designed for.
+It is low-cost, scalable, high-privacy and ultra-low power distributed network of pods with edge machine learning capability.\
 These pods are equipped with RADAR sensors, microcontrollers and are divided into two catergories of pods; sensor pods and tool pods. \
 Sensor pods primary function is to learn and respond to movement in the environment.\
 Tool pods are capable of performing a miriad of functions such as reading vital signs and sleep tracking (Vital Pods).\
