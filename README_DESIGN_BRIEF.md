@@ -14,13 +14,14 @@ The pods also have a centralised hub which analyses the emergent patterns across
 
 - # WHAT it explores in practice: Theoretical underpinnings.
 
-QUESTION 1: What if we designed a technology for all people but use a neurodivergent person as the primary user case. What curb cut advantages could come to fruition?\ 
+QUESTION 1: What if we designed a technology for all people but use a neurodivergent person as the primary user case. What curb cut advantages could come to fruition?\
+
 THEORETICAL BASIS:\ 
 1. Affordance Theory\
 _Definition:_ People are afforded and unafforded by their environment and technology design. I posit that there is untapped expertise in people whose experiences are not afforded naturally by our environment and current technologies.
 In this case, I am focusing on the experience of neurodivergent people.
 
-2. The Social Model of Disability
+2. The Social Model of Disability\ 
 _Definition:_ Closely tied to this, is the social model of disability which tells us that the individual is disabled by their environment and inaccommodations that exist within it.
 
 3. Curb Cut Theory\ 
@@ -33,7 +34,7 @@ _Definition:_ Who do we see as a valid user of a technology/innovation.
 5. Information Ecologies and technology with heart.\
 _Definition:_ By designing a piece of technology
 
-6. Accessability to Security, Privacy and Information Sovereignty
+6. Accessability to Security, Privacy and Information Sovereignty\
 _Definition:_
 
 7. 
