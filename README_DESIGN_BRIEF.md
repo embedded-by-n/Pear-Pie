@@ -4,15 +4,14 @@ _'In theory there is no difference between theory and practice.
 In practice, there is.'_\
 (Norman 2018, p.236)
 
-- # WHAT is it:  A general overview.
+# WHAT is it:  A general overview.
 The Pear Pie is a cyber-physical system which reimagines the smart home system of the future as a low-cost, scalable, high-privacy and ultra-low power distributed network of pods with edge machine learning capability.\
 These pods are equipped with RADAR sensors, microcontrollers and are divided into two catergories of pods; sensor pods and tool pods. \
 Sensor pods primary function is to learn and respond to movement in the environment.\
 Tool pods are capable of performing a miriad of functions such as reading vital signs and sleep tracking (Vital Pods).\
 The pods also have a centralised hub which analyses the emergent patterns across the distributed network of pods, which help to learn and predict the movements of the user in the space, sending weighted recommendations back to each pod and displaying the patterns of behaviour of the user in the home on the main hub display. \
 
-
-- # WHAT it explores in practice: Theoretical underpinnings.
+# WHAT it explores in practice: Theoretical underpinnings.
 
 QUESTION 1: What if we designed a technology for all people but use a neurodivergent person as the primary user case. What curb cut advantages could come to fruition?\
 
