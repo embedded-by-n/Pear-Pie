@@ -4,6 +4,25 @@ _'In theory there is no difference between theory and practice.
 In practice, there is.'_\
 (Norman 2018, p.236)
 
+- # WHAT is it:  A general overview.
+The Pear Pie is a cyber-physical system which reimagines the smart home system of the future;
+by exploring the following theoretical underpinnings.
+
+1. Curb Cut Theory
+When technologies are designed for/by disabled users, it creates opportunities for others that may not have otherwise been obvious.
+
+1. Affordance Theory
+Tying 
+
+Who technology is designed for as the primary user.
+What technologies do we not typically associate as 
+
+
+- # WHO is it for:
+-
+- Designed to be low-cost, scalable, high-privacy and ultra-low power, utilising RADAR sensing and edge machine learning technologies.
+
+
 Policy in practice - the gap between the lived experience of system navigation and the well-intended policies and social systems and uphold/reinforce them.
 
 
@@ -17,11 +36,6 @@ Lived-expertise design
 - my experience = 'practice' (lived-expertise in neurodivergence, professional career for over a decade in psychosocial sector, building devices to help my clients with practical problems)
 - applied cybernetics masters = 'theory'. I see cybernetics losely as the theory of practice. plus other theoretical studies i have undertaken related to them.
 
-
-
-- # WHAT is it:  A general overview.
-The Pear Pie is a reimagining of the smart home system, designed for neurodivergent people as the primary user.
-Designed to be low-cost, scalable, high-privacy and ultra-low power, utilising RADAR sensing and edge machine learning technologies.
 
 
 
