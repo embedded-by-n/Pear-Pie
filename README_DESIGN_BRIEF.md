@@ -5,9 +5,14 @@ In practice, there is.'_\
 (Norman 2018, p.236)
 
 - # WHAT is it:  A general overview.
-The Pear Pie is a cyber-physical system which reimagines the smart home system of the future as a low-cost, scalable, high-privacy and ultra-low power network of pods which utilise RADAR sensing and edge machine learning to analyse emergent patterns across the distributed network.
+The Pear Pie is a cyber-physical system which reimagines the smart home system of the future as a low-cost, scalable, high-privacy and ultra-low power distributed network of pods with edge machine learning capability.\
+These pods are equipped with RADAR sensors, microcontrollers and are divided into two catergories of pods; sensor pods and tool pods. \
+Sensor pods primary function is to learn and respond to movement in the environment.\
+Tool pods are capable of performing a miriad of functions such as reading vital signs and sleep tracking (Vital Pods).\
+The pods also have a centralised hub which analyses the emergent patterns across the distributed network of pods, which help to learn and predict the movements of the user in the space, sending weighted recommendations back to each pod and displaying the patterns of behaviour of the user in the home on the main hub display. \
 
-by exploring the following theoretical underpinnings:
+
+by exploring the following theoretical underpinnings:\
 
 1. Affordance Theory\
 People are afforded and unafforded by their environment and technology design. I posit that there is untapped expertise in people whose experiences are not afforded naturally by our environment and current technologies.
