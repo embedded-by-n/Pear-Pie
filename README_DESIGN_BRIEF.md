@@ -19,58 +19,6 @@ Lived-expertise design
 
 
 
-
-# Acknowledgement 
-The kindness, encouragement, and generosity I have experienced within the School of Cybernetics have been deeply meaningful. As a neurodivergent student navigating an academic system that is not always designed to accommodate autistic ways of learning, I have been fortunate to study in a community that has consistently demonstrated patience, curiosity, and a genuine commitment to inclusion.
-
-Meaningful inclusion of neurodivergent people remains uncommon, particularly in ways that provide the time, space, and trust needed for people to contribute at their best. It is my hope that this project contributes, in some small way, to amplifying neurodivergent perspectives within applied cybernetics and the broader discourse surrounding humanitarian engineering and systems design.
-
-I would like to sincerely thank the teaching staff who have shaped my thinking throughout this semester:
-
-Dr Tom Biedermann – for encouraging imaginative thinking, futurism, and the confidence to think beyond conventional boundaries.
-Dr Safiya Noble – for introducing me to humanitarian engineering and continually emphasising the importance of privacy, security, and human dignity in technical systems.
-Dr Ash Lenton– for introducing the Sensorium and inspiring my exploration of calming technologies.
-Gabby – for her guidance in machine learning and programming, her generosity in supporting me when I was unable to communicate, and for being an inspiring role model for women in technical fields.
-Songyuen – for broadening my understanding of emergent systems and machine learning.
-Andrew Meares – for generous conversations about neurodivergence and for sharing valuable resources on communication.
-Kathrin – for encouraging my interest in improving communication within autism systems and for helping me appreciate the lineage of thinkers and practitioners whose work has brought us here.
-Jessamy – for introducing me to feminist engineering and actor-network theory.
-Paul – for encouraging critical thinking and reminding me to be unapologetically myself.
-
-Thank you to my fellow students—Katrina, Sam, Muhammad, Kane, Yeu, Grace, Jim, Gareth, Jules, and Dennis—for your friendship, encouragement, advice, and willingness to share your knowledge throughout the semester. I am also grateful to senior student Sui Jackson for his generosity with time, technical knowledge, and practical support.
-
-Finally, I would like to thank my family. Mum, thank you for the late-night Monday soup that kept me going. Dad, thank you for sharing your technical knowledge and practical skills. And to Barnabas, thank you for reminding me to rest, for your unwavering emotional support, and for believing in me even when I struggled to believe in myself.
-
-To everyone who has shared their expertise, time, encouragement, and passion for cybernetics—thank you. Your generosity has inspired me to continue pursuing applied cybernetics and to contribute my own lived experience of neurodiversity and systems navigation to this emerging field.
-
-
-# Definition of Key Terms
-Affordance Theory:
-The relationship between a person's capabilities and the opportunities for action provided by their environment.
-Curb Cut Effect:
-Designing for accessibility often benefits everyone.
-Capability Approach:
-Focuses on what people are genuinely able to do, rather than the services or resources available to them.
-Distributed Cognition:
-Cognition is shared across people, technologies, and environments, not confined to the individual.
-Social Model of Disability:
-Disability arises through the interaction between people and environments that are not designed to accommodate diverse needs.
-
-
-# Methodological Underpinnings
-PADE Model:
-Structured the project's problem identification, analysis, design, and evaluation.
-Cybernetic Wheel:
-Guided iterative learning through observation, feedback, and adaptation.
-Double Diamond:
-Supported an iterative process of discovering, defining, developing, and delivering the solution.
-
-
-
-
-
-Rather than intervening in the navigation of social welfare systems themselves, the Pear-Pie Cyber-Physical Home System intervenes further upstream by supporting the sensory, cognitive, and emotional conditions that enable engagement to occur. It recognises that before a person can navigate complex systems, they must first have the capacity to participate in them.
-
 - # WHAT is it:  A general overview.
 The Pear Pie is a reimagining of the smart home system, designed for neurodivergent people as the primary user.
 Designed to be low-cost, scalable, high-privacy and ultra-low power, utilising RADAR sensing and edge machine learning technologies.
@@ -154,6 +102,58 @@ The Pear Pie is an  that utulises the Cybernetic Wheel principles of SARS (Safe,
 
 
 # WHY is it needed:
+
+
+# Acknowledgement 
+The kindness, encouragement, and generosity I have experienced within the School of Cybernetics have been deeply meaningful. As a neurodivergent student navigating an academic system that is not always designed to accommodate autistic ways of learning, I have been fortunate to study in a community that has consistently demonstrated patience, curiosity, and a genuine commitment to inclusion.
+
+Meaningful inclusion of neurodivergent people remains uncommon, particularly in ways that provide the time, space, and trust needed for people to contribute at their best. It is my hope that this project contributes, in some small way, to amplifying neurodivergent perspectives within applied cybernetics and the broader discourse surrounding humanitarian engineering and systems design.
+
+I would like to sincerely thank the teaching staff who have shaped my thinking throughout this semester:
+
+Dr Tom Biedermann – for encouraging imaginative thinking, futurism, and the confidence to think beyond conventional boundaries.
+Dr Safiya Noble – for introducing me to humanitarian engineering and continually emphasising the importance of privacy, security, and human dignity in technical systems.
+Dr Ash Lenton– for introducing the Sensorium and inspiring my exploration of calming technologies.
+Gabby – for her guidance in machine learning and programming, her generosity in supporting me when I was unable to communicate, and for being an inspiring role model for women in technical fields.
+Songyuen – for broadening my understanding of emergent systems and machine learning.
+Andrew Meares – for generous conversations about neurodivergence and for sharing valuable resources on communication.
+Kathrin – for encouraging my interest in improving communication within autism systems and for helping me appreciate the lineage of thinkers and practitioners whose work has brought us here.
+Jessamy – for introducing me to feminist engineering and actor-network theory.
+Paul – for encouraging critical thinking and reminding me to be unapologetically myself.
+
+Thank you to my fellow students—Katrina, Sam, Muhammad, Kane, Yeu, Grace, Jim, Gareth, Jules, and Dennis—for your friendship, encouragement, advice, and willingness to share your knowledge throughout the semester. I am also grateful to senior student Sui Jackson for his generosity with time, technical knowledge, and practical support.
+
+Finally, I would like to thank my family. Mum, thank you for the late-night Monday soup that kept me going. Dad, thank you for sharing your technical knowledge and practical skills. And to Barnabas, thank you for reminding me to rest, for your unwavering emotional support, and for believing in me even when I struggled to believe in myself.
+
+To everyone who has shared their expertise, time, encouragement, and passion for cybernetics—thank you. Your generosity has inspired me to continue pursuing applied cybernetics and to contribute my own lived experience of neurodiversity and systems navigation to this emerging field.
+
+
+# Definition of Key Terms
+Affordance Theory:
+The relationship between a person's capabilities and the opportunities for action provided by their environment.
+Curb Cut Effect:
+Designing for accessibility often benefits everyone.
+Capability Approach:
+Focuses on what people are genuinely able to do, rather than the services or resources available to them.
+Distributed Cognition:
+Cognition is shared across people, technologies, and environments, not confined to the individual.
+Social Model of Disability:
+Disability arises through the interaction between people and environments that are not designed to accommodate diverse needs.
+
+
+# Methodological Underpinnings
+PADE Model:
+Structured the project's problem identification, analysis, design, and evaluation.
+Cybernetic Wheel:
+Guided iterative learning through observation, feedback, and adaptation.
+Double Diamond:
+Supported an iterative process of discovering, defining, developing, and delivering the solution.
+
+
+
+
+
+Rather than intervening in the navigation of social welfare systems themselves, the Pear-Pie Cyber-Physical Home System intervenes further upstream by supporting the sensory, cognitive, and emotional conditions that enable engagement to occur. It recognises that before a person can navigate complex systems, they must first have the capacity to participate in them.
 
 # WHERE is it used:
 # HOW does it work:
