@@ -12,7 +12,7 @@ Tool pods are capable of performing a miriad of functions such as reading vital 
 The pods also have a centralised hub which analyses the emergent patterns across the distributed network of pods, which help to learn and predict the movements of the user in the space, sending weighted recommendations back to each pod and displaying the patterns of behaviour of the user in the home on the main hub display. \
 
 
-by exploring the following theoretical underpinnings:\
+- # WHAT questions am I asking: Theories that I am exploring through practical application.
 
 1. Affordance Theory\
 People are afforded and unafforded by their environment and technology design. I posit that there is untapped expertise in people whose experiences are not afforded naturally by our environment and current technologies.
