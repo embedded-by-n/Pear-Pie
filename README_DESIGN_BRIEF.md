@@ -5,7 +5,7 @@ In practice, there is.'_\
 (Norman 2018, p.236)
 
 This project is a demonstration of the theoretical and technical skills I have acquired across Semester 1 of the Master of Applied Cybernetics at the Australian National University, 2026 Cohort. 
-It is also personally significant, as it represents my determination to perseveree through lived-experience of neurodivergence and applied navigation of welfare systems as a participant and psychosocial worker.
+It is also personally significant, as it represents my determination to perseveree through lived-experience of neurodivergence and applied navigation of welfare systems as a participant and professional psychosocial worker.
 I have brought all of my skills together in this project,
 of my preexisting and continually evolving knowledge and skills in embedded systems design, specifically by and for the use of people whose needs are not afforded in everyday environments. 
 
