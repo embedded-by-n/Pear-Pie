@@ -4,16 +4,12 @@ _'In theory there is no difference between theory and practice.
 In practice, there is.'_\
 (Norman 2018, p.236)
 
-This project is a demonstration of the theoretical and technical skills I have acquired across Semester 1 of the Master of Applied Cybernetics at the Australian National University, 2026 Cohort. 
-It is also personally significant, as it is the culmination of my determination to persevere through lived-experience of neurodivergence and applied navigation of welfare systems. 
-This thaught me the irreplaceable value of lived-experience and later in my professional career as a lived-experience psychosocial worker and educator, I saw the systemic human welfare ramifications of policy-in-practice.
-
-I designed and built devices to bridge these gaps where policy stopped people from accessing support.
-
-To create _technologies with heart_ (Nardi and O'Day, 1993) that practically address gaps in systems and increase equitable access to affordable, scalable, high-privacy and cutting edge technologies. 
-help improve the communication between disparate groups in social systems, particularly in the welfare and education sectors, to contribute positively to understanding what policy can look like in practice for those on the real-world end of systems design and to demystify these systems for those impacted by them. 
-To create technologies with heart (Nardi and O'day, 1993) that practically increase equitable access to technological innovations, security and privacy forward 
-access for marginalised community members low-socioeconomic community members in a world that is rapidly evolving equitable access to technologies for low-socioeconomic members of our communities through practical grass-roots innovations. 
+This project demonstrates the theoretical and technical knowledge I have developed throughout Semester 1 of the Master of Applied Cybernetics at the Australian National University.
+It is also deeply personal. It represents the culmination of my determination to persevere through the lived experience of neurodivergence and years spent navigating Australia's social welfare systems.
+Those experiences taught me the irreplaceable value of lived expertise. Later, through my professional career as a psychosocial worker and educator, I witnessed first-hand the human consequences of the gap between policy and practice.
+Wherever possible, I designed and built practical technologies that helped bridge those gaps when existing systems could not adequately meet people's needs.
+This project brings together those experiences with the theoretical foundations of applied cybernetics. My aim is to design technologies with heart (Nardi & O'Day, 1999): technologies that improve communication across complex social systems, particularly within the welfare and education sectors, while demonstrating what policy can look like in practice for the people who ultimately live with its consequences.
+More broadly, I hope to contribute to the development of affordable, scalable, privacy-preserving technologies that expand equitable access to innovation for marginalised and low-socioeconomic communities. I believe that meaningful technological progress should not only advance capability, but also dignity, autonomy, and opportunity.
 
 # WHAT is it:  A general overview.
 The Pear Pie is a cyber-physical system that reimagines what a smart home system of the future could be like and who it could be designed for.
