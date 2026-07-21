@@ -7,8 +7,9 @@ In practice, there is.'_\
 This project demonstrates the theoretical and technical knowledge I have developed throughout Semester 1 of the Master of Applied Cybernetics at the Australian National University.
 
 It is also deeply personal. It represents the culmination of my determination to persevere through the lived experience of neurodivergence and years spent navigating Australia's social welfare systems.
-Those experiences taught me the irreplaceable value of lived expertise. Later, through my professional career as a psychosocial worker and educator, I witnessed first-hand the human consequences of the gap between policy and practice.
-Wherever possible, I designed and built practical technologies that helped bridge those gaps when existing systems could not adequately meet people's needs.
+Those experiences taught me the irreplaceable value of lived expertise. 
+
+Later, through my professional career as a psychosocial worker and educator, I witnessed first-hand the human consequences of the gap between policy and practice.
 
 This project brings together those experiences with the theoretical foundations of applied cybernetics. My aim is to design technologies with heart (Nardi & O'Day, 1999): technologies that improve communication across complex social systems, particularly within the welfare and education sectors, while demonstrating what policy can look like in practice for the people who ultimately live with its consequences.
 More broadly, I hope to contribute to the development of affordable, scalable, privacy-preserving technologies that expand equitable access to innovation for marginalised and low-socioeconomic communities. I believe that meaningful technological progress should not only advance capability, but also dignity, autonomy, and opportunity.
