@@ -5,11 +5,11 @@ In practice, there is.'_\
 (Norman 2018, p.236)
 
 This project is a demonstration of the theoretical and technical skills I have acquired across Semester 1 of the Master of Applied Cybernetics at the Australian National University, 2026 Cohort. 
-It is also personally significant, as it represents my determination to perseveree through lived-experience of neurodivergence and applied navigation of welfare systems as a participant and professional psychosocial worker.
-I have brought all of my skills together in this project,
-of my preexisting and continually evolving knowledge and skills in embedded systems design, specifically by and for the use of people whose needs are not afforded in everyday environments. 
+It is also personally significant, as it is the culmination of my determination to persevere through lived-experience of neurodivergence and applied navigation of welfare systems. 
+This thaught me the irreplaceable value of lived-experience and later in my professional career as a lived-experience psychosocial worker and educator, I saw the systemic human welfare ramifications of policy-in-practice.
 
-I wish to continue to contribute to the field of cybernetics into the future, through theoretical and applied cyber-physical humanitarian projects. 
+I designed and built devices to bridge these gaps where policy stopped people from accessing support.
+
 To create _technologies with heart_ (Nardi and O'Day, 1993) that practically address gaps in systems and increase equitable access to affordable, scalable, high-privacy and cutting edge technologies. 
 help improve the communication between disparate groups in social systems, particularly in the welfare and education sectors, to contribute positively to understanding what policy can look like in practice for those on the real-world end of systems design and to demystify these systems for those impacted by them. 
 To create technologies with heart (Nardi and O'day, 1993) that practically increase equitable access to technological innovations, security and privacy forward 
