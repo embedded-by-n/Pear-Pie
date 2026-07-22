@@ -15,6 +15,15 @@ This project brings together those experiences with the theoretical foundations 
 
 More broadly, I hope to contribute to the development of affordable, scalable, privacy-preserving technologies that expand equitable access to innovation for marginalised and low-socioeconomic communities. I believe that meaningful technological progress should not only advance capability, but also dignity, autonomy, and opportunity.
 
+# Conceptual Contribution: A Cybernetic Model of Lived Expertise.
+This project proposes a cybernetic interpretation of lived expertise as the feedback signal linking the Social Model of Disability, Affordance Theory, participatory design, and the Curb Cut Effect. It argues that repeated interaction with environmental barriers generates situated knowledge that cannot be fully obtained through observation alone. By recognising lived expertise as a legitimate form of systems knowledge and incorporating it into the design process, interventions can improve environmental affordance, reduce disability, and generate broader societal benefits through the Curb Cut Effect. This conceptual model positions lived expertise as the feedback signal that enables inclusive systems to learn, adapt, and continually improve.
+
+(Insert the feedback loop diagram here.)
+
+The Pear Pie Cyber-Physical Home System is designed as an applied demonstration of this conceptual model.
+
+
+
 # WHAT is it:  A general overview.
 The Pear Pie is a cyber-physical system that reimagines what a smart home system of the future could be like and who it could be designed for.
 It is a low-cost, scalable, high-privacy and ultra-low power distributed network of pods with edge machine learning capability.\
