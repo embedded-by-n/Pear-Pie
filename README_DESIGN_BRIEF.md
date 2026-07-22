@@ -29,7 +29,21 @@ As a proof of concept, the prototype demonstrates the practical application of t
 
 ## List of Functions, Desired and Fulfilled:
 
-
+| Function | Desired Function | Fulfilled | Sensing | Computation | Actuation | Machine Learning |
+|----------|------------------|-----------|----------|-------------|-----------|------------------|
+| Presence sensing | Detect movement and presence within individual areas of the home without cameras or wearables. | ✅ Yes | 24 GHz mmWave RADAR | Read sensor values | None | None |
+| Adaptive baseline | Learn what is "normal" for each location. | ✅ Yes | RADAR input | EWMA adaptive baseline and threshold comparison | None | Local adaptive learning (EWMA) |
+| Change detection | Detect activity that differs from the learned baseline. | ✅ Yes | RADAR input | Difference calculation and threshold classification | LED state triggered | Uses learned baseline |
+| Ambient feedback | Display meaningful environmental information without requiring screens or notifications. | ✅ Yes | Triggered by detected state | Timing and fade calculations | WS2812 LED arrival sweep, sustained trail and fade | None |
+| Distributed pod operation | Allow multiple pods to operate independently throughout the home. | ✅ Yes | Local sensing per pod | Independent processing on each Pico | Local LED actuation | Individual learned baselines |
+| BLE communication | Share pod state with a central hub. | ✅ Yes | Pod state | Packet creation and transmission | None | None |
+| Hub event logging | Record activity from all pods using a common time base. | ✅ Yes | BLE packet reception | Event logging, timestamps and pod registry | None | Data collection for future learning |
+| Second-order adaptation | Allow the hub to modify pod learning parameters. | 🟡 Partial | BLE communication | Parameter evaluation and update packets | None | Hub adjusts EWMA alpha and thresholds |
+| Long-term pattern learning | Detect behavioural patterns across rooms, days and weeks. | 🟡 Partial | Network event history | Pattern comparison and trend analysis | None | Planned network-level learning |
+| Vitals sensing | Monitor respiration, heart rate and sleep using 60 GHz radar. | 🟡 Partial | 60 GHz mmWave RADAR | Sensor processing | Future interventions | Future learning |
+| Graceful degradation | Continue operating if the hub or network fails. | ✅ Yes | Local sensing | Local computation continues independently | Local LEDs continue operating | Local learning retained |
+| Outbound SMS | Send selected notifications externally without inbound control. | ❌ Planned | Event trigger | Message generation | SMS transmission | None |
+| Clinical monitoring | Provide medical diagnosis or emergency monitoring. | ❌ Out of scope | N/A | N/A | N/A | N/A |
 
 
 
