@@ -87,6 +87,60 @@ As a proof of concept, the prototype demonstrates the practical application of t
 
 ## Prototype Architecture
 
+### Architecture: the units and their orders
+
+---
+
+#### 🔵 SENSOR POD  ×7
+**Hardware:** Raspberry Pi Pico 2 W · mmWave radar (S3KM1110, 24GHz) · Lorikeet WS2812 LED · LiPo/USB-C
+**Software order: FIRST ORDER — the pod regulates its own space**
+
+What it does, every loop:
+- Senses presence via radar (presence, not the identity of an individual)
+- Folds the reading into its own Adaptive Baseline (EWMA), learning that room's normal
+- Judges "unusual for you" against its own learned baseline, never a population norm
+- Actuates the ambient light trail locally
+- Broadcasts its state over BLE (uplink "PP") — non-connectable, no pairing
+- Overhears every other pod's broadcasts, maintaining a live neighbour table from their RSSI: who is near, and when that proximity shifts. No hub involved.
+
+Emergent, not programmed: the trail following a person through the home, and the network's relational self-picture, arise from independent pods each doing only the above.
+
+---
+
+#### 🟣 SENSOR POD + TOOL CAPABILITY  ×1 built (the Time Timer pod)
+**Hardware:** Raspberry Pi Pico 2 W · ST7735S 1.8" LCD · rotary potentiometer
+**Software order: FIRST ORDER — same family, different actuation**
+
+Everything a sensor pod is, with a purpose-built capability in place of the light trail:
+- Renders a physical Time Timer face: red winds on anticlockwise, drains clockwise, sixty minutes to the full circle
+- Learns your preferred session duration (EWMA, persisted to `timer_data.json`) and auto-starts at it — you never have to choose a time
+- Pauses when you leave the desk, resumes when you return, abandons after long absence
+- Sparkles gently at completion instead of alarming; runs a ten-minute break; soft return prompt
+
+The architecture supports further tool pods without changing the network.
+
+---
+
+#### 🟠 THE HUB  ×1
+**Hardware:** Raspberry Pi 5 · Inky Impression 7.3" e-ink · projector
+**Software order: SECOND ORDER — the hub regulates the rules the pods follow**
+
+What it does:
+- Hears every pod broadcast, stamps each event with one shared clock, logs to `pod_log.csv` (2.7M+ readings, RSSI included)
+- On a slow cycle, recomputes each pod's learning rate (alpha) and sensitivity (threshold) from that space's observed activity, clamped to safe bounds
+- Runs a trained decision tree predicting the next room, and pre-warms that pod ahead of arrival
+- Broadcasts parameter updates (downlink "PU") addressed to one pod at a time
+
+The hub does not command. It broadcasts clamped *suggestions*, and each pod applies updates addressed to it on its own. In the code's own words: "It does NOT command pods. It adjusts the rules they follow... Pods apply it (or not) on their own."
+
+It also faces the person:
+- E-ink status face: calm summary, ten-minute refresh, never asks for anything
+- Projected pattern map: the walked trail, learned occupancy, predicted next room as a pulsing gold ring, rolling second-order activity log
+
+---
+
+
+
 An off-grid modular home system using a two-tier Raspberry Pi 5 and Pi Pico control system with BLE peer-to-peer broadcast, RADAR, and edge ML to create a self-regulating feedback loop.
 
 Inspired by W. Ross Ashby's homeostat (1948) and designed by a neurodivergent person for people with fluctuating capacity, it learns each user's homeostasis over time, adapts its actuation style accordingly, and recognises emergent patterns across the distributed pod network to help users pre-empt capacity shifts.
