@@ -25,24 +25,61 @@ The Pear-Pie Cyber-Physical Home System is presented as an applied demonstration
 
 # 2. Lived Expertise Conceptual Framework 
 
-## 2a) Conceptual Terminology: _Unafforded People_
+## 2a) Conceptual Terminology: _Unafforded Person/People and Affordance Technology_
 
-_A proposed colloquial systems term that shifts responsibility away from individual deficit and towards the shared relationship between people, communities, institutions, technologies, and their environments._ 
--
-Definition
+A proposed conceptual terminology that reframes disability and technology through the relationship between people, environments, institutions, and affordances.
 
-Diagram
+### Why language matters
 
-Discussion
-Throughout this project, I introduce unafforded as a complementary systems term rather than a replacement for disabled. The intention is not to redefine disability or diminish the importance of disability identity, but to offer language that foregrounds the relationship between people and their environments.
+The language used to describe people and technology shapes how systems are understood and, consequently, where responsibility for change is located. Within many Western systems, disability has historically been framed through deficit-oriented language that categorises people according to what they cannot do. While the Social Model of Disability has shifted attention towards environmental barriers (Oliver 1990; Shakespeare 2018), much of the language surrounding disability, support services, and technology continues to position disability as an attribute of the individual rather than as a relationship between people and their environments.
 
-Many people identify proudly as disabled, and for many, the term represents an important source of identity, community, and empowerment. This project fully acknowledges and respects those perspectives. Accordingly, the terms disabled person and unafforded person are used interchangeably throughout this paper, with disabled retained where referring to existing legislation, policy, and disability scholarship.
+This project proposes two complementary conceptual terms—unafforded and affordance technology—to provide a systems-oriented language for discussing participation, technology, and inclusion.
 
-The term unafforded is proposed to emphasise that barriers to participation often arise not from the individual alone, but from environments, technologies, institutions, and communities that fail to provide the affordances necessary for equitable participation. By shifting the linguistic emphasis from individual deficit towards the relationship between people and their environments, the term encourages a shared understanding of responsibility for inclusion rather than locating that responsibility solely within the individual.
+### Unafforded people
 
-This relational framing is consistent with the theoretical foundations of Affordance Theory and the Social Model of Disability that underpin this project. It also resonates with relational understandings of personhood found in many Indigenous knowledge systems, where people are often described in terms of their relationships, capabilities, and circumstances rather than being defined by a fixed deficit. While unafforded is proposed here as a conceptual term within an applied cybernetics context, it reflects a broader commitment to understanding disability as an interaction between people and the systems in which they live.
+This project introduces unafforded people as a complementary systems term rather than a replacement for disabled. The intention is not to redefine disability or diminish disability identity, but to provide language that foregrounds the relationship between people and the affordances provided by their environments.
 
-Ultimately, the purpose of introducing unafforded is not to replace existing language, but to expand it. It provides an additional way of describing experiences of exclusion that foregrounds shared responsibility for creating environments in which more people can participate, contribute, and flourish.
+#### Definition
+
+Unafforded (proposed conceptual terminology)
+A person, community, or group whose opportunities for participation are constrained because the affordances required for equitable engagement are absent or insufficient within their environments, technologies, institutions, or communities.
+
+Many people identify proudly as disabled, and for many the term represents identity, community, political advocacy, and empowerment. This project fully acknowledges and respects those perspectives. Accordingly, the terms disabled person and unafforded person are used interchangeably throughout this report where appropriate, with disabled retained when referring to legislation, policy, existing disability scholarship, and people's preferred identities.
+
+The purpose of unafforded is therefore not to replace existing language, but to extend it. Rather than locating disability solely within the individual, it draws attention to the interaction between people and their environments, encouraging a shared understanding of responsibility for creating conditions that enable participation.
+
+Importantly, this project begins from the premise that affordance is relational rather than categorical. Every person is both afforded and unafforded in different environments throughout their lives. Disability therefore represents one important context in which unaffordance becomes highly visible, but it is not the only one. By understanding affordance as a universal human condition rather than as a characteristic of a particular group, accessibility becomes a shared design objective rather than a specialised accommodation.
+
+This relational framing extends Affordance Theory (Gibson 1979; Norman 2013) by asking not only what environments afford, but what happens when the affordances necessary for participation are systematically absent. It also builds upon the Social Model of Disability by providing conceptual language that foregrounds relationships between people, environments, institutions, technologies, and communities rather than individual deficit.
+
+### Language, identity, and participation
+
+Questions surrounding disability language are neither straightforward nor culturally universal. Scholars and advocates have long recognised that labels can simultaneously enable access to support while also reinforcing deficit-based understandings of people. This tension is particularly evident within many Aboriginal and Torres Strait Islander communities, where disability has often been described in relational and functional ways rather than through categorical identity labels.
+
+Damian Griffis (First Peoples Disability Network) argues that many Aboriginal approaches focus less on defining people by disability and more on understanding what supports are required for meaningful participation within family and community. However, accessing contemporary support systems such as the National Disability Insurance Scheme often requires people to adopt deficit-oriented language and demonstrate what they cannot do in order to become eligible for assistance (Griffis 2017). The challenge is therefore not only one of service provision, but of language itself.
+
+These perspectives resonate strongly with this project's systems approach. If participation is understood relationally rather than categorically, then the focus shifts from asking "What is wrong with this person?" towards asking "What affordances are missing from this environment?" This subtle linguistic shift changes where responsibility for intervention is located and opens new possibilities for systems design.
+
+### Affordance Technology
+
+This project also proposes the complementary term affordance technology.
+
+Rather than describing technologies according to the category of people they are assumed to serve—as implied by terms such as assistive technology or disability aid—the term affordance technology foregrounds their function: increasing environmental affordance.
+
+#### Definition
+
+Affordance Technology (proposed conceptual terminology)
+Technologies intentionally designed to increase people's opportunities for action, participation, autonomy, and interaction within their environments.
+
+Viewed through this lens, technologies commonly regarded as disability technologies are revealed to be technologies that increase affordance for everyone. Automatic doors, ramps, subtitles, speech recognition, predictive text, GPS navigation, voice assistants, ergonomic tools, and many other everyday technologies originated from, or were significantly advanced through, efforts to improve accessibility. Today they are used widely throughout society because they increase participation, convenience, safety, and efficiency for all users.
+
+This phenomenon reflects the Curb Cut Effect, whereby designing for people experiencing the greatest barriers frequently produces broader societal benefits. Similarly, Duvall et al. (2022) argue that inventors with disabilities represent an under-recognised source of innovation because lived experience reveals problems, opportunities, and design requirements that others may never encounter. Rather than viewing disability as a limitation on innovation, they position lived expertise as a valuable driver of technological creativity.
+
+This principle also aligns closely with the PADE methodology, which places intended users at the centre of problem identification, analysis, design, and evaluation. When technologies are designed from lived expertise rather than retrofitted for accessibility, they are more likely to generate solutions that extend well beyond their original user group.
+
+Accordingly, this project argues that affordance technologies should not be viewed as niche products designed for a segregated population. They represent a broader philosophy of inclusive innovation that seeks to increase participation by improving the relationship between people and their environments. Within this framing, disability becomes not a category of people requiring special technologies, but one of the richest sources of insight into how future technologies can be designed to benefit society as a whole.
+
+Ultimately, unafforded and affordance technology provide a shared conceptual language for the remainder of this project. Together they shift attention away from individual deficit and towards the design of environments, institutions, and technologies that enable more people to participate, contribute, and flourish.
 
 
 ## 2b) Conceptual Model: _Lived Expertise Feedback Model_ 
