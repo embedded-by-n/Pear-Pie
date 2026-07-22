@@ -3,13 +3,19 @@
 ## Final Maker Project — CYBN8001 Building Cyber-Physical Systems
 ## Master of Applied Cybernetics, Australian National University, 2026 Cohort
 
+---
+
 _'In theory there is no difference between theory and practice. 
 In practice, there is.'_\
 (Norman 2018, p.236)
 
+---
+
 ## Faming Foreword: 'Nothing about us, without us'
 
 This paper is written by and for a person who is multiply neurodivergent, with direct lived experience of the material it covers. Providing the reader with a theoretical and lived-experience framing is essential to understanding the scope of this project's necessity, what inclusive design offers wider society, and why functions that appear paradoxical to a reader without lived experience of neurodivergence are in fact deliberate and useful to our community.
+
+---
 
 # PART ONE: PROTOTYPE DOCUMENTATION
 
@@ -19,6 +25,8 @@ N Hall
 ## All code and documentation is available on GitHub:
 https://github.com/embedded-by-n/Pear-Pie
 
+---
+
 ## Objective of Prototype:
 
 The objective of the Pear-Pie prototype is to design, build, and evaluate a functional cyber-physical home system that demonstrates how adaptive technologies can support participation within everyday home environments.
@@ -27,9 +35,8 @@ The prototype aims to integrate distributed sensing, local processing, and autom
 
 As a proof of concept, the prototype demonstrates the practical application of the Lived Expertise Design Framework by translating systems thinking and lived expertise into a working cyber-physical intervention. Its purpose is to explore how a cyber-physical intervention can generate feedback about both the system being designed and the design process itself, informing future iterations of the technology and the framework.
 
+---
 ## List of Functions, Desired and Fulfilled:
-
-## System Functions
 
 ### ✅ Fulfilled
 
@@ -83,13 +90,12 @@ As a proof of concept, the prototype demonstrates the practical application of t
 | 30 | Home Assistant / third-party integration | The architectural opposite of the design: centralised, networked, app-managed. Excluded from this build. |
 | 31 | Medical diagnosis or clinical monitoring | Pear-Pie is an exploratory prototype. It does not diagnose, replace professional care, or provide emergency monitoring. |
 
-
+---
 
 ## Prototype Architecture
 
 ### Architecture: the units and their orders
 
----
 
 #### 🔵 SENSOR POD  ×7
 **Hardware:** Raspberry Pi Pico 2 W · mmWave radar (S3KM1110, 24GHz) · Lorikeet WS2812 LED · LiPo/USB-C
@@ -105,7 +111,6 @@ What it does, every loop:
 
 Emergent, not programmed: the trail following a person through the home, and the network's relational self-picture, arise from independent pods each doing only the above.
 
----
 
 #### 🟣 SENSOR POD + TOOL CAPABILITY  ×1 built (the Time Timer pod)
 **Hardware:** Raspberry Pi Pico 2 W · ST7735S 1.8" LCD · rotary potentiometer
@@ -119,7 +124,6 @@ Everything a sensor pod is, with a purpose-built capability in place of the ligh
 
 The architecture supports further tool pods without changing the network.
 
----
 
 #### 🟠 THE HUB  ×1
 **Hardware:** Raspberry Pi 5 · Inky Impression 7.3" e-ink · projector
@@ -137,9 +141,8 @@ It also faces the person:
 - E-ink status face: calm summary, ten-minute refresh, never asks for anything
 - Projected pattern map: the walked trail, learned occupancy, predicted next room as a pulsing gold ring, rolling second-order activity log
 
+
 ---
-
-
 
 An off-grid modular home system using a two-tier Raspberry Pi 5 and Pi Pico control system with BLE peer-to-peer broadcast, RADAR, and edge ML to create a self-regulating feedback loop.
 
