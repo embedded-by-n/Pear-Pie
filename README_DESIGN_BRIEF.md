@@ -15,6 +15,10 @@ This project brings together those experiences with the theoretical foundations 
 
 More broadly, I hope to contribute to the development of affordable, scalable, privacy-preserving technologies that expand equitable access to innovation for marginalised and low-socioeconomic communities. I believe that meaningful technological progress should not only advance capability, but also dignity, autonomy, and opportunity.
 
+# An Important Note On Terminology
+- I will refer to disabled people as unafforded people and i propose this as a new term that can be used instead of disabled that puts the onus back onto the community and shared responsibility (here is where i also want to reference kinship systems and the indigenous article about undle doesnt hear good etc. by referring to people as unafforded we do not have to inherently view them as disabled, can help people to access services better etc etc.  disabled/unafforded person interchangeable terminology i will use this throughout the paper.
+- 
+
 # Conceptual Contribution: A Cybernetic Model of Lived Expertise.
 This project proposes a cybernetic interpretation of lived expertise as the feedback signal linking the Social Model of Disability, Affordance Theory, participatory design, and the Curb Cut Effect. It argues that repeated interaction with environmental barriers generates situated knowledge that cannot be fully obtained through observation alone. By recognising lived expertise as a legitimate form of systems knowledge and incorporating it into the design process, interventions can improve environmental affordance, reduce disability, and generate broader societal benefits through the Curb Cut Effect. This conceptual model positions lived expertise as the feedback signal that enables inclusive systems to learn, adapt, and continually improve.
 
