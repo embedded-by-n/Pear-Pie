@@ -1,19 +1,22 @@
 # Final Maker Project: Pear-Pie Cyber-Physical Home System - Design Brief | CYBN8001 Building Cyber-Physical Systems, Master of Applied Cybernetics, 2026 Cohort, Australian National University
 
+# 1. Introduction
 _'In theory there is no difference between theory and practice. 
 In practice, there is.'_\
 (Norman 2018, p.236)
 
-This project demonstrates the theoretical and technical knowledge I have developed throughout Semester 1 of the Master of Applied Cybernetics at the Australian National University.
+This project represents the convergence of theory, professional practice, and lived experience. It demonstrates the theoretical knowledge and technical capabilities developed throughout Semester 1 of the Master of Applied Cybernetics at the Australian National University while addressing a problem that has been deeply personal throughout my own life.
 
-It is also deeply personal. It represents the culmination of my determination to persevere through the lived experience of neurodivergence and years spent navigating Australia's social welfare systems.
-Those experiences taught me the irreplaceable value of lived expertise. 
+As a neurodivergent person, I have spent years navigating Australia's social welfare and education systems. These experiences revealed that the greatest barriers to participation are often not a person's impairment, but the complex interactions between people, environments, policies, and institutions. Through repeatedly encountering these barriers, I came to understand the unique value of lived expertise as a legitimate form of systems knowledge—knowledge that cannot be fully acquired through observation alone.
 
-Later, through my professional career as a psychosocial worker and educator, I witnessed first-hand the human consequences of the gap between policy and practice.
+Later, through my professional career as a psychosocial worker and educator, I witnessed these same challenges from a different perspective. Supporting people to navigate complex social systems highlighted the persistent gap between policy as it is designed and policy as it is experienced in practice. It reinforced my belief that understanding systems requires more than institutional perspectives alone; it also requires the insights of those who live within them.
 
-This project brings together those experiences with the theoretical foundations of applied cybernetics. My aim is to design technologies with heart (Nardi & O'Day, 1999): technologies that improve communication across complex social systems, particularly within the welfare and education sectors, while demonstrating what policy can look like in practice for the people who ultimately live with its consequences.
+This project brings these experiences together with the theoretical foundations of applied cybernetics. Rather than beginning with technology and searching for a problem, it begins with lived experience and asks how cyber-physical systems might better support people navigating complex environments. Guided by Nardi and O'Day's (1999) vision of "technologies with heart," the project explores how technology can strengthen communication between people and systems, increase environmental affordance, and support more equitable engagement with social services.
 
-More broadly, I hope to contribute to the development of affordable, scalable, privacy-preserving technologies that expand equitable access to innovation for marginalised and low-socioeconomic communities. I believe that meaningful technological progress should not only advance capability, but also dignity, autonomy, and opportunity.
+More broadly, I hope this work contributes to the development of affordable, scalable, and privacy-preserving technologies that expand equitable access to innovation for marginalised and low-socioeconomic communities. I believe that meaningful technological progress should not simply increase technical capability, but also enhance dignity, autonomy, opportunity, and inclusion.
+
+The Pear Pie Cyber-Physical Home System is presented as an applied demonstration of these principles. Before introducing the system itself, however, the following sections outline the conceptual framework that informed its design.
+
 
 # An Important Note On Terminology
 - I will refer to disabled people as unafforded people and i propose this as a new term that can be used instead of disabled that puts the onus back onto the community and shared responsibility (here is where i also want to reference kinship systems and the indigenous article about undle doesnt hear good etc. by referring to people as unafforded we do not have to inherently view them as disabled, can help people to access services better etc etc.  disabled/unafforded person interchangeable terminology i will use this throughout the paper.
