@@ -30,17 +30,17 @@ The term unafforded is proposed to emphasise that barriers to participation ofte
 This relational framing is consistent with the theoretical foundations of Affordance Theory and the Social Model of Disability that underpin this project. It also resonates with relational understandings of personhood found in many Indigenous knowledge systems, where people are often described in terms of their relationships, capabilities, and circumstances rather than being defined by a fixed deficit. While unafforded is proposed here as a conceptual term within an applied cybernetics context, it reflects a broader commitment to understanding disability as an interaction between people and the systems in which they live.
 
 Ultimately, the purpose of introducing unafforded is not to replace existing language, but to expand it. It provides an additional way of describing experiences of exclusion that foregrounds shared responsibility for creating environments in which more people can participate, contribute, and flourish.
--
+
 
 # Conceptual Contribution 1 : The Lived Expertise Feedback Model
 This project proposes a cybernetic interpretation of lived expertise as the feedback signal linking the Social Model of Disability, Affordance Theory, participatory design, and the Curb Cut Effect. It argues that repeated interaction with environmental barriers generates situated knowledge that cannot be fully obtained through observation alone. By recognising lived expertise as a legitimate form of systems knowledge and incorporating it into the design process, interventions can improve environmental affordance, reduce disability, and generate broader societal benefits through the Curb Cut Effect. This conceptual model positions lived expertise as the feedback signal that enables inclusive systems to learn, adapt, and continually improve.
 
-(Insert the feedback loop diagram here.)
+# (Insert the feedback loop diagram here.)
 
 # Contribution Contribution 2: The Bottom-Up Systems Mapping Model
 The Pear Pie Cyber-Physical Home System is designed as an applied demonstration of this conceptual model. Using the cybernetic model of lived expertise and bottom-up systems mapping to  discovering interventions that conventional systems analysis misses and reveals entirely different intervention points that are invisible from a top-down view of the system.
 
-(Insert the feedback loop diagram here.)
+# (Insert the feedback loop diagram here.)
 
 
 # Case Study: NDIS Top-down model vs Bottom-up Model
