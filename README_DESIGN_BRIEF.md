@@ -18,9 +18,17 @@ More broadly, I hope this work contributes to the development of affordable, sca
 The Pear Pie Cyber-Physical Home System is presented as an applied demonstration of these principles. Before introducing the system itself, however, the following sections outline the conceptual framework that informed its design.
 
 
-# An Important Note On Terminology
-- I will refer to disabled people as unafforded people and i propose this as a new term that can be used instead of disabled that puts the onus back onto the community and shared responsibility (here is where i also want to reference kinship systems and the indigenous article about undle doesnt hear good etc. by referring to people as unafforded we do not have to inherently view them as disabled, can help people to access services better etc etc.  disabled/unafforded person interchangeable terminology i will use this throughout the paper.
-- 
+# An Important Note On Terminology: Unafforded People
+Throughout this project, I introduce unafforded as a complementary systems term rather than a replacement for disabled. The intention is not to redefine disability or diminish the importance of disability identity, but to offer language that foregrounds the relationship between people and their environments.
+
+Many people identify proudly as disabled, and for many, the term represents an important source of identity, community, and empowerment. This project fully acknowledges and respects those perspectives. Accordingly, the terms disabled person and unafforded person are used interchangeably throughout this paper, with disabled retained where referring to existing legislation, policy, and disability scholarship.
+
+The term unafforded is proposed to emphasise that barriers to participation often arise not from the individual alone, but from environments, technologies, institutions, and communities that fail to provide the affordances necessary for equitable participation. By shifting the linguistic emphasis from individual deficit towards the relationship between people and their environments, the term encourages a shared understanding of responsibility for inclusion rather than locating that responsibility solely within the individual.
+
+This relational framing is consistent with the theoretical foundations of Affordance Theory and the Social Model of Disability that underpin this project. It also resonates with relational understandings of personhood found in many Indigenous knowledge systems, where people are often described in terms of their relationships, capabilities, and circumstances rather than being defined by a fixed deficit. While unafforded is proposed here as a conceptual term within an applied cybernetics context, it reflects a broader commitment to understanding disability as an interaction between people and the systems in which they live.
+
+Ultimately, the purpose of introducing unafforded is not to replace existing language, but to expand it. It provides an additional way of describing experiences of exclusion that foregrounds shared responsibility for creating environments in which more people can participate, contribute, and flourish.
+-
 
 # Conceptual Contribution 1 : The Lived Expertise Feedback Model
 This project proposes a cybernetic interpretation of lived expertise as the feedback signal linking the Social Model of Disability, Affordance Theory, participatory design, and the Curb Cut Effect. It argues that repeated interaction with environmental barriers generates situated knowledge that cannot be fully obtained through observation alone. By recognising lived expertise as a legitimate form of systems knowledge and incorporating it into the design process, interventions can improve environmental affordance, reduce disability, and generate broader societal benefits through the Curb Cut Effect. This conceptual model positions lived expertise as the feedback signal that enables inclusive systems to learn, adapt, and continually improve.
