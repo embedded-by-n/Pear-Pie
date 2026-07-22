@@ -20,8 +20,10 @@ More broadly, I hope this work contributes to the development of affordable, sca
 The Pear Pie Cyber-Physical Home System is presented as an applied demonstration of these principles. Before introducing the system itself, however, the following sections outline the conceptual framework that informed its design.
 
 
-# Conceptual Contribution 1: Systems Terminology: _Unafforded People_
+# Conceptual Contribution 1: 
+Systems Terminology: _Unafforded People_
 _A proposed colloquial systems term that shifts responsibility away from individual deficit and towards the shared relationship between people, communities, institutions, technologies, and their environments._ 
+-
 
 Throughout this project, I introduce unafforded as a complementary systems term rather than a replacement for disabled. The intention is not to redefine disability or diminish the importance of disability identity, but to offer language that foregrounds the relationship between people and their environments.
 
