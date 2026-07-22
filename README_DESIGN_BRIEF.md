@@ -1,4 +1,5 @@
-# Final Maker Project: Pear-Pie Cyber-Physical Home System - Design Brief | CYBN8001 Building Cyber-Physical Systems, Master of Applied Cybernetics, 2026 Cohort, Australian National University
+# Pear-Pie Cyber-Physical Home System | 
+## CYBN8001 Building Cyber-Physical Systems, Master of Applied Cybernetics, 2026 Cohort, Australian National University
 
 # 1. Introduction
 
