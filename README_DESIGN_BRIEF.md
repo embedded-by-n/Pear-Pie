@@ -7,6 +7,16 @@ In practice, there is.'_\
 (Norman 2018, p.236)
 -
 
+This thesis develops a conceptual and analytical framework for understanding participation in socio-technical systems through the lens of affordance and cybernetics. It introduces the concept of the Unafforded Person as a relational condition arising when the affordances available within a person's ecological context are insufficient to support equitable participation. Building on this concept, it proposes a methodology that interprets lived expertise as a source of systems feedback, enabling analysts to identify mismatches between institutional assumptions and real-world system behaviour and thereby reveal hidden barriers, omitted conditions, and opportunities for intervention.
+
+
+
+
+
+This thesis develops a systems analysis methodology that integrates affordance theory, critical systems thinking, applied cybernetics and lived expertise. Within this framework, lived expertise is interpreted as a source of systems feedback, enabling comparison between institutional and lived system representations to identify omitted boundary conditions and upstream intervention opportunities. 
+
+
+
 This project represents the culmination of the theoretical, technical, and practical knowledge developed throughout Semester 1 of the Master of Applied Cybernetics at the Australian National University. As the final Maker Project for CYBN8001, it demonstrates the application of applied cybernetics across the complete design process: understanding a complex socio-technical system, analysing its dynamics, developing conceptual and analytical frameworks, identifying opportunities for intervention, designing a cyber-physical system, and implementing that system through integrated hardware and software.
 
 More than the construction of a technological artefact, this project demonstrates the practice of applied cybernetics. It brings together systems thinking, cybernetic theory, human-centred design, embedded systems engineering, machine learning, and cyber-physical systems design to explore how technology can respond to complex human problems in ways that are technically robust, socially meaningful, and ethically grounded.
