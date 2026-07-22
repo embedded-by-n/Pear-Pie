@@ -9,6 +9,33 @@ In practice, there is.'_\
 
 # PART ONE: PROTOTYPE DOCUMENTATION
 
+## Makers: 
+N Hall
+
+## All code and documentation is available on GitHub:
+https://github.com/embedded-by-n/Pear-Pie
+
+## Objective of Prototype:
+
+The objective of the Pear-Pie prototype is to design, build, and evaluate a functional cyber-physical home system that demonstrates how adaptive technologies can support participation within everyday home environments.
+
+The prototype aims to integrate distributed sensing, local processing, and automated actuation into a single modular system capable of responding to changing environmental conditions and user needs. Through iterative design, testing, and reflection, the prototype explores how cybernetic feedback can be used to create technologies that increase affordances rather than simply providing static assistance.
+
+As a proof of concept, the prototype demonstrates the practical application of the Lived Expertise Design Framework by translating systems thinking and lived expertise into a working cyber-physical intervention. Its purpose is to explore how a cyber-physical intervention can generate feedback about both the system being designed and the design process itself, informing future iterations of the technology and the framework.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Framing Foreword: 'Nothing about us, without us'
 
 This paper is written by and for a person who is multiply neurodivergent, with direct lived experience of the material it covers. Providing the reader with a theoretical and lived-experience framing is essential to understanding the scope of this project's necessity, what inclusive design offers wider society, and why functions that appear paradoxical to a reader without lived experience of neurodivergence are in fact deliberate and useful to our community.
