@@ -20,7 +20,7 @@ More broadly, I hope this work contributes to the development of affordable, sca
 The Pear Pie Cyber-Physical Home System is presented as an applied demonstration of these principles. Before introducing the system itself, however, the following sections outline the conceptual framework that informed its design.
 
 
-# Conceptual Contribution 1: _Unafforded People_
+# Contribution 1: Conceptual Terminology -  _Unafforded People_
 
 _A proposed colloquial systems term that shifts responsibility away from individual deficit and towards the shared relationship between people, communities, institutions, technologies, and their environments._ 
 -
@@ -36,7 +36,7 @@ This relational framing is consistent with the theoretical foundations of Afford
 Ultimately, the purpose of introducing unafforded is not to replace existing language, but to expand it. It provides an additional way of describing experiences of exclusion that foregrounds shared responsibility for creating environments in which more people can participate, contribute, and flourish.
 
 
-# Conceptual Contribution 1 : The Lived Expertise Feedback Model
+# Contribution 2: Conceptual Synthesis -  _Lived Expertise Feedback Model_
 
 _A conceptual cybernetic model that positions lived expertise as the feedback signal enabling inclusive systems to learn, adapt, and continually improve._
 -
@@ -45,7 +45,7 @@ This project proposes a cybernetic interpretation of lived expertise as the feed
 
 # (Insert the feedback loop diagram here.)
 
-# Contribution Contribution 2: The Bottom-Up Systems Analysis Model
+# Contribution 3: Methodological Approach -  _Bottom-Up/Lived-Expertise Systems Analysis Model_
 
 _A complementary systems mapping and analysis model that compares lived experience with conventional systems maps to reveal gaps between intended and experienced systems, identifying barriers and intervention opportunities._
 -
