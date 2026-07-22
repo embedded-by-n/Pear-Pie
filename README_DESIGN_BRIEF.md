@@ -24,7 +24,7 @@ Tool pods are capable of performing a miriad of functions such as reading vital 
 The pods also have a centralised hub which analyses the emergent patterns across the distributed network of pods, which help to learn and predict the movements of the user in the space, sending weighted recommendations back to each pod and displaying the patterns of behaviour of the user in the home on the main hub display. \
 
 # WHAT questions it explores: The applied theory.
-This project proposes a cybernetic interpretation of lived expertise as a feedback mechanism connecting the Social Model of Disability, Affordance Theory, participatory design, and the Curb Cut Effect.
+This project proposes a cybernetic interpretation of lived expertise as a feedback mechanism connecting the Social Model of Disability, Affordance Theory, participatory design, and the Curb Cut Effect. Repeated interaction with environmental barriers generates situated knowledge that is difficult to obtain through observation alone. I propose this as a conceptual cybernetic model that synthesises these existing theories and explains how lived expertise functions as a feedback mechanism within inclusive design.
 
 <img width="10080" height="3555" alt="image" src="https://github.com/user-attachments/assets/91cb47f8-d5df-4532-b401-bd7cf42e80b7" />
 
