@@ -96,7 +96,7 @@ As a proof of concept, the prototype demonstrates the practical application of t
 
 ### Architecture: the units and their orders
 
-'''PEAR-PIE ARCHITECTURE
+```PEAR-PIE ARCHITECTURE
                      units and their cybernetic orders
 
 ┌─────────────────────────────────────────────────────────────────┐
@@ -146,7 +146,7 @@ As a proof of concept, the prototype demonstrates the practical application of t
 └─────────────────────────────────────────────────────────────────┘
 
         remove the hub → every pod continues autonomously
-              a homeostat of homeostats (Ashby 1948)'''
+              a homeostat of homeostats (Ashby 1948)```
 
 #### 🔵 SENSOR POD  ×7
 **Hardware:** Raspberry Pi Pico 2 W · mmWave radar (S3KM1110, 24GHz) · Lorikeet WS2812 LED · LiPo/USB-C
@@ -203,32 +203,7 @@ First-order learning happens on the pods as they regulate the home through peer-
 
 Particular care is given to PDA-profile (Persistent Drive for Autonomy) neurodivergent users, supporting executive functioning and working memory by externalising cognitive load. Asking who we unconsciously see as viable users of cutting-edge technology: the Pear Pie embodies the curb-cut effect. Design affordances for disability as a priority, and everyone benefits.
 
-'''
-┌─────────────────────────────────────────────────────────┐
-│ HOME HUB │
-│ Raspberry Pi 5 │
-│ │
-│ pod_log.csv learn.py rules.py │
-│ (event logging, (decision (deterministic │
-│ shared timebase) tree model) control) │
-│ │
-│ inky_face.py pattern_map.py │
-│ (e-ink status) (projected live map) │
-└───────────────────────────┬─────────────────────────────┘
-│
-BLE advertise-and-scan
-uplink "PP" ▲ ▼ downlink "PU"
-│
-┌──────────┬──────────┬──┴───────┬──────────┬──────────┐
-▼ ▼ ▼ ▼ ▼ ▼
-┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐
-│ Pod 1 │ │ Pod 2 │ │ Pod 3 │ │ Pod 4 │ │ Pods │ │ Pod 8 │
-│Hallway │ │Kitchen │ │Island │ │Office │ │5,6,7 │ │Bedroom │
-│ │ │ │ │ │ │TOOL: │ │Lounge/ │ │ │
-│ │ │ │ │ │ │Timer │ │Door/ │ │ │
-│ │ │ │ │ │ │ │ │Bath │ │ │
-└────────┘ └────────┘ └────────┘ └────────┘ └────────┘ └────────┘
-'''
+
 
 ### The two tiers
 
