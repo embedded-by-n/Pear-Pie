@@ -78,9 +78,23 @@ In this sense, unafforded functions as a boundary object (Star & Griesemer 1989)
 
 This shift in language also changes where we look for knowledge. If participation depends on relationships between people and systems, then understanding those relationships requires listening to the people who repeatedly experience them. This leads to the second principle of the framework: lived expertise as feedback.
 
+# 2.2 How do we understand it? — The Lived Expertise Feedback Model
 
+If unaffordance arises through relationships between people and systems, those relationships must be understood through the experiences generated within them.
 
+Feedback is foundational to cybernetics. Systems can only learn and adapt when information about the consequences of their behaviour is returned and influences future action (Wiener 1948; Ashby 1956). Without feedback, systems cannot distinguish intended outcomes from experienced outcomes.
 
+Human service systems typically evaluate themselves through institutional measures such as compliance, policy implementation, service utilisation, and organisational performance. These measures describe how the system operates. They rarely describe how the system is experienced by the people expected to navigate it.
+
+Lived expertise: Situated systems knowledge developed through repeated interaction with an environment, technology, institution, community, or social system over time.
+
+Lived expertise is more than lived experience alone. It emerges through repeated interaction with the same system, revealing recurring barriers, informal workarounds, unintended consequences, hidden dependencies, and the gap between intended and actual system behaviour.
+
+Institutional actors understand systems through their design, governance, and intended operation. People who continually navigate those systems understand them through their effects. Both describe the same system, but each observes different forms of knowledge.
+
+From a cybernetic perspective, lived expertise functions as an essential source of feedback. It provides information about system behaviour that institutional measures cannot observe. Rather than treating lived expertise as consultation undertaken after design, this framework positions it as a continuous feedback signal that guides where intervention is needed and how systems should adapt.
+
+[RED: FIGURE 3 — Lived Expertise Feedback Model diagram. You have drawn this.]
 
 
 
