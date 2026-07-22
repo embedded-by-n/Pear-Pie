@@ -22,11 +22,21 @@ https://github.com/embedded-by-n/Pear-Pie
 
 ## Theoretical Foundation: 
 
-### Social Model of Disability + Affordance Theory + The Curb Cut Effect
+
 <img width="550" height="450" alt="image" src="https://github.com/user-attachments/assets/c6bcebd5-2591-437c-8a63-53b1874a9059" />
 
-### Unafforded People:
+### Social Model of Disability + Affordance Theory + The Curb Cut Effect
 
+The foundation of this project rests on three interlocking ideas. The Social
+Model of Disability locates disability in environments rather than bodies
+(Oliver 1990). Affordance Theory gives that relocation its precision: an
+affordance is neither a property of a person nor of a place, but of the
+relationship between them (Gibson 1979; Davis & Chouinard 2016). The Curb Cut
+Effect completes the argument: design for the people an environment fails
+first, and everyone benefits (Duvall et al. 2022).
+
+### Unafforded People:
+(add diagram)
 **An unafforded person** is a person, community or group whose opportunities for
 participation are constrained because the affordances required for equitable
 engagement are absent or insufficient within their environments, technologies,
@@ -50,6 +60,7 @@ human condition. Understood this way, accessibility becomes a shared design
 objective rather than a specialised accommodation.
 
 ### The Lived Expertise Feedback Model:
+(add lived expertise feedback loop diagram)
 
 **Lived expertise** is situated systems knowledge developed through repeated
 interaction with an environment, technology, institution or social system over
@@ -67,7 +78,7 @@ behaviour (Wiener 1948; Ashby 1956). Most human service systems evaluate
 themselves on institutional measures and never receive this signal.
 
 ### Allowance Technology:
-
+(add alloance diagram of davis chounard highlighted)
 **Allowance technology** is technology intentionally designed to increase a
 person's opportunities for action, participation, autonomy and communication
 within their environments. The term foregrounds what a technology *enables*
