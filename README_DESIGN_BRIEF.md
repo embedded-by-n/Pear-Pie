@@ -550,7 +550,9 @@ The hub uses this to translate raw pod IDs into meaningful spaces during analysi
 * Kaiko I, Ham I van der and Schomaker J (30 June 2026) ‘The condition that causes people to get lost in their own home’, ABC News, accessed 2 July 2026, https://www.abc.net.au/news/2026-07-01/developmental-topographical-disorientation-people-lost-in-home/106863294, accessed 2 July 2026.
 * Norman D (2013) *The design of everyday things: revised and expanded edition*, Basic Books, New York.
 * Okai-Ugbaje, S. (forthcoming). "The Cybernetic Wheel: A model to aid the design and development of safe, responsible and sustainable technological systems."
+* Oliver, M. (1990) The Politics of Disablement.
 * Rosenblueth, A., Wiener, N., & Bigelow, J. (1943). "Behavior, purpose and teleology." *Philosophy of Science*, 10(1), 18-24
+* Shakespeare, T. (2018) Disability: The Basics.
 * Swift, B. (2025). Hendrix homeostat [Source code repository]. ANU Cybernetic Studio. https://github.com/ANUcybernetics/hendrix-homeostat. README structure and conceptual-mapping framework adapted for the Pear Pie project.
 * von Foerster, H. (1974). *Cybernetics of Cybernetics*
 
