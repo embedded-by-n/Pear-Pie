@@ -1,9 +1,11 @@
 # Final Maker Project: Pear-Pie Cyber-Physical Home System - Design Brief | CYBN8001 Building Cyber-Physical Systems, Master of Applied Cybernetics, 2026 Cohort, Australian National University
 
 # 1. Introduction
+
 _'In theory there is no difference between theory and practice. 
 In practice, there is.'_\
 (Norman 2018, p.236)
+-
 
 This project represents the convergence of theory, professional practice, and lived experience. It demonstrates the theoretical knowledge and technical capabilities developed throughout Semester 1 of the Master of Applied Cybernetics at the Australian National University while addressing a problem that has been deeply personal throughout my own life.
 
