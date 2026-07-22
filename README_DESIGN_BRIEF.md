@@ -19,9 +19,9 @@ More broadly, I hope this work contributes to the development of affordable, sca
 
 The Pear Pie Cyber-Physical Home System is presented as an applied demonstration of these principles. Before introducing the system itself, however, the following sections outline the conceptual framework that informed its design.
 
-## Lived Expertise Conceptual Framework 
+# 2. Lived Expertise Conceptual Framework 
 
-# Contribution 1: Proposed Conceptual Terminology -  _Unafforded People_
+## Contribution 1: Proposed Conceptual Terminology -  _Unafforded People_
 
 _A proposed colloquial systems term that shifts responsibility away from individual deficit and towards the shared relationship between people, communities, institutions, technologies, and their environments._ 
 -
@@ -41,7 +41,7 @@ This relational framing is consistent with the theoretical foundations of Afford
 Ultimately, the purpose of introducing unafforded is not to replace existing language, but to expand it. It provides an additional way of describing experiences of exclusion that foregrounds shared responsibility for creating environments in which more people can participate, contribute, and flourish.
 
 
-# Contribution 2: Conceptual Synthesis -  _Lived Expertise Feedback Model_
+## Contribution 2: Conceptual Synthesis -  _Lived Expertise Feedback Model_
 
 _A conceptual cybernetic model that positions lived expertise as the feedback signal enabling inclusive systems to learn, adapt, and continually improve._
 -
@@ -55,7 +55,7 @@ This project proposes a cybernetic interpretation of lived expertise as the feed
 
 # (Insert the feedback loop diagram here.)
 
-# Contribution 3: Proposed Analytical Methodology -  _Lived Expertise Systems Mapping_
+## Contribution 3: Proposed Analytical Methodology -  _Lived Expertise Systems Mapping_
 
 _A complementary systems mapping and analysis model that compares lived experience with conventional systems maps to reveal gaps between intended and experienced systems, identifying barriers and intervention opportunities._
 -
@@ -70,7 +70,8 @@ The Pear Pie Cyber-Physical Home System is designed as an applied demonstration 
 # (Insert intended system diagram here.)(policy, service pathways, official processes)
 # (Insert experienced system diagram here.)what people actually have to navigate).
 
-# Integrating the Conceptual Framework
+# 3. Applying the Lived Expertise Conceptual Framework
+
 - building empthy
 # Case Study: NDIS Top-down model vs Bottom-up Model
 
