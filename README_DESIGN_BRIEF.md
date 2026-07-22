@@ -133,43 +133,101 @@ This conceptual model provides the theoretical foundation for the Lived Expertis
 
 ## 2c) Analytical Methodology: _Lived Expertise Systems Boundary Analysis Methodology_
 
-Institutional boundaries are often treated as precise, whereas people's lived interactions with systems occur across diffuse, overlapping, and upstream conditions.
+_The Lived Expertise Systems Boundary Analysis Methodology is a complementary systems mapping and analysis methodology that compares intended and experienced representations of the same system to identify systems gaps, hidden barriers, and intervention opportunities by expanding conventional institutional system boundaries through lived expertise._ 
 
-Why do we need to analyse systems differently in the first place?
+Why do we need to analyse systems differently?
+
+Institutional boundaries are often treated as precise, whereas people's lived interactions with systems occur across diffuse, overlapping, and upstream conditions. Conventional systems analysis frequently begins with the institutional definition of where a system starts and finishes. While this approach is effective for understanding organisational structures, governance, and service delivery, it can overlook the conditions that determine whether people can access, engage with, or benefit from those systems in the first place.
+
+The Lived Expertise Systems Boundary Analysis Methodology was developed to address this limitation.
 
 Problem: Institutional boundaries hide upstream causes.
-Response: Use lived expertise to expand the analytical boundary.
-Method: Compare intended and experienced systems.
-Output: Identify systems gaps.
-Application: Design Pear Pie to bridge those gaps.
+Response: Expand the analytical boundary using lived expertise.
+Method: Compare intended and experienced representations of the same system.
+Output: Identify systems gaps, hidden barriers, and intervention opportunities.
 
-_A complementary systems mapping and analysis model that compares lived experience with conventional systems maps to reveal gaps between intended and experienced systems, identifying barriers and intervention opportunities._
-
-One sentence
+Rather than replacing conventional systems analysis, this methodology complements existing approaches by recognising lived expertise as a legitimate source of systems knowledge. It proposes that understanding complex socio-technical systems sometimes requires stepping beyond institutional boundaries to examine the upstream conditions that connect people to them.
 
 Theory
+Where do you draw the system boundary?
 
-_Where do you draw the system boundary?_
+Every systems analysis begins with a boundary judgement. Where the system boundary is drawn determines what is considered part of the system, what is excluded, which relationships are examined, whose perspectives are represented, and ultimately what conclusions can be reached.
 
-Conventional systems analysis is often bounded by institutional definitions of where a system begins and ends. However, many of the conditions that determine whether people can access, engage with, or benefit from a system originate beyond these formal boundaries. This project proposes that understanding a system sometimes requires stepping across its institutional boundary to examine the upstream conditions that connect people to it. Lived expertise provides access to these boundary conditions, revealing systems gaps, hidden barriers, and intervention opportunities that remain invisible when analysis is confined to the institution's definition of the system.
+Churchman (1970) argued that systems cannot be understood independently of the boundaries chosen by the observer. Building on this work, Ulrich's (1983) Critical Systems Heuristics and Midgley's (2000) Systemic Intervention demonstrate that system boundaries are analytical choices rather than objective realities. These boundary judgements determine which empirical observations, values, stakeholders, and causal relationships become visible, while simultaneously obscuring those that fall outside the chosen boundary.
 
-Institutional systems frequently draw their boundaries around the point of service delivery rather than around the conditions that determine whether people can reach that service.
-Understanding a system sometimes requires analysing the conditions beyond its formal boundary, because those conditions determine how, whether, and for whom the system functions in practice. Lived expertise provides access to these boundary conditions, revealing causal relationships and intervention opportunities that remain invisible when analysis is confined to the institutional definition of the system.
-Restricting analysis to institutionally defined system boundaries risks overlooking the upstream conditions that determine access, participation, and outcomes. Incorporating lived expertise enables analysts to examine these boundary conditions and identify intervention opportunities that may otherwise remain obscured.
+Institutional systems frequently draw these boundaries around formal organisational responsibility. Policy, legislation, eligibility, funding, assessment, and service delivery become the focus of analysis because they define where institutions perceive their responsibility to begin and end. While these boundaries are administratively necessary, they do not necessarily reflect where the system begins for the people attempting to navigate it.
 
+For many people, particularly those navigating complex disability and social support systems, engagement with formal services is shaped by conditions that originate well before the point of service delivery. Executive functioning, communication, transport, housing, digital access, sensory environments, previous experiences with institutions, social supports, financial stability, and countless other interacting conditions influence whether participation within the formal system is possible at all. Although these conditions often exist outside institutional responsibility, they remain part of the lived system that determines real-world outcomes.
 
-Official vs Experienced diagrams
+From a critical systems perspective, restricting analysis to institutionally defined boundaries risks overlooking the upstream conditions that determine access, participation, and outcomes. Expanding the analytical boundary through lived expertise enables these otherwise invisible conditions to become visible.
 
-The Pear Pie Cyber-Physical Home System is designed as an applied demonstration of this conceptual model. Using the cybernetic model of lived expertise and bottom-up systems mapping to  discovering interventions that conventional systems analysis misses and reveals entirely different intervention points that are invisible from a top-down view of the system.
+This broader understanding of systems also aligns with Actor-Network Theory (Latour, 2005), which proposes that systems emerge through relationships between human and non-human actors rather than existing solely within organisations or institutions. Policies, technologies, forms, algorithms, transport systems, homes, physical environments, and everyday objects all participate in shaping people's capacity to act. Rather than treating these elements as external context, this methodology considers them integral components of the lived system.
+
+Similarly, Tsing's (2012) critique of scalability highlights how institutional systems depend upon simplified representations that enable consistency across large organisations. These intended representations are necessary for governance, yet they inevitably simplify the diverse, relational, and locally contingent conditions through which systems are actually experienced. Consequently, institutional representations describe how a system is intended to function, while lived expertise reveals how that same system functions in practice.
+
+The central proposition of this methodology is therefore:
+
+Institutional systems frequently draw their boundaries around the point of service delivery, whereas lived systems begin much earlier in the upstream conditions that determine whether service engagement is possible.
+
+### Intended and Experienced Systems
+
+The Lived Expertise Systems Boundary Analysis Methodology compares two complementary representations of the same system.
+
+The intended system represents how institutions describe the system. It includes policy, legislation, organisational structures, eligibility requirements, service pathways, operational processes, and intended outcomes. It reflects the assumptions embedded within the formal design of the system.
+
+The experienced system represents how people actually encounter and navigate that same system. Rather than beginning at the point of service delivery, it includes the upstream conditions, informal relationships, environmental factors, personal circumstances, workarounds, delays, barriers, and feedback processes that shape whether participation within the institutional system is possible.
+
+Neither representation is incorrect. They simply describe different perspectives of the same system.
+
+The intended system explains how the institution expects the system to operate.
+
+The experienced system explains how the system actually operates within everyday life.
+
+The analytical value emerges through comparing these two representations.
+
+#### (Insert Intended System Diagram here.)
+
+Policy, legislation, organisational structures, eligibility requirements, service pathways, institutional boundaries.
+
+#### (Insert Experienced System Diagram here.)
+
+Upstream conditions, lived pathways, environmental influences, informal relationships, barriers, feedback loops, and conditions experienced before reaching formal services.
+
+### Systems Gaps
+
+Comparing intended and experienced representations reveals what this project defines as systems gaps.
+
+A systems gap is the difference between how a system is intended to function and how it is experienced in practice.
+
+These gaps frequently occur where institutional assumptions fail to account for upstream conditions influencing participation. They may appear when formal pathways exist but cannot realistically be accessed, when environmental barriers prevent engagement before institutional processes begin, when responsibility is distributed across multiple organisations, or when people develop informal workarounds to achieve outcomes the system was originally intended to provide.
+
+Rather than viewing these differences as isolated service failures, the methodology interprets them as evidence that the analytical system boundary is incomplete.
+
+Systems gaps therefore represent opportunities for further systems inquiry rather than simply identifying operational problems.
+
+#### The Lived Expertise Systems Boundary Analysis Methodology
+
+The methodology consists of five iterative stages:
+
+1. Map the intended system by documenting institutional structures, policies, actors, responsibilities, service pathways, and intended outcomes.
+2. Map the experienced system by documenting lived pathways, upstream conditions, informal relationships, barriers, workarounds, environmental influences, and feedback encountered through lived experience.
+3. Expand the analytical system boundary by identifying conditions influencing participation that exist beyond institutional responsibility but materially affect system behaviour.
+4. Compare intended and experienced representations to identify systems gaps between institutional assumptions and lived reality.
+5. Identify intervention opportunities by analysing where changes to technologies, environments, communication, policy, services, relationships, or system design may reduce identified systems gaps.
+
+This methodology does not replace conventional systems analysis. Instead, it extends existing approaches by incorporating lived expertise into the process of systems inquiry. By expanding analytical boundaries beyond institutional definitions and comparing intended and experienced representations of the same system, it reveals hidden barriers, upstream causal relationships, and intervention opportunities that remain obscured within conventional top-down analyses.
+
 
 # (Insert intended system diagram here.)(policy, service pathways, official processes)
 # (Insert experienced system diagram here.)what people actually have to navigate).
+
 
 # 3. Applying the Lived Expertise Conceptual Framework
 Existing participatory and systems approaches seek to understand lived experience as one perspective within a system. This project instead proposes that lived expertise constitutes a distinct form of systems knowledge. By comparing intended and experienced representations of the same system, the Lived Expertise Systems Analysis Methodology identifies systems gaps that remain invisible from institutional perspectives alone. These gaps become the feedback through which systems can learn, adapt, and improve.
 
 
 - building empthy
+- 
 # Case Study: NDIS Top-down model vs Bottom-up Model
 
 # Gap Analysis
