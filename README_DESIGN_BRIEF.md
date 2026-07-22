@@ -96,11 +96,11 @@ As a proof of concept, the prototype demonstrates the practical application of t
 
 ### Architecture: the units and their orders
 
-<img width="80" height="100" alt="20260623_100055" src="https://github.com/user-attachments/assets/a86ef0c9-8fd3-4171-a3cd-598f9b6b0982" />
-<img width="80" height="100" alt="20260526_093125" src="https://github.com/user-attachments/assets/ce9e47ae-aa18-4ef6-ba2e-9b4072ee23fe" />
-<img width="80" height="100" alt="20260521_120035" src="https://github.com/user-attachments/assets/12a938b3-7892-4e2b-a5a1-067e741711e3" />
-<img width="80" height="100" alt="20260610_071612" src="https://github.com/user-attachments/assets/ee9c8006-0d03-4192-aa9b-a4e8611bcd3b" />
-<img width="80" height="100" alt="20260609_210038" src="https://github.com/user-attachments/assets/9aff210d-4be2-4f4b-a090-8bbf665bcc37" />
+<img width="200" height="200" alt="20260623_100055" src="https://github.com/user-attachments/assets/a86ef0c9-8fd3-4171-a3cd-598f9b6b0982" />
+<img width="200" height="200" alt="20260526_093125" src="https://github.com/user-attachments/assets/ce9e47ae-aa18-4ef6-ba2e-9b4072ee23fe" />
+<img width="200" height="200" alt="20260521_120035" src="https://github.com/user-attachments/assets/12a938b3-7892-4e2b-a5a1-067e741711e3" />
+<img width="200" height="200" alt="20260610_071612" src="https://github.com/user-attachments/assets/ee9c8006-0d03-4192-aa9b-a4e8611bcd3b" />
+<img width="200" height="200" alt="20260609_210038" src="https://github.com/user-attachments/assets/9aff210d-4be2-4f4b-a090-8bbf665bcc37" />
 
 ```
 PEAR-PIE ARCHITECTURE
