@@ -29,22 +29,37 @@ As a proof of concept, the prototype demonstrates the practical application of t
 
 ## List of Functions, Desired and Fulfilled:
 
-| Function | Desired Function | Fulfilled | Sensing | Computation | Actuation | Machine Learning |
-|----------|------------------|-----------|----------|-------------|-----------|------------------|
-| Presence sensing | Detect movement and presence within individual areas of the home without cameras or wearables. | ✅ Yes | 24 GHz mmWave RADAR | Read sensor values | None | None |
-| Adaptive baseline | Learn what is "normal" for each location. | ✅ Yes | RADAR input | EWMA adaptive baseline and threshold comparison | None | Local adaptive learning (EWMA) |
-| Change detection | Detect activity that differs from the learned baseline. | ✅ Yes | RADAR input | Difference calculation and threshold classification | LED state triggered | Uses learned baseline |
-| Ambient feedback | Display meaningful environmental information without requiring screens or notifications. | ✅ Yes | Triggered by detected state | Timing and fade calculations | WS2812 LED arrival sweep, sustained trail and fade | None |
-| Distributed pod operation | Allow multiple pods to operate independently throughout the home. | ✅ Yes | Local sensing per pod | Independent processing on each Pico | Local LED actuation | Individual learned baselines |
-| BLE communication | Share pod state with a central hub. | ✅ Yes | Pod state | Packet creation and transmission | None | None |
-| Hub event logging | Record activity from all pods using a common time base. | ✅ Yes | BLE packet reception | Event logging, timestamps and pod registry | None | Data collection for future learning |
-| Second-order adaptation | Allow the hub to modify pod learning parameters. | 🟡 Partial | BLE communication | Parameter evaluation and update packets | None | Hub adjusts EWMA alpha and thresholds |
-| Long-term pattern learning | Detect behavioural patterns across rooms, days and weeks. | 🟡 Partial | Network event history | Pattern comparison and trend analysis | None | Planned network-level learning |
-| Vitals sensing | Monitor respiration, heart rate and sleep using 60 GHz radar. | 🟡 Partial | 60 GHz mmWave RADAR | Sensor processing | Future interventions | Future learning |
-| Graceful degradation | Continue operating if the hub or network fails. | ✅ Yes | Local sensing | Local computation continues independently | Local LEDs continue operating | Local learning retained |
-| Outbound SMS | Send selected notifications externally without inbound control. | ❌ Planned | Event trigger | Message generation | SMS transmission | None |
-| Clinical monitoring | Provide medical diagnosis or emergency monitoring. | ❌ Out of scope | N/A | N/A | N/A | N/A |
+## System Functions
 
+| # | Function | Order | Status |
+|---|----------|-------|--------|
+| 1 | Presence sensing via mmWave radar (existence, not identity) | First | ✅ Fulfilled |
+| 2 | On-pod adaptive baseline learning (EWMA, unsupervised, on-device) | First | ✅ Fulfilled |
+| 3 | Ambient LED light response with emergent room-to-room trail | First | ✅ Fulfilled |
+| 4 | BLE advertise-and-scan broadcast (no pairing, no central authority) | First | ✅ Fulfilled |
+| 5 | Time Timer tool pod with learned session duration and persistent memory | First | ✅ Fulfilled |
+| 6 | Hub event logging with single shared timebase (2.7M+ readings) | Second | ✅ Fulfilled |
+| 7 | Second-order parameter control (hub retunes pod alpha and threshold) | Second | ✅ Fulfilled |
+| 8 | Next-room prediction via decision tree, wired into pod pre-warming | Second | ✅ Fulfilled |
+| 9 | Calm e-ink status face (10-minute refresh, no demands) | Second | ✅ Fulfilled |
+| 10 | Live projected pattern map with second-order activity overlay | Second | ✅ Fulfilled |
+| 11 | Graceful degradation (pods run autonomously without hub) | First | ✅ Fulfilled |
+| 12 | RSSI capture as coarse proximity signal | Second | 🟡 Partly fulfilled — logged with every reading, not yet used in the model |
+| 13 | Vitals sensing (respiration, heart rate, sleep) via C1001 60GHz radar | First | 🟡 Partly fulfilled — sensor read, accuracy unreliable, deferred |
+| 14 | Third-order loop: system regulates its own fit to the person | Third | 🔵 Desired |
+| 15 | Neural network tier for richer pattern recognition | Third | 🔵 Desired |
+| 16 | RSSI fusion for within-room localisation | Third | 🔵 Desired |
+| 17 | Simplex (outbound-only) SMS alert channel | Second | 🔵 Desired |
+| 18 | RTC module for off-grid wall-clock time | Second | 🔵 Desired |
+| 19 | Object-find: BLE beacons, LED throwies, Anchor Pod | First | 🔵 Desired |
+| 20 | Sensor fusion: PIR fast-wake paired with mmWave stillness detection | First | 🔵 Desired |
+| 21 | Encrypted BLE and formal threat modelling | Second | 🔵 Desired |
+| 22 | Modular clip-on capability expansion (physical agency over functions) | First | 🔵 Desired |
+| 23 | Home Assistant or third-party smart home integration | — | ⚪ Out of scope |
+| 24 | Cloud connectivity, remote access, companion app | — | ⚪ Out of scope |
+| 25 | Cameras, microphones, Wi-Fi | — | ⚪ Out of scope (deliberate exclusion, privacy by design) |
+| 26 | Medical diagnosis or clinical monitoring | — | ⚪ Out of scope |
+| 27 | Multi-occupant identification or person tracking | — | ⚪ Out of scope (senses existence, not identity) |
 
 
 
