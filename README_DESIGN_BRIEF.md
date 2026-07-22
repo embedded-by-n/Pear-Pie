@@ -7,6 +7,10 @@ In practice, there is.'_\
 (Norman 2018, p.236)
 -
 
+This project presents the Pear-Pie Cyber-Physical Home System, a distributed, privacy-preserving home system designed to support participation for people experiencing fluctuating cognitive, sensory, and executive functioning demands. Developed as the final Maker Project for CYBN8001, the project demonstrates how applied cybernetics can be used to translate lived expertise into the design of practical cyber-physical technologies.
+
+
+
 This thesis develops a conceptual and analytical framework for understanding participation in socio-technical systems through the lens of affordance and cybernetics. It introduces the concept of the Unafforded Person as a relational condition arising when the affordances available within a person's ecological context are insufficient to support equitable participation. Building on this concept, it proposes a methodology that interprets lived expertise as a source of systems feedback, enabling analysts to identify mismatches between institutional assumptions and real-world system behaviour and thereby reveal hidden barriers, omitted conditions, and opportunities for intervention.
 
 This project demonstrates how lived expertise can be integrated with the theoretical foundations of applied cybernetics to analyse complex socio-technical systems and inform the design of practical interventions. Drawing together the concepts, methods, and technical capabilities developed throughout Semester 1 of the Master of Applied Cybernetics, alongside professional experience within the psychosocial disability sector and lived expertise navigating Australian social welfare systems as a neurodivergent person, the project applies systems thinking across the complete design process. This includes analysing institutional policies and service systems, identifying the relationships between intended system behaviour and lived system performance, developing conceptual and analytical frameworks, and translating those insights into a cyber-physical intervention designed to improve participation.
@@ -35,7 +39,7 @@ More broadly, I hope this work contributes to the development of affordable, sca
 
 The Pear-Pie Cyber-Physical Home System is presented as an applied demonstration of this conceptual framework. The following sections first introduce the theoretical contributions that informed its design before demonstrating how those ideas were translated into a practical cyber-physical intervention.
 
-# 2. Lived Expertise Conceptual Framework 
+# 2. A Lived Expertise Framework for Designing Cyber-Physical Systems
 
 ## 2a) Conceptual Terminology: _Unafforded Person/People and Affordance Technology_
 
