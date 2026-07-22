@@ -7,6 +7,10 @@ _'In theory there is no difference between theory and practice.
 In practice, there is.'_\
 (Norman 2018, p.236)
 
+## Faming Foreword: 'Nothing about us, without us'
+
+This paper is written by and for a person who is multiply neurodivergent, with direct lived experience of the material it covers. Providing the reader with a theoretical and lived-experience framing is essential to understanding the scope of this project's necessity, what inclusive design offers wider society, and why functions that appear paradoxical to a reader without lived experience of neurodivergence are in fact deliberate and useful to our community.
+
 # PART ONE: PROTOTYPE DOCUMENTATION
 
 ## Makers: 
@@ -23,6 +27,7 @@ The prototype aims to integrate distributed sensing, local processing, and autom
 
 As a proof of concept, the prototype demonstrates the practical application of the Lived Expertise Design Framework by translating systems thinking and lived expertise into a working cyber-physical intervention. Its purpose is to explore how a cyber-physical intervention can generate feedback about both the system being designed and the design process itself, informing future iterations of the technology and the framework.
 
+## List of Functions, Desired and Fulfilled:
 
 
 
@@ -36,9 +41,8 @@ As a proof of concept, the prototype demonstrates the practical application of t
 
 
 
-## Framing Foreword: 'Nothing about us, without us'
 
-This paper is written by and for a person who is multiply neurodivergent, with direct lived experience of the material it covers. Providing the reader with a theoretical and lived-experience framing is essential to understanding the scope of this project's necessity, what inclusive design offers wider society, and why functions that appear paradoxical to a reader without lived experience of neurodivergence are in fact deliberate and useful to our community.
+
 
 
 # 1. Introduction
