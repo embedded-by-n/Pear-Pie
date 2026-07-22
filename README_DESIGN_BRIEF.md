@@ -134,6 +134,11 @@ https://github.com/user-attachments/assets/3eadf65b-84aa-4794-a66b-c652208677d0
 
 <img width="350" height="450" alt="20260609_214939 (1)" src="https://github.com/user-attachments/assets/19217e39-9a0e-4bcd-ae05-186a20e2c5df" />
 
+<img width="489" height="73" alt="Screenshot 2026-06-04 064236" src="https://github.com/user-attachments/assets/c5dab8bb-92d5-4bf5-aa87-638758da8d2f" />
+
+<img width="934" height="446" alt="Screenshot 2026-06-04 045517" src="https://github.com/user-attachments/assets/0594b8e9-1bb3-4390-a6ae-443dade4016c" />
+<img width="935" height="433" alt="Screenshot 2026-06-04 045220" src="https://github.com/user-attachments/assets/e8ab3aee-db51-484a-8966-a5b026df3293" />
+
 
 ```
 PEAR-PIE ARCHITECTURE
