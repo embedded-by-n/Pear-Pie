@@ -44,8 +44,8 @@ Ultimately, the purpose of introducing unafforded is not to replace existing lan
 ## 2b) Conceptual Model: _Lived Expertise Feedback Model_ 
 
 _A conceptual cybernetic model that positions lived expertise as the feedback signal enabling inclusive systems to learn, adapt, and continually improve._
--
-One sentence
+
+This model instead proposes that lived expertise constitutes a distinct form of systems knowledge.
 
 Theory
 
@@ -57,12 +57,25 @@ This project proposes a cybernetic interpretation of lived expertise as the feed
 
 ## 2c) Analytical Methodology: _Lived Expertise Systems Boundary Analysis Methodology_
 
+Institutional boundaries are often treated as precise, whereas people's lived interactions with systems occur across diffuse, overlapping, and upstream conditions.
+
+Why do we need to analyse systems differently in the first place?
+
+Problem: Institutional boundaries hide upstream causes.
+Response: Use lived expertise to expand the analytical boundary.
+Method: Compare intended and experienced systems.
+Output: Identify systems gaps.
+Application: Design Pear Pie to bridge those gaps.
+
 _A complementary systems mapping and analysis model that compares lived experience with conventional systems maps to reveal gaps between intended and experienced systems, identifying barriers and intervention opportunities._
--
+
 One sentence
 
 Theory
+
 _Where do you draw the system boundary?_
+
+Conventional systems analysis is often bounded by institutional definitions of where a system begins and ends. However, many of the conditions that determine whether people can access, engage with, or benefit from a system originate beyond these formal boundaries. This project proposes that understanding a system sometimes requires stepping across its institutional boundary to examine the upstream conditions that connect people to it. Lived expertise provides access to these boundary conditions, revealing systems gaps, hidden barriers, and intervention opportunities that remain invisible when analysis is confined to the institution's definition of the system.
 
 Institutional systems frequently draw their boundaries around the point of service delivery rather than around the conditions that determine whether people can reach that service.
 Understanding a system sometimes requires analysing the conditions beyond its formal boundary, because those conditions determine how, whether, and for whom the system functions in practice. Lived expertise provides access to these boundary conditions, revealing causal relationships and intervention opportunities that remain invisible when analysis is confined to the institutional definition of the system.
