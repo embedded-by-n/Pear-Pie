@@ -22,7 +22,71 @@ https://github.com/embedded-by-n/Pear-Pie
 
 ## Theoretical Foundation: 
 
+### Social Model of Disability + Affordance Theory + The Curb Cut Effect
 <img width="550" height="450" alt="image" src="https://github.com/user-attachments/assets/c6bcebd5-2591-437c-8a63-53b1874a9059" />
+
+### Unafforded People:
+
+**An unafforded person** is a person, community or group whose opportunities for
+participation are constrained because the affordances required for equitable
+engagement are absent or insufficient within their environments, technologies,
+institutions or communities.
+
+The word already exists in English, meaning "not afforded". I am repurposing it
+the way Gibson repurposed "afford" when he coined *affordance*: he needed a word
+that referred to the environment and the animal together, and no existing term
+did. Where *disabled* has collapsed back into being read as a property of the
+person, *unafforded* cannot be misread that way. Its grammar is relational. It
+pushes the onus for support and inclusion away from the individual and toward
+the systems around them.
+
+The term is not a replacement for *disabled*, and never overrides the language
+people choose for themselves. Many people hold pride in *disabled*, and both
+terms are used interchangeably throughout this project. Affordance is
+relational rather than categorical: every person is afforded in some
+environments and unafforded in others. Disability is one context in which
+unaffordance becomes particularly visible, but unaffordance is a universal
+human condition. Understood this way, accessibility becomes a shared design
+objective rather than a specialised accommodation.
+
+### The Lived Expertise Feedback Model:
+
+**Lived expertise** is situated systems knowledge developed through repeated
+interaction with an environment, technology, institution or social system over
+time. It is not lived experience alone, and it is not consultation. It is what
+repeated navigation of the same system teaches: the hidden barriers, the
+workarounds, the gaps between how a system is intended to work and how it
+actually behaves.
+
+Institutional actors understand a system through its design and policy. People
+who continually navigate it understand it through its effects. Both describe
+the same system; each reveals different knowledge. From a cybernetic
+perspective, lived expertise **is feedback** — information about the
+consequences of a system's behaviour, returning to influence its future
+behaviour (Wiener 1948; Ashby 1956). Most human service systems evaluate
+themselves on institutional measures and never receive this signal.
+
+### Allowance Technology:
+
+**Allowance technology** is technology intentionally designed to increase a
+person's opportunities for action, participation, autonomy and communication
+within their environments. The term foregrounds what a technology *enables*
+rather than categorising the people assumed to use it. It does not assist a
+person; it alters the environment so that more actions become possible.
+
+Pear-Pie sits at a specific point on Davis and Chouinard's (2016) affordance
+continuum — request, demand, encourage, **allow**, discourage, refuse. Most
+technology sits at the demanding end. Pear-Pie is built deliberately at
+*allow*: it permits the person to exist in their space and to act, or not,
+without the system requesting, demanding or encouraging anything. I term this
+**allowance technology**.
+
+This matters most for PDA-profile (Persistent Drive for Autonomy) users, for
+whom a prompt is not a helpful suggestion but a demand felt by the nervous
+system as threat.
+
+
+
 
 ## Objective of Prototype:
 
