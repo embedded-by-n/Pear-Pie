@@ -41,7 +41,7 @@ This relational framing is consistent with the theoretical foundations of Afford
 Ultimately, the purpose of introducing unafforded is not to replace existing language, but to expand it. It provides an additional way of describing experiences of exclusion that foregrounds shared responsibility for creating environments in which more people can participate, contribute, and flourish.
 
 
-## 2b) Conceptual Synthesis -  _Lived Expertise Feedback Model_
+## 2b) Proposed Conceptual Synthesis -  _Lived Expertise Feedback Model_
 
 _A conceptual cybernetic model that positions lived expertise as the feedback signal enabling inclusive systems to learn, adapt, and continually improve._
 -
