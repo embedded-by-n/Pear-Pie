@@ -97,6 +97,10 @@ As a proof of concept, the prototype demonstrates the practical application of t
 ### Architecture: the units and their orders
 
 
+
+https://github.com/user-attachments/assets/3eadf65b-84aa-4794-a66b-c652208677d0
+
+
 <img width="350" height="450" alt="20260623_100055" src="https://github.com/user-attachments/assets/a86ef0c9-8fd3-4171-a3cd-598f9b6b0982" />
 <img width="350" height="450" alt="20260526_093125" src="https://github.com/user-attachments/assets/ce9e47ae-aa18-4ef6-ba2e-9b4072ee23fe" />
 <img width="350" height="450" alt="20260521_120035" src="https://github.com/user-attachments/assets/12a938b3-7892-4e2b-a5a1-067e741711e3" />
