@@ -84,17 +84,52 @@ Ultimately, unafforded and affordance technology provide a shared conceptual lan
 
 ## 2b) Conceptual Model: _Lived Expertise Feedback Model_ 
 
-_A conceptual cybernetic model that positions lived expertise as the feedback signal enabling inclusive systems to learn, adapt, and continually improve._
+A proposed cybernetic model that positions lived expertise as the feedback signal enabling inclusive systems to learn, adapt, and continually improve.
 
-This model instead proposes that lived expertise constitutes a distinct form of systems knowledge.
+Why feedback matters
 
-Theory
+Feedback is a foundational principle of cybernetics. Whether biological, ecological, technological, or social, systems are only capable of learning and adapting when information about the consequences of their actions is returned to the system and influences future behaviour (Wiener 1948; Ashby 1956). Without effective feedback, systems cannot distinguish between intended outcomes and experienced outcomes, limiting their capacity to respond to changing conditions and improve over time.
 
-Feedback loop diagram
+Within contemporary human service systems, however, much of the feedback used to evaluate performance originates from institutional measures such as compliance, policy implementation, service utilisation, or organisational performance. While these measures provide valuable information about the operation of the system, they often fail to capture how those systems are actually experienced by the people who use them. Consequently, many barriers to participation remain invisible within conventional forms of evaluation.
 
-This project proposes a cybernetic interpretation of lived expertise as the feedback signal linking the Social Model of Disability, Affordance Theory, participatory design, and the Curb Cut Effect. It argues that repeated interaction with environmental barriers generates situated knowledge that cannot be fully obtained through observation alone. By recognising lived expertise as a legitimate form of systems knowledge and incorporating it into the design process, interventions can improve environmental affordance, reduce disability, and generate broader societal benefits through the Curb Cut Effect. This conceptual model positions lived expertise as the feedback signal that enables inclusive systems to learn, adapt, and continually improve.
+Lived expertise as systems knowledge
 
-# (Insert the feedback loop diagram here.)
+This project proposes that lived expertise constitutes a distinct form of systems knowledge.
+
+Lived expertise is not simply lived experience, nor is it equivalent to consultation or participation. Rather, it emerges through repeated interaction with the same system over time. As people continually navigate environments, technologies, institutions, and policies, they develop situated knowledge about how those systems behave in practice. This knowledge includes tacit understandings of barriers, workarounds, unintended consequences, and interactions that are often inaccessible through observation, policy analysis, or institutional data alone.
+
+From a cybernetic perspective, lived expertise represents a unique source of feedback because it captures the difference between how a system is intended to function and how it is actually experienced. This distinction is fundamental. While designers and institutions typically understand systems from the perspective of intention, people living within those systems understand them through continual interaction. Both perspectives describe the same system, but each reveals different forms of knowledge.
+
+The Lived Expertise Feedback Model
+
+This project proposes a cybernetic interpretation of lived expertise that integrates principles from the Social Model of Disability (Oliver 1990; Shakespeare 2018), Affordance Theory (Gibson 1979; Norman 2013), participatory design (Sanders & Stappers 2008), and the Curb Cut Effect into a continuous learning model.
+
+Within this model, individuals interact with environments, technologies, institutions, and communities. These interactions either increase or reduce environmental affordance. Where affordances are absent, barriers to participation emerge. Through repeated engagement with these barriers, people develop lived expertise—a distinct form of systems knowledge generated through ongoing interaction with the system itself.
+
+When this lived expertise is intentionally incorporated into systems analysis, policy development, service design, and technological innovation, it functions as a cybernetic feedback signal. It communicates where intended system behaviour differs from experienced system behaviour, enabling designers, organisations, and institutions to identify opportunities for adaptation and redesign.
+
+As interventions improve environmental affordance, participation increases and barriers are reduced. These changes generate new experiences, producing further feedback and allowing the system to continue learning over time. In this way, lived expertise becomes the mechanism through which socio-technical systems can continually evaluate, adapt, and improve rather than relying solely on institutional assumptions about success.
+
+Through the Curb Cut Effect, improvements originally developed in response to significant barriers frequently extend benefits to much broader populations. Likewise, Duvall et al. (2022) argue that inventors with disabilities represent an under-recognised source of innovation because lived expertise exposes problems and opportunities that others may never encounter. Within this model, lived expertise therefore becomes not only a mechanism for improving accessibility, but also a catalyst for broader technological and social innovation.
+
+Figure X. The Lived Expertise Feedback Model
+
+Insert conceptual feedback loop diagram illustrating:
+
+Environment → Interaction → Experience
+Repeated interaction → Lived Expertise
+Lived Expertise → Feedback
+Feedback → System adaptation
+Adaptation → Increased affordance
+Increased affordance → Improved participation
+New experiences → Continuous feedback loop
+Contribution
+
+Participatory and co-design methodologies have long recognised the importance of involving people with lived experience throughout the design process. This project extends these approaches by proposing that lived expertise should be understood not simply as a source of consultation, but as a distinct form of systems knowledge that functions as a cybernetic feedback mechanism.
+
+By positioning lived expertise as feedback, this conceptual model reframes inclusion as a process of continuous learning rather than one-off consultation. It proposes that the most effective socio-technical systems are those capable of continually comparing intended outcomes with lived experience and adapting accordingly.
+
+This conceptual model provides the theoretical foundation for the Lived Expertise Systems Boundary Analysis Methodology, presented in the following section, which operationalises this feedback process by comparing intended and experienced representations of the same system to identify systems gaps that would otherwise remain invisible.
 
 ## 2c) Analytical Methodology: _Lived Expertise Systems Boundary Analysis Methodology_
 
