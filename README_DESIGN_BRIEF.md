@@ -55,13 +55,19 @@ This project proposes a cybernetic interpretation of lived expertise as the feed
 
 # (Insert the feedback loop diagram here.)
 
-## 2c) Analytical Methodology: _Lived Expertise Systems Analysis Methodology_
+## 2c) Analytical Methodology: _Lived Expertise Systems Boundary Analysis Methodology_
 
 _A complementary systems mapping and analysis model that compares lived experience with conventional systems maps to reveal gaps between intended and experienced systems, identifying barriers and intervention opportunities._
 -
 One sentence
 
 Theory
+_Where do you draw the system boundary?_
+
+Institutional systems frequently draw their boundaries around the point of service delivery rather than around the conditions that determine whether people can reach that service.
+Understanding a system sometimes requires analysing the conditions beyond its formal boundary, because those conditions determine how, whether, and for whom the system functions in practice. Lived expertise provides access to these boundary conditions, revealing causal relationships and intervention opportunities that remain invisible when analysis is confined to the institutional definition of the system.
+Restricting analysis to institutionally defined system boundaries risks overlooking the upstream conditions that determine access, participation, and outcomes. Incorporating lived expertise enables analysts to examine these boundary conditions and identify intervention opportunities that may otherwise remain obscured.
+
 
 Official vs Experienced diagrams
 
@@ -71,6 +77,8 @@ The Pear Pie Cyber-Physical Home System is designed as an applied demonstration 
 # (Insert experienced system diagram here.)what people actually have to navigate).
 
 # 3. Applying the Lived Expertise Conceptual Framework
+Existing participatory and systems approaches seek to understand lived experience as one perspective within a system. This project instead proposes that lived expertise constitutes a distinct form of systems knowledge. By comparing intended and experienced representations of the same system, the Lived Expertise Systems Analysis Methodology identifies systems gaps that remain invisible from institutional perspectives alone. These gaps become the feedback through which systems can learn, adapt, and improve.
+
 
 - building empthy
 # Case Study: NDIS Top-down model vs Bottom-up Model
