@@ -151,7 +151,7 @@ Inspired by W. Ross Ashby's homeostat (1948) and designed by a neurodivergent pe
 First-order learning happens on the pods as they regulate the home through peer-to-peer BLE broadcast; second-order learning happens at the hub, which observes the network's behaviour over days and weeks and updates the rules the pods follow, so the system fits each user's homeostasis as it changes.
 
 Particular care is given to PDA-profile (Persistent Drive for Autonomy) neurodivergent users, supporting executive functioning and working memory by externalising cognitive load. Asking who we unconsciously see as viable users of cutting-edge technology: the Pear Pie embodies the curb-cut effect. Design affordances for disability as a priority, and everyone benefits.
-
+'''
 ┌─────────────────────────────────────────────────────────┐
 │ HOME HUB │
 │ Raspberry Pi 5 │
@@ -176,7 +176,7 @@ uplink "PP" ▲ ▼ downlink "PU"
 │ │ │ │ │ │ │Timer │ │Door/ │ │ │
 │ │ │ │ │ │ │ │ │Bath │ │ │
 └────────┘ └────────┘ └────────┘ └────────┘ └────────┘ └────────┘
-
+'''
 ### The two tiers
 
 **Tier one: the pods (first-order regulators).** Eight autonomous units, one per space. Each pod is self-contained: radar in, Pico computes, LED out, BLE broadcast. Every presence pod runs identical hardware and identical code; the only difference is a single `POD_ID` in `config.py`. Pods never depend on the hub or each other to function.
