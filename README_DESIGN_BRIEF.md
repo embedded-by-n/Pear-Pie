@@ -96,8 +96,7 @@ As a proof of concept, the prototype demonstrates the practical application of t
 
 ### Architecture: the units and their orders
 
-'''
-PEAR-PIE ARCHITECTURE
+'''PEAR-PIE ARCHITECTURE
                      units and their cybernetic orders
 
 ┌─────────────────────────────────────────────────────────────────┐
@@ -147,8 +146,7 @@ PEAR-PIE ARCHITECTURE
 └─────────────────────────────────────────────────────────────────┘
 
         remove the hub → every pod continues autonomously
-              a homeostat of homeostats (Ashby 1948)
-'''
+              a homeostat of homeostats (Ashby 1948)'''
 
 #### 🔵 SENSOR POD  ×7
 **Hardware:** Raspberry Pi Pico 2 W · mmWave radar (S3KM1110, 24GHz) · Lorikeet WS2812 LED · LiPo/USB-C
