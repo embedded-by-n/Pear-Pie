@@ -7,14 +7,73 @@ _'In theory there is no difference between theory and practice.
 In practice, there is.'_\
 (Norman 2018, p.236)
 
+# PART ONE: PROTOTYPE DOCUMENTATION
+
+## Framing Foreword: 'Nothing about us, without us'
+
+This paper is written by and for a person who is multiply neurodivergent, with direct lived experience of the material it covers. Providing the reader with a theoretical and lived-experience framing is essential to understanding the scope of this project's necessity, what inclusive design offers wider society, and why functions that appear paradoxical to a reader without lived experience of neurodivergence are in fact deliberate and useful to our community.
+
 
 # 1. Introduction
 
+This is the final Maker Project for CYBN8001. It demonstrates the knowledge and technical skills developed across Semester 1, cross-applied with my existing professional expertise in the psychosocial disability and education sectors, and my lived expertise as a neurodivergent person navigating Australian welfare systems.
 
-final assignment for maker project in x course for x uni for z cohort in x class
-demonstrates the knowledge skills etc gained across semester one
-also demonstrate how i cross applied with my preexisitng skills and knowledge as a professional in spychosocial and educaiton sector careers 
-and also lived eperience of neurodivergence an systems navigations in this sense too. 
+Pear-Pie is a distributed, privacy-preserving cyber-physical home system supporting participation for people with fluctuating cognitive, sensory, emotional and executive functioning demands. Modular sensor and tool pods sit throughout the home. They sense local conditions, learn patterns of activity, communicate over Bluetooth Low Energy, and provide ambient support without requiring interaction. A central hub observes patterns emerging across the pod network and adjusts the rules individual pods follow. This creates a two-level adaptive system inspired by W. Ross Ashby's homeostat.
+
+Pear-Pie is affordable, modular, privacy-preserving, adaptive, locally controlled and low power. It survives network or hub failure, functions without cloud connectivity, and responds to individual rather than standardised patterns of behaviour.
+
+# RED: FIGURE 1 — photograph of the full system in situ. Hub with e-ink face, pods installed, office Time Timer. Label the components.]
+
+# 1.1 Motivation
+
+The motivation for Pear-Pie emerged through the convergence of lived experience, professional practice, and academic study.
+
+As a neurodivergent person and psychosocial practitioner, I repeatedly encountered the gap between policy as intended and policy as experienced. Many barriers to participation occur before people reach formal support systems, where difficulties recognising needs, communicating, organising information, or sustaining engagement can prevent access altogether.
+
+Pear-Pie responds by intervening upstream, supporting the cognitive, sensory, communicative, and environmental conditions that make participation possible. Guided by Nardi and O'Day's (1999) concept of technology with heart, the project explores how cyber-physical systems can increase dignity, autonomy, and participation through practical, everyday support.
+
+# 1.2 The Design Challenge
+
+Pear-Pie did not begin with a design framework. It began as an attempt to build a cyber-physical home system from my own lived experience.
+
+As the project evolved, I repeatedly found myself struggling to explain why the system was necessary to people who had never experienced the barriers it was designed to address. This became especially apparent during the project demonstration, where explaining the technology proved easier than communicating the lived conditions that made it necessary.
+
+Building Pear-Pie therefore became an iterative process of designing, reflecting, and refining. As I tested ideas, I gradually recognised that I had developed my own way of moving from lived experience to system design. Looking back, I was able to reverse-engineer that process into a repeatable design framework.
+
+The framework and Pear-Pie therefore co-evolved. The artefact generated the framework, and the framework, in turn, reshaped the artefact.
+
+# 1.3 Scope
+
+Pear-Pie is a working prototype. Its first- and second-order feedback loops are operational, with eight pods collectively logging more than 2.7 million sensor readings.
+
+The third-order feedback loop and several additional pod types have been designed but not yet implemented. Throughout this project, completed functions are clearly distinguished from proposed future development.
+
+# 2.1 What is the problem?  Unafforded People
+
+The first design question is not What is wrong with the person? It is What opportunities for action and participation are absent from the relationship between the person and their environment?
+
+Three complementary perspectives shape this project. The Social Model of Disability locates disability in inaccessible social, physical, and institutional environments rather than solely within individual impairment (Oliver 1990). Affordance Theory explains participation as a relationship between a person and their environment, where opportunities for action emerge through that interaction rather than existing in either alone (Gibson 1979). The Curb Cut Effect demonstrates that designing for those experiencing the greatest barriers often improves participation for many others as well (Blackwell 2017).
+
+Together, these perspectives suggest that participation is fundamentally relational. The problem is not simply the person or the environment, but whether the relationship between them affords meaningful action.
+
+To describe this relationship, I propose the complementary systems term unafforded people.
+
+#### Unafforded person or people: A person, community, or group whose opportunities for participation are constrained because the affordances required for equitable engagement are absent or insufficient within their environments, technologies, institutions, or communities.
+
+The term is not intended to replace disabled, diminish disability identity, or override the language people use for themselves. Instead, it provides a systems-oriented way of describing where participation breaks down by shifting attention from individual deficit to missing affordances. Disability is one context in which unaffordance becomes particularly visible, but every person is afforded in some environments and unafforded in others.
+
+This shift also changes the design problem. Rather than asking how a person can better adapt to an environment, it asks how environments, technologies, and institutions can better adapt to the person.
+
+This project argues that many supports currently provided to neurodivergent people remain fundamentally one-directional. Timers, printed schedules, reminder cards, and visual prompts can assist with specific tasks, but they cannot sense changing conditions, recognise when support is required, or adapt their behaviour. They provide support, but they do not participate in a feedback loop.
+
+As early as 1964, Michael Arbib distinguished between passive prosthetic devices, such as a peg leg, and adaptive prostheses capable of sensing and responding through feedback (Arbib 1964). The difference was not simply technological sophistication. A peg leg provides static support regardless of changing conditions, whereas a feedback-controlled prosthesis continuously senses, adjusts, and responds to the person using it.
+
+More than sixty years later, many supports available to neurodivergent people remain the equivalent of the peg leg. They are valuable and often essential, but they are fundamentally passive technologies. They ask the person to do the work of sensing, interpreting, remembering, adapting, and responding. The feedback loop remains inside the person rather than being shared with the technology.
+
+Pear-Pie is designed to close that gap. Rather than providing one-directional assistance, it functions as an affordance technology: a cyber-physical system that senses, learns, and adapts to changing conditions, allowing the environment itself to participate in the feedback loop. Instead of requiring the user to continually adapt to their surroundings, the surroundings begin to adapt to them.
+
+
+
 
 
 
