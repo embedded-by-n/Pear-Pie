@@ -636,18 +636,27 @@ The hub uses this to translate raw pod IDs into meaningful spaces during analysi
 ## References
 
 * Ashby, W. R. (1960). *Design for a Brain: The Origin of Adaptive Behaviour*
-* Ashby, W. R. (1956). *An Introduction to Cybernetics*
+* Ashby, W.R. (1956) An Introduction to Cybernetics. London: Chapman & Hall.
+* Beresford, P. (2003) It's Our Lives: A Short Theory of Knowledge, Distance and Experience. London: Citizen Press.
+* Checkland, P. (1999) Systems Thinking, Systems Practice. Chichester: Wiley.
+* Churchman, C.W. (1970) Operations Research as a Profession. Management Science, 17(2), pp. B37–B53.
 * Duvall, J., Sivakanthan, S., Daveler, B., Sundaram, S. A., & Cooper, R. A. (2022). "Inventors with disabilities, an opportunity for innovation, inclusion, and economic development." *Technology and Innovation*, 22(3), 315-329. https://doi.org/10.21300/22.3.2022.5
-* Gibson, J.J. (1979) The Ecological Approach to Visual Perception.
+* Gibson, J.J. (1979) The Ecological Approach to Visual Perception. Boston: Houghton Mifflin.
 * Indigenous Protocol and Artificial Intelligence Working Group (2020). *Indigenous Protocol and Artificial Intelligence Position Paper*. Honolulu, Hawai'i.
 * Kaiko I, Ham I van der and Schomaker J (30 June 2026) ‘The condition that causes people to get lost in their own home’, ABC News, accessed 2 July 2026, https://www.abc.net.au/news/2026-07-01/developmental-topographical-disorientation-people-lost-in-home/106863294, accessed 2 July 2026.
+* Latour, B. (2005) Reassembling the Social: An Introduction to Actor-Network-Theory. Oxford: Oxford University Press.
+* Meadows, D.H. (2008) Thinking in Systems. Chelsea Green.
+* Midgley, G. (2000) Systemic Intervention: Philosophy, Methodology, and Practice. New York: Kluwer Academic/Plenum Publishers.
 * Norman D (2013) *The design of everyday things: revised and expanded edition*, Basic Books, New York.
 * Okai-Ugbaje, S. (forthcoming). "The Cybernetic Wheel: A model to aid the design and development of safe, responsible and sustainable technological systems."
-* Oliver, M. (1990) The Politics of Disablement.
+* Oliver, M. (1990) The Politics of Disablement. London: Macmillan.
 * Rosenblueth, A., Wiener, N., & Bigelow, J. (1943). "Behavior, purpose and teleology." *Philosophy of Science*, 10(1), 18-24
-* Shakespeare, T. (2018) Disability: The Basics.
+* Shakespeare, T. (2018) Disability: The Basics. London: Routledge.
 * Swift, B. (2025). Hendrix homeostat [Source code repository]. ANU Cybernetic Studio. https://github.com/ANUcybernetics/hendrix-homeostat. README structure and conceptual-mapping framework adapted for the Pear Pie project.
+* Tsing, A.L. (2012) On Nonscalability: The Living World Is Not Amenable to Precision-Nested Scales. Common Knowledge, 18(3), pp. 505–524.
+* Ulrich, W. (1983) Critical Heuristics of Social Planning: A New Approach to Practical Philosophy. Bern: Haupt.
 * von Foerster, H. (1974). *Cybernetics of Cybernetics*
+* Wiener, N. (1948) Cybernetics: Or Control and Communication in the Animal and the Machine. Cambridge, MA: MIT Press.
 
 * ANUcybernetics. *hendrix-homeostat* (related work, ANU Master of Applied Cybernetics). https://github.com/ANUcybernetics/hendrix-homeostat
 
