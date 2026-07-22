@@ -20,7 +20,7 @@ N Hall
 ## All code and documentation is available on GitHub:
 https://github.com/embedded-by-n/Pear-Pie
 
-<img width="50" height="450" alt="image" src="https://github.com/user-attachments/assets/c6bcebd5-2591-437c-8a63-53b1874a9059" />
+<img width="550" height="450" alt="image" src="https://github.com/user-attachments/assets/c6bcebd5-2591-437c-8a63-53b1874a9059" />
 
 ## Objective of Prototype:
 
