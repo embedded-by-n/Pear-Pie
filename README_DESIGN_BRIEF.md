@@ -30,37 +30,54 @@ As a proof of concept, the prototype demonstrates the practical application of t
 ## List of Functions, Desired and Fulfilled:
 
 ## System Functions
+## System Functions
 
-| # | Function | Order | Status |
-|---|----------|-------|--------|
-| 1 | Presence sensing via mmWave radar (existence, not identity) | First | ✅ Fulfilled |
-| 2 | On-pod adaptive baseline learning (EWMA, unsupervised, on-device) | First | ✅ Fulfilled |
-| 3 | Ambient LED light response with emergent room-to-room trail | First | ✅ Fulfilled |
-| 4 | BLE advertise-and-scan broadcast (no pairing, no central authority) | First | ✅ Fulfilled |
-| 5 | Time Timer tool pod with learned session duration and persistent memory | First | ✅ Fulfilled |
-| 6 | Hub event logging with single shared timebase (2.7M+ readings) | Second | ✅ Fulfilled |
-| 7 | Second-order parameter control (hub retunes pod alpha and threshold) | Second | ✅ Fulfilled |
-| 8 | Next-room prediction via decision tree, wired into pod pre-warming | Second | ✅ Fulfilled |
-| 9 | Calm e-ink status face (10-minute refresh, no demands) | Second | ✅ Fulfilled |
-| 10 | Live projected pattern map with second-order activity overlay | Second | ✅ Fulfilled |
-| 11 | Graceful degradation (pods run autonomously without hub) | First | ✅ Fulfilled |
-| 12 | RSSI capture as coarse proximity signal | Second | 🟡 Partly fulfilled — logged with every reading, not yet used in the model |
-| 13 | Vitals sensing (respiration, heart rate, sleep) via C1001 60GHz radar | First | 🟡 Partly fulfilled — sensor read, accuracy unreliable, deferred |
-| 14 | Third-order loop: system regulates its own fit to the person | Third | 🔵 Desired |
-| 15 | Neural network tier for richer pattern recognition | Third | 🔵 Desired |
-| 16 | RSSI fusion for within-room localisation | Third | 🔵 Desired |
-| 17 | Simplex (outbound-only) SMS alert channel | Second | 🔵 Desired |
-| 18 | RTC module for off-grid wall-clock time | Second | 🔵 Desired |
-| 19 | Object-find: BLE beacons, LED throwies, Anchor Pod | First | 🔵 Desired |
-| 20 | Sensor fusion: PIR fast-wake paired with mmWave stillness detection | First | 🔵 Desired |
-| 21 | Encrypted BLE and formal threat modelling | Second | 🔵 Desired |
-| 22 | Modular clip-on capability expansion (physical agency over functions) | First | 🔵 Desired |
-| 23 | Home Assistant or third-party smart home integration | — | ⚪ Out of scope |
-| 24 | Cloud connectivity, remote access, companion app | — | ⚪ Out of scope |
-| 25 | Cameras, microphones, Wi-Fi | — | ⚪ Out of scope (deliberate exclusion, privacy by design) |
-| 26 | Medical diagnosis or clinical monitoring | — | ⚪ Out of scope |
-| 27 | Multi-occupant identification or person tracking | — | ⚪ Out of scope (senses existence, not identity) |
+### ✅ Fulfilled
 
+| # | Function | Order | Description |
+|---|----------|-------|-------------|
+| 1 | Presence sensing | First | **What:** Waveshare HMMD mmWave radar (S3KM1110, 24GHz) reads presence and rough range over UART. **How:** plain-text output ("ON", "Range 65") debounced on the Pico. **Why:** senses a person's existence, never their identity. No cameras, no microphones. |
+| 2 | Adaptive baseline learning | First | **What:** each pod learns its own room's normal occupancy. **How:** an Exponentially Weighted Moving Average updates every loop, on-device, unsupervised. **Why:** the system learns *your* normal, never a neurotypical norm. A polyphasic sleeper is a valid baseline, not a fault. |
+| 3 | Ambient light response and emergent trail | First | **What:** arrival sweep in blue, purple trail held, fade over time. **How:** lights trigger on the rising edge of presence; the trail across rooms is emergent, each pod independently reacting in turn. **Why:** externalises spatial memory. You can see where you have been. |
+| 4 | BLE broadcast | First | **What:** every pod broadcasts its state each loop. **How:** BLE advertise-and-scan, uplink packet "PP" (pod_id, presence, unusual, sequence). No pairing, no central authority. **Why:** decentralised by design; no pod depends on any other to function. |
+| 5 | Time Timer tool pod | First | **What:** a physical Time Timer on an LCD with a rotary dial. **How:** red winds on anticlockwise, drains clockwise, sixty minutes to the full circle. An EWMA learns your preferred duration and auto-starts at it; presence pauses and resumes it; completion sparkles gently instead of alarming. **Why:** makes time visible without ever issuing a demand. |
+| 6 | Hub event logging | Second | **What:** the hub logs every broadcast from every pod. **How:** `bleak` scanner stamps each event with one shared clock into `pod_log.csv`. Over 2.7 million readings. **Why:** one consistent timebase is what makes pattern learning possible. |
+| 7 | Second-order parameter control | Second | **What:** the hub retunes each pod's learning rate (alpha) and sensitivity (threshold). **How:** deterministic rules measure each space's activity and push clamped updates down over BLE (packet "PU"). Control, not machine learning. **Why:** this is the homeostat's second loop — the system adapts the rules the pods follow. |
+| 8 | Next-room prediction | Second | **What:** the hub predicts where you will go next. **How:** a scikit-learn decision tree trained on movement transitions (hour, day, current space), holdout accuracy 0.58 against ~12.5% chance, wired into the control loop to pre-warm the predicted pod. **Why:** the home gets ready ahead of you, without asking. |
+| 9 | E-ink status face | Second | **What:** a calm always-on summary: where you are, each room's learned rhythm, total readings. **How:** Inky Impression 7.3" refreshing every ten minutes. **Why:** information without demand. It never asks for anything. |
+| 10 | Projected pattern map | Second | **What:** a live visual of the whole system thinking. **How:** pygame projection of the walked trail, learned occupancy, the predicted next room as a pulsing gold ring, and a rolling second-order activity log. **Why:** makes your own emergent patterns legible to you — the network observed, handed back to the actor inside it. |
+| 11 | Graceful degradation | First | **What:** the system survives hub failure. **How:** pods hold their last-learned parameters locally and continue autonomously. **Why:** Ashby's ultrastability. The function the person depends on never disappears. |
+
+### 🟡 Partly fulfilled
+
+| # | Function | Order | Description |
+|---|----------|-------|-------------|
+| 12 | Vitals sensing | First | **What:** respiration, heart rate and sleep staging via DFRobot C1001 60GHz radar. **How:** read on the Pi through the HumanDetection library. **Status:** it read, but values were unreliable, slow, and sometimes reported with nobody present. Deferred to protect the MVP; documented, not claimed. |
+| 13 | RSSI proximity signal | Second | **What:** signal strength as a coarse distance measure. **How:** RSSI is captured with every logged reading. **Status:** logged, not yet used by the model. Feeds the designed localisation tier. |
+
+### 🔵 Desired
+
+| # | Function | Order | Description |
+|---|----------|-------|-------------|
+| 14 | Object-find | First | **What:** finding lost possessions, a core executive-function need. **How:** BLE beacons on objects, always-glow LED throwies, and an Anchor Pod combining charging dock, undocked-warning ring and a find button. **Why:** working memory support extended to things, not just spaces. |
+| 15 | Sensor fusion | First | **What:** richer, cheaper sensing per pod. **How:** PIR for instant wake paired with mmWave for sustained stillness, plus designed light-spectrum, capacitive-touch and pressure-mat modalities. **Why:** radar catches a still person PIR misses; fusion covers both. |
+| 16 | Modular clip-on capability | First | **What:** physical modules that add or remove functions. **How:** capability granted and removed at the hardware; unplugging at the bus physically deletes the function. **Why:** agency over the system's powers belongs in the person's hands, not a settings menu. |
+| 17 | Simplex SMS channel | Second | **What:** the home's only external channel, outbound alerts. **How:** cellular module on the hub, AT commands over serial, send-only. **Why:** the data-diode principle — the system can reach out, nothing can reach in. |
+| 18 | RTC module | Second | **What:** wall-clock time without any network. **How:** battery-backed real-time clock on the hub. **Why:** fully off-grid operation with accurate timestamps. |
+| 19 | Encrypted BLE and threat modelling | Second | **What:** hardening the radio layer. **How:** encrypted BLE, formal threat model, security testing. **Why:** the current build is advertise-and-scan, unencrypted; stated honestly, scheduled properly. |
+| 20 | Third-order loop | Third | **What:** the system regulates its own fit to the person. **How:** balancing checks at three timescales (daily rhythm, slow drift, "unusual for you"), adjusting how it adapts. **Why:** the regulated variable becomes the fit itself — never the person's behaviour. The named frontier of the project. |
+| 21 | Neural network tier | Third | **What:** richer pattern recognition than the decision tree. **How:** designed for Edge Impulse or emlearn-style deployment. **Why:** deeper temporal patterns, still local, still private. |
+| 22 | RSSI fusion localisation | Third | **What:** from "which room" toward "where in the path". **How:** fusing already-logged RSSI across multiple pods, resolving the doorway problem when two pods both hear presence. **Why:** finer spatial memory without adding a single sensor. |
+
+### ⚪ Out of scope
+
+| # | Function | Description |
+|---|----------|-------------|
+| 23 | Cameras, microphones, Wi-Fi | Deliberate exclusion, not a gap. The system captures no image or audio and holds no inbound network channel. Privacy is structural, which matters acutely in domestic-violence contexts. |
+| 24 | Multi-occupant identification | Deliberate exclusion. The system senses existence, not identity, and cannot become a surveillance tool aimed at the people around its user. |
+| 25 | Cloud connectivity, remote access, companion app | Against the thesis. No subscription, no account, no server dependency, no company that can sunset your support system. |
+| 26 | Home Assistant / third-party integration | The architectural opposite of the design: centralised, networked, app-managed. Excluded from this build. |
+| 27 | Medical diagnosis or clinical monitoring | Pear-Pie is an exploratory prototype. It does not diagnose, replace professional care, or provide emergency monitoring. |
 
 
 
