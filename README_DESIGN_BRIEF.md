@@ -72,6 +72,14 @@ More than sixty years later, many supports available to neurodivergent people re
 
 Pear-Pie is designed to close that gap. Rather than providing one-directional assistance, it functions as an affordance technology: a cyber-physical system that senses, learns, and adapts to changing conditions, allowing the environment itself to participate in the feedback loop. Instead of requiring the user to continually adapt to their surroundings, the surroundings begin to adapt to them.
 
+The term unafforded is intended as a practical systems language rather than a replacement for disability identity. Many people identify proudly as disabled, and that language remains appropriate in legislation, policy, scholarship, and personal identity. Unafforded instead provides a complementary term that shifts attention from individual deficit to the relationship between people and their environments.
+
+In this sense, unafforded functions as a boundary object (Star & Griesemer 1989). It provides a shared language that can travel between different communities—disabled people, support workers, clinicians, policymakers, engineers, and researchers—without requiring each to abandon their own perspective. Rather than creating a single universal definition, it creates a common point of communication about where participation breaks down.
+
+This shift in language also changes where we look for knowledge. If participation depends on relationships between people and systems, then understanding those relationships requires listening to the people who repeatedly experience them. This leads to the second principle of the framework: lived expertise as feedback.
+
+
+
 
 
 
