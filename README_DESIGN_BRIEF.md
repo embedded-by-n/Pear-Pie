@@ -1,12 +1,60 @@
+# Pear-Pie Cyber-Physical Home System
+
+## Final Maker Project — CYBN8001 Building Cyber-Physical Systems
+## Master of Applied Cybernetics
+## Australian National University, 2026
+
+_'In theory there is no difference between theory and practice. 
+In practice, there is.'_\
+(Norman 2018, p.236)
+
+# Contents
+Project Overview
+Motivation
+The Design Challenge
+The Lived Expertise Design Framework
+What is the problem?
+How do we understand it?
+Where should we intervene?
+What should we build?
+How does this become a cyber-physical system?
+Applying the Framework
+Designing Pear-Pie
+System Overview
+Cybernetic Architecture
+Hardware
+Software and Networking
+Installation and Setup
+Limitations and Future Development
+Acknowledgements
+Key Terms
+References
+Licence
+
+
+
+
+
+
+
+
+
+
+
 # CYBN8001 Building Cyber-Physical Systems, Master of Applied Cybernetics, 2026 Cohort, Australian National University | 
 # Pear-Pie Cyber-Physical Home System
 
 # 1. Introduction
 
-_'In theory there is no difference between theory and practice. 
-In practice, there is.'_\
-(Norman 2018, p.236)
 -
+
+final assignment for maker project in x course for x uni for z cohort in x class
+demonstrates the knowledge skills etc gained across semester one
+also demonstrate how i cross applied with my preexisitng skills and knowledge as a professional in spychosocial and educaiton sector careers 
+and also lived eperience of neurodivergence an systems navigations in this sense too. 
+
+
+
 
 This project presents the Pear-Pie Cyber-Physical Home System, a distributed, privacy-preserving home system designed to support participation for people experiencing fluctuating cognitive, sensory, and executive functioning demands. Developed as the final Maker Project for CYBN8001, the project demonstrates how applied cybernetics can be used to translate lived expertise into the design of practical cyber-physical technologies.
 
