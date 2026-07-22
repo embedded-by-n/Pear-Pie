@@ -79,8 +79,50 @@ As a proof of concept, the prototype demonstrates the practical application of t
 | 26 | Home Assistant / third-party integration | The architectural opposite of the design: centralised, networked, app-managed. Excluded from this build. |
 | 27 | Medical diagnosis or clinical monitoring | Pear-Pie is an exploratory prototype. It does not diagnose, replace professional care, or provide emergency monitoring. |
 
+## Prototype Architecture
 
+An off-grid modular home system using a two-tier Raspberry Pi 5 and Pi Pico control system with BLE peer-to-peer broadcast, RADAR, and edge ML to create a self-regulating feedback loop.
 
+Inspired by W. Ross Ashby's homeostat (1948) and designed by a neurodivergent person for people with fluctuating capacity, it learns each user's homeostasis over time, adapts its actuation style accordingly, and recognises emergent patterns across the distributed pod network to help users pre-empt capacity shifts.
+
+First-order learning happens on the pods as they regulate the home through peer-to-peer BLE broadcast; second-order learning happens at the hub, which observes the network's behaviour over days and weeks and updates the rules the pods follow, so the system fits each user's homeostasis as it changes.
+
+Particular care is given to PDA-profile (Persistent Drive for Autonomy) neurodivergent users, supporting executive functioning and working memory by externalising cognitive load. Asking who we unconsciously see as viable users of cutting-edge technology: the Pear Pie embodies the curb-cut effect. Design affordances for disability as a priority, and everyone benefits.
+
+┌─────────────────────────────────────────────────────────┐
+│ HOME HUB │
+│ Raspberry Pi 5 │
+│ │
+│ pod_log.csv learn.py rules.py │
+│ (event logging, (decision (deterministic │
+│ shared timebase) tree model) control) │
+│ │
+│ inky_face.py pattern_map.py │
+│ (e-ink status) (projected live map) │
+└───────────────────────────┬─────────────────────────────┘
+│
+BLE advertise-and-scan
+uplink "PP" ▲ ▼ downlink "PU"
+│
+┌──────────┬──────────┬──┴───────┬──────────┬──────────┐
+▼ ▼ ▼ ▼ ▼ ▼
+┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐
+│ Pod 1 │ │ Pod 2 │ │ Pod 3 │ │ Pod 4 │ │ Pods │ │ Pod 8 │
+│Hallway │ │Kitchen │ │Island │ │Office │ │5,6,7 │ │Bedroom │
+│ │ │ │ │ │ │TOOL: │ │Lounge/ │ │ │
+│ │ │ │ │ │ │Timer │ │Door/ │ │ │
+│ │ │ │ │ │ │ │ │Bath │ │ │
+└────────┘ └────────┘ └────────┘ └────────┘ └────────┘ └────────┘
+
+### The two tiers
+
+**Tier one: the pods (first-order regulators).** Eight autonomous units, one per space. Each pod is self-contained: radar in, Pico computes, LED out, BLE broadcast. Every presence pod runs identical hardware and identical code; the only difference is a single `POD_ID` in `config.py`. Pods never depend on the hub or each other to function.
+
+**Tier two: the hub (second-order regulator).** A Raspberry Pi 5 that hears every broadcast, stamps each event with one shared clock, and logs it. On a slow cycle it learns the person's patterns, retunes each pod's learning rate and sensitivity within clamped bounds, and pushes updates back down the same radio. The hub does not command the pods. It changes the rules they follow.
+
+**Resilience.** If the hub fails, every pod continues autonomously on its last-learned configuration. The system degrades from a learning homeostat to a stable one, and the function the person experiences never disappears.
+
+The sections below detail the sensing, computation and actuation of each function, the software components, the physical components, how each part was made, and the tools and materials used.
 
 an off-grid modular home system using a two-tier Raspberry Pi 5 and Pi Pico control system with BLE mesh, RADAR, and edge ML to create a self-regulating feedback loop. 
 Inspired by W. Ross Ashby's homeostat (1948) and designed by a neurodivergent person for people with fluctuating capacity, it learns each user's homeostasis over time, adapts its actuation style accordingly, and recognises emergent patterns across the distributed pod network to help users pre-empt capacity shifts. 
