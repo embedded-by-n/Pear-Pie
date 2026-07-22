@@ -96,6 +96,59 @@ As a proof of concept, the prototype demonstrates the practical application of t
 
 ### Architecture: the units and their orders
 
+'''
+PEAR-PIE ARCHITECTURE
+                     units and their cybernetic orders
+
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│   FIRST ORDER · each pod regulates its own space                │
+│                                                                 │
+│   ┌──────────────────┐        ┌──────────────────────────┐      │
+│   │   SENSOR POD ×7  │        │  SENSOR POD + TOOL  ×1   │      │
+│   │                  │        │     (Time Timer)         │      │
+│   │  radar ── senses │        │  radar ── senses         │      │
+│   │  EWMA ─── learns │        │  EWMA ─── learns         │      │
+│   │  LED ──── trail  │        │  LCD ──── timer face     │      │
+│   │  BLE ──── gossip │        │  BLE ──── gossip         │      │
+│   └────────┬─────────┘        └────────────┬─────────────┘      │
+│            │                               │                    │
+│            └──── pods overhear each other ─┘                    │
+│                  (neighbour tables, RSSI)                       │
+│                                                                 │
+│        emergent within first order: the light trail,            │
+│        the network's relational self-picture                    │
+│                                                                 │
+└───────────────────────────┬─────────────────────────────────────┘
+                            │
+             uplink "PP" ▲  │  ▼ downlink "PU"
+          (pod state)       │      (clamped rule suggestions —
+                            │       pods apply on their own)
+                            │
+┌───────────────────────────┴─────────────────────────────────────┐
+│                                                                 │
+│   SECOND ORDER · the hub regulates the rules the pods follow    │
+│                                                                 │
+│   ┌───────────────────────────────────────────────────┐         │
+│   │                  HUB  (Pi 5)                      │         │
+│   │                                                   │         │
+│   │  logs ──── one shared clock, 2.7M+ readings       │         │
+│   │  rules ─── retunes each pod's alpha + threshold   │         │
+│   │  tree ──── predicts next room, pre-warms that pod │         │
+│   │  e-ink ─── calm status, never asks anything       │         │
+│   │  map ───── live pattern projection                │         │
+│   └───────────────────────────────────────────────────┘         │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│  THIRD ORDER · the system regulates its own fit to the person   │
+│  foundation live ("unusual for you") · reflexive loop designed  │
+└─────────────────────────────────────────────────────────────────┘
+
+        remove the hub → every pod continues autonomously
+              a homeostat of homeostats (Ashby 1948)
+'''
 
 #### 🔵 SENSOR POD  ×7
 **Hardware:** Raspberry Pi Pico 2 W · mmWave radar (S3KM1110, 24GHz) · Lorikeet WS2812 LED · LiPo/USB-C
