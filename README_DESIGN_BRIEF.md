@@ -54,7 +54,7 @@ This project proposes a cybernetic interpretation of lived expertise as the feed
 
 # (Insert the feedback loop diagram here.)
 
-# Contribution 3: Proposed Analytical Methodology -  _Lived-Expertise Systems Analysis Model_
+# Contribution 3: Proposed Analytical Methodology -  _Lived-Expertise Systems Mapping_
 
 _A complementary systems mapping and analysis model that compares lived experience with conventional systems maps to reveal gaps between intended and experienced systems, identifying barriers and intervention opportunities._
 -
