@@ -37,14 +37,23 @@ Ultimately, the purpose of introducing unafforded is not to replace existing lan
 
 
 # Conceptual Contribution 1 : The Lived Expertise Feedback Model
+
+_A conceptual cybernetic model that positions lived expertise as the feedback signal enabling inclusive systems to learn, adapt, and continually improve._
+-
+
 This project proposes a cybernetic interpretation of lived expertise as the feedback signal linking the Social Model of Disability, Affordance Theory, participatory design, and the Curb Cut Effect. It argues that repeated interaction with environmental barriers generates situated knowledge that cannot be fully obtained through observation alone. By recognising lived expertise as a legitimate form of systems knowledge and incorporating it into the design process, interventions can improve environmental affordance, reduce disability, and generate broader societal benefits through the Curb Cut Effect. This conceptual model positions lived expertise as the feedback signal that enables inclusive systems to learn, adapt, and continually improve.
 
 # (Insert the feedback loop diagram here.)
 
-# Contribution Contribution 2: The Bottom-Up Systems Mapping Model
+# Contribution Contribution 2: The Bottom-Up Systems Analysis Model
+
+_A complementary systems mapping and analysis model that compares lived experience with conventional systems maps to reveal gaps between intended and experienced systems, identifying barriers and intervention opportunities._
+-
+
 The Pear Pie Cyber-Physical Home System is designed as an applied demonstration of this conceptual model. Using the cybernetic model of lived expertise and bottom-up systems mapping to  discovering interventions that conventional systems analysis misses and reveals entirely different intervention points that are invisible from a top-down view of the system.
 
-# (Insert the feedback loop diagram here.)
+# (Insert intended system diagram here.)(policy, service pathways, official processes)
+# (Insert experienced system diagram here.)what people actually have to navigate).
 
 
 # Case Study: NDIS Top-down model vs Bottom-up Model
