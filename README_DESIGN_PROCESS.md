@@ -1,4 +1,423 @@
+<img width="487" height="355" alt="Screenshot 2026-06-05 073751" src="https://github.com/user-attachments/assets/7aaa3c25-5ce9-4e55-9cbc-f9645eba5095" />
+<img width="939" height="559" alt="Screenshot 2026-06-05 073628" src="https://github.com/user-attachments/assets/3fe059d4-77e9-41ab-afc7-b7a1b860b450" />
+<img width="188" height="374" alt="Screenshot 2026-06-05 064814" src="https://github.com/user-attachments/assets/e5fe459e-e610-4a13-98f1-1876eca0fc17" />
+<img width="255" height="271" alt="Screenshot 2026-06-05 054013" src="https://github.com/user-attachments/assets/ad5c60c5-bbe2-43a1-9ed1-d28aa95b402c" />
 
+Radar Pear Pie Process Document:
+
+Pear Pie ~ Running Document
+Rules of this document
+•	Every entry is proposed first and only added after Nina approves it.
+•	Once an entry is in, it stays. Claude does not edit, rephrase, or tidy past entries.
+•	New entries are appended in order.
+________________________________________
+Entry #1 ~ What the Pear Pie is
+An off-grid home system designed specifically to assist with executive functioning. It needs to consider safety and functionality. It's my individual design idea.
+The software and hardware clip together to make user-defined open-source systems more accessible for disabled people, or people with intellectual disabilities. You shouldn't have to be highly technical to understand open source.
+Ease of access can be internet, can also not involve internet. Could have Wi-Fi, could also not have Wi-Fi.
+A home console with all software built in — like a Raspberry Pi, but for disability. Premade rather than components only, where everything is self-built and created.
+It would have an impact on society because it would help so many people to access this beautiful world of self-creation and technologies that is inaccessible to people without technical skill. It's also a way to help create a device that can lower costs for [unfinished ~ Nina to complete]
+________________________________________
+Entry #2 ~ Design Brief Notes
+Display and interface
+•	Has an ink LED display.
+•	Each component of the system can clip on and off.
+Power harvesting
+•	Potential radio power harvesting.
+•	Microturbines connected to taps in the house.
+•	Use of friction power at doorways for closing and opening.
+•	Pressure power pads.
+•	Harvesting output and input power to generate power — think Woomera style.
+•	Potentially use of spark jump power, like in radio-controlled little cars from the mid-fifties. I read something about that. Think the kinds of technologies included in things such as cat's whisker cohering.
+Aesthetic
+•	Mid-century Australian space design.
+•	Mid-century 1950s atomic style technology.
+Communications
+•	SIM card for communications that go out but don't go back in.
+Design philosophy
+•	Reverse engineering of old technologies, to show that they have continued applicability into the future.
+•	Think Indigenous style — time moves through us, not us through time. Therefore validity to all different forms of technologies.
+•	The cross-application of old and new technologies together.
+•	Not all tech needs to be high power or online for it to be useful, or beneficial to lots of people. For example, many poor people can't afford Wi-Fi. Maybe the futures of these technologies won't ever include being on the grid. It's good to work towards this. So [unfinished ~ Nina to complete]
+________________________________________
+Entry #3 ~ Systems thinking, feedback and control
+Power and feedback
+•	Solo input, multi-power input.
+•	Feedback and control — using the output of the system to regulate and control it, such as harvesting output and input power to generate more power.
+•	Device uses existing energy in the system, like the centrifugal flyball governor.
+•	Aiming for balanced feedback.
+Systems thinking
+•	It might be useful to consider the Systems Thinking Playbook.
+•	Concurrent sensing and actuating. Actuation needs the execution of actions.
+•	Ashton and Murray feedback systems.
+•	Systems connected in a way that each system influences each other.
+Framing the design
+•	The goal of my design — power to the people.
+•	What assumptions are you making about people and how they use systems?
+•	Frame what is and isn't outside the design brief.
+•	How to make a low-variety customisable system which is modifiable [unfinished ~ Nina to complete]
+________________________________________
+Entry #4 ~ Variety, control, and circular causality
+The design challenge
+•	How to make a low-variety customisable system which is modifiable, with a wide event horizon.
+•	The challenge and beauty is that we are absorbing part / all of the executive function component into the system itself. So it doesn't function how other systems like this usually would — because part of the point is that it's helping people with executive functioning challenges.
+Feedback, design, and control (Part 2)
+•	Tesla's radio boat — control via visual observation even at night.
+•	Determining purpose and objective of the system separate from the physical mechanism.
+•	Living loops, nodes.
+Principles
+•	Complexity does not always equal resilience.
+•	High variety equals costly.
+•	Control equals sense, compare, actuate, symbiote.
+•	Control equals sense, compute, actuate, symbiote.
+•	Circular causality [unfinished ~ Nina to complete]
+
+**Pear Pie design log: decisions and processes from this chat**
+
+* Identified scope risk: 12 weeks plus $250 cannot deliver a fully built modular ecosystem, so adopted a "build one fully, stub the rest" strategy. Hub built for real, Time Timer Pod plus External Time Timer fully working, remaining module slots present as labelled clip-in points only.
+
+* Locked the hub compute platform as Raspberry Pi 5 8GB, chosen for GUI responsiveness and headroom to run Pygame plus BLE plus the joule reader concurrently.
+
+* Locked the hub display as the official 7" Raspberry Pi touchscreen, chosen over e-ink and retro LCD options on the grounds of build simplicity (DSI ribbon, no driver work) and to free build time for the chassis and pressure pad.
+
+* Selected Python with Pygame in full-screen mode as the Pear OS GUI framework, started at boot via systemd, so the aesthetic can be controlled rather than defaulting to Raspberry Pi OS desktop.
+
+* Defined the module bus architecture: GPIO broken out to physical pogo-pin clip points, SPI for fast modules, I2C for slow ones, with a power rail and ground at every clip point.
+
+* Defined the Time Timer module pair: a small Pod that clips into the hub (ID chip plus pogo contacts, optionally an RP2040 if more capability is wanted), paired with a wall-mounted External Time Timer using Adafruit Circuit Playground Bluefruit, PIR sensor, e-ink display, rotary encoder with click, and a 500mAh LiPo with charging breakout, communicating to the hub over BLE.
+
+* Reframed the pressure pad after your clarification: not a sensor module on the data bus, but a power input feeding a separate power bus inside the hub. Clean architectural split between data modules (SPI/I2C) and power inputs (USB-C, future solar, harvest pad).
+
+* Chose piezo discs over electromagnetic generators for the harvester, on the basis that piezo is cheaper, has no moving parts, and fits within the 12-week build window without taking time from the main hub build.
+
+* Established the energy honesty position: the pad will not run the Pi, it will trickle-charge a backup battery and contribute visibly via a joule gauge. Stated this would be documented openly in the build journey rather than overclaimed.
+
+* Locked the pad's physical location as a hallway runner, for continuous traffic across Demo Day so the joule gauge moves visibly rather than sitting flat between visitors.
+
+* Locked the Demo Day visibility design: an LED wired directly off the piezo output (passive, current-limited, powered by the step itself) for the per-step pulse, plus a cumulative joule gauge rendered live on the touchscreen.
+
+* Added the ADS1115 ADC breakout to the parts list, because the Pi 5 has no built-in analog input and the joule gauge needs to read the supercap voltage over time to compute cumulative joules.
+
+* Compiled a full Australian-sourced parts list with rough AUD prices, totalling approximately $670 if everything is purchased new.
+
+* Flagged budget reality: the course excludes lab/box items from the $250 cap, so the relevant figure after auditing the supplied box is closer to $370 in budget-counted parts. Identified five line items likely already supplied (CPB, USB-C PSU, microSD, PIR, hookup wire/headers/breadboard/resistors).
+
+* Identified two paths to close the residual ~$120 budget overage: drop to Pi 4B plus a cheaper Waveshare 5" display to hit budget exactly, or document the overage as a deliberate scope decision in the build journey.
+
+* Produced a visual mood image of the hardware in situ: walnut sideboard, mid-century atomic styling, the hub with touchscreen and step LED and four clip-in slots (one filled), the External Time Timer wall-mounted with PIR eye and rotary knob, the hallway runner with visible piezo discs and the cable returning to the hub.
+
+* Open questions still on the table: chassis form factor (horizontal console vs upright tabletop radio), chassis material (wood vs painted aluminium for the Australian space program aesthetic), final count and arrangement of physical module slots in the chassis, and the build sequence across the 12 weeks.
+
+Sensor selection exploration (active)
+•	Reviewed Infineon XENSIV 60 GHz radar options (BGT60LTR11AIP, TR13C, UTR11AIP, LTR11SAIP)
+•	Identified blockers: BGA packages need reflow, eval kits run high, current draw conflicts with off-grid budget, no CircuitPython drivers
+•	Surveyed alternatives: HLK-LD2410 mmWave radar, VL53L1X and VL53L5CX time of flight, PAJ7620U2 gesture, capacitive touch via MPR121 or built in Bluefruit pads
+•	APDS-9960 ruled out based on prior experience
+
+Here's your design process to date, organized by phase. This is genuinely substantial documentation for your build journey.
+Starting position
+•	Began with existing design brief defining Pear Pie as a homeostatic familiar for executive function difference: off-grid, PDA-aware, hardware-as-interface
+•	Cybernetic wheel framing from Okai-Ugbaje paper structured the brief's argument
+•	Core thesis locked from the start: presence as input, no network, designed to be ignorable
+Architectural decisions
+•	Considered Home Assistant Green as a shortcut, rejected as the architectural opposite of the thesis (centralised, networked, app-managed, sealed)
+•	Considered Pi as single central controller, rejected for first-order homeostat limitations
+•	Considered all-microcontroller mesh, rejected for adaptive learning constraints
+•	Locked in two-tier architecture: on-hub clip-on Modules grant capabilities, distributed Pods extend through space
+•	Locked in second-order cybernetic framing: Pods regulate the home (first order), hub regulates the rules the Pods follow (second order)
+•	Locked in graceful degradation: Pods function autonomously without the hub, system degrades gracefully across timescales (minutes, hours, weeks, years)
+Chip and board selection
+•	Considered Circuit Playground Bluefruit (original brief), considered Adafruit ESP32-S3-Zero, considered STM32 family
+•	Considered Raspberry Pi 5 as hub, rejected as overkill for power and boot time
+•	Considered Pico 2 W only architecture (Inky Frame), considered keeping Linux on Pi
+•	Considered Infineon BGA mmWave chips, rejected as industrial tier (BGA packaging, custom PCB required, no maker ecosystem)
+•	Locked in: Pi Zero 2 W for hub (Linux + BLE + low power), Pi Pico 2 W for Pods (instant boot + deep sleep + ecosystem maturity)
+Display selection
+•	Considered Inky Frame for all-in-one simplicity, considered Inky Impression for cleaner face
+•	Considered HyperPixel 2.1 Round LCD for Time Timer, rejected for always-on backlight (PDA-hostile) and GPIO monopolisation
+•	Considered round e-ink for Time Timer, found unavailable at hobbyist scale
+•	Locked in: Inky Impression 7.3" for hub face, rectangular e-ink behind round bezel + servo-driven physical wedge for Time Timer
+•	Locked in: ambient NeoPixel ring around hub bezel as nightlight + state indicator + arrival pulse
+Communication protocol exploration
+•	Considered Wi-Fi for inter-device communication, rejected for "no network" thesis
+•	Considered LoRa/Meshtastic, considered Bluetooth Mesh
+•	Locked in: peer-to-peer BLE advertise-and-scan, no pairing, no addressing, no central authority
+•	LoRa described in brief as future Pod type for village-scale extension, BLE Mesh described as enhancement path without new hardware
+Sensor selection
+•	Considered PIR alone, rejected as insufficient (misses stillness)
+•	Considered camera-based presence detection, rejected for privacy
+•	Locked in: PIR + LD2410C mmWave sensor fusion (PIR for fast wake, mmWave for sustained stillness)
+•	Locked in: AS7341 light spectrum sensor for circadian baseline adaptation
+•	Locked in: MPR121 capacitive touch in furniture for touch-as-input
+•	Locked in: FSR pressure mat at front door for threshold sensing
+•	Future-described in brief: ToF, ultrasonic, smell sensors, load cells in cupboards
+Power and energy
+•	Locked in: Pisugar 3 UPS HAT for hub with 3000mAh LiPo and USB-C top-up
+•	Locked in: 1000mAh LiPos per Pod, replaceable, magnetic USB-C charging for relevant Pods
+•	Considered tap microturbines and RF/piezo energy harvesting, kept as speculative future Pods in brief (not built)
+Aesthetic and conceptual framing
+•	Locked in: atomic space age form factor inherited from original brief
+•	Added: bioluminescent / Avatar-grass framing for LED strips with breathing baselines
+•	Added: presence trail concept (recent rooms glow at decay brightness)
+•	Added: "spatial residue" / "ambient task memory" / "the home holds the residue of unfinished activity"
+•	Added: Actor-Network Theory framing (user, cat, keys, doormat, home all as actants)
+•	Added: "I am of no hierarchy above Jimmy" as the project's ethical thesis statement
+•	Added: "the system senses your existence, not your identity" for the mmWave privacy framing
+•	Added: second-order cybernetics framing for the hub's role
+•	Added: "the user exists in the space, the system evolves around the user" as the locked design principle
+Object find and anchor system
+•	Considered RFID stickers, rejected for range and reader infrastructure
+•	Locked in: BLE beacons stuck on possessions + always-glow LED throwies for passive findability
+•	Locked in: Anchor Pod design that unifies magnetic charging dock + LED ring + find button (one physical object doing three jobs)
+•	Locked in: LED ring red when object is undocked, button press lights the object beacon for find function
+Machine learning stack
+•	Considered training real neural network from scratch, rejected as too time-intensive
+•	Locked in three-layer learning approach: 
+o	Adaptive baseline (statistical pattern recognition over presence data, pandas-driven)
+o	Decision tree classifier (scikit-learn, trained from user-labelled state data)
+o	Edge Impulse tiny neural network (pre-trained for one specific task, e.g. sound classification or Cat TV)
+•	Locked in: "what the system has learned" panel on hub display for transparent learning
+Rejected explicitly with reasons
+•	Home Assistant Green: anti-thesis (centralised, networked, app-managed)
+•	Pimoroni Automation HAT: wrong architecture (wired-load, central)
+•	APDS-9960 gesture sensor: known reliability issues from prior experience
+•	Custom PCB with pogo pins for clip-on bus: not buildable in time
+•	Infineon BGA radar chips: industrial tier, not maker-compatible
+•	HyperPixel Round LCD: backlight always-on, GPIO conflicts
+•	Real neural net training from scratch: time constraints
+Final commitment (locked)
+•	5x Pi Pico 2 W based Pods: Time Timer, Door PIR (with doormat), 2x Lamp Pods, Anchor Pod
+•	1x Pi Zero 2 W hub with Inky Impression 7.3" + Breakout Garden HAT + NeoPixel bezel ring + Pisugar 3 UPS
+•	5-6 Hub Modules (3 standard, 2 hot-swap demo, 1 USB Wi-Fi optional)
+•	BLE beacons + LED throwies for object find system
+•	Magnetic USB-C charging for Anchor Pod and portable Pods
+•	Timeline: order Monday 19 May, build complete by 8 June, Demo Day 10 June
+Process reflections worth capturing
+•	Significant mid-conversation exploration phase where multiple product pages prompted re-evaluation
+•	Returned to the original brief's architecture (slide 10) after exploring alternatives: the clip-on Modules on top of the BASE UNIT plus distributed Pods through the home
+•	Pattern emerged of needing to hold design discipline against scope creep while staying open to genuine improvements
+•	Several decisions were reversed once and then locked: clip-on bus dropped then re-locked, Badger Pods dropped then replaced with Pico foundations
+
+Here's your design process to date, organized by phase. This is genuinely substantial documentation for your build journey.
+Starting position
+•	Began with existing design brief defining Pear Pie as a homeostatic familiar for executive function difference: off-grid, PDA-aware, hardware-as-interface
+•	Cybernetic wheel framing from Okai-Ugbaje paper structured the brief's argument
+•	Core thesis locked from the start: presence as input, no network, designed to be ignorable
+Architectural decisions
+•	Considered Home Assistant Green as a shortcut, rejected as the architectural opposite of the thesis (centralised, networked, app-managed, sealed)
+•	Considered Pi as single central controller, rejected for first-order homeostat limitations
+•	Considered all-microcontroller mesh, rejected for adaptive learning constraints
+•	Locked in two-tier architecture: on-hub clip-on Modules grant capabilities, distributed Pods extend through space
+•	Locked in second-order cybernetic framing: Pods regulate the home (first order), hub regulates the rules the Pods follow (second order)
+•	Locked in graceful degradation: Pods function autonomously without the hub, system degrades gracefully across timescales (minutes, hours, weeks, years)
+Chip and board selection
+•	Considered Circuit Playground Bluefruit (original brief), considered Adafruit ESP32-S3-Zero, considered STM32 family
+•	Considered Raspberry Pi 5 as hub, rejected as overkill for power and boot time
+•	Considered Pico 2 W only architecture (Inky Frame), considered keeping Linux on Pi
+•	Considered Infineon BGA mmWave chips, rejected as industrial tier (BGA packaging, custom PCB required, no maker ecosystem)
+•	Locked in: Pi Zero 2 W for hub (Linux + BLE + low power), Pi Pico 2 W for Pods (instant boot + deep sleep + ecosystem maturity)
+Display selection
+•	Considered Inky Frame for all-in-one simplicity, considered Inky Impression for cleaner face
+•	Considered HyperPixel 2.1 Round LCD for Time Timer, rejected for always-on backlight (PDA-hostile) and GPIO monopolisation
+•	Considered round e-ink for Time Timer, found unavailable at hobbyist scale
+•	Locked in: Inky Impression 7.3" for hub face, rectangular e-ink behind round bezel + servo-driven physical wedge for Time Timer
+•	Locked in: ambient NeoPixel ring around hub bezel as nightlight + state indicator + arrival pulse
+Communication protocol exploration
+•	Considered Wi-Fi for inter-device communication, rejected for "no network" thesis
+•	Considered LoRa/Meshtastic, considered Bluetooth Mesh
+•	Locked in: peer-to-peer BLE advertise-and-scan, no pairing, no addressing, no central authority
+•	LoRa described in brief as future Pod type for village-scale extension, BLE Mesh described as enhancement path without new hardware
+Sensor selection
+•	Considered PIR alone, rejected as insufficient (misses stillness)
+•	Considered camera-based presence detection, rejected for privacy
+•	Locked in: PIR + LD2410C mmWave sensor fusion (PIR for fast wake, mmWave for sustained stillness)
+•	Locked in: AS7341 light spectrum sensor for circadian baseline adaptation
+•	Locked in: MPR121 capacitive touch in furniture for touch-as-input
+•	Locked in: FSR pressure mat at front door for threshold sensing
+•	Future-described in brief: ToF, ultrasonic, smell sensors, load cells in cupboards
+Power and energy
+•	Locked in: Pisugar 3 UPS HAT for hub with 3000mAh LiPo and USB-C top-up
+•	Locked in: 1000mAh LiPos per Pod, replaceable, magnetic USB-C charging for relevant Pods
+•	Considered tap microturbines and RF/piezo energy harvesting, kept as speculative future Pods in brief (not built)
+Aesthetic and conceptual framing
+•	Locked in: atomic space age form factor inherited from original brief
+•	Added: bioluminescent / Avatar-grass framing for LED strips with breathing baselines
+•	Added: presence trail concept (recent rooms glow at decay brightness)
+•	Added: "spatial residue" / "ambient task memory" / "the home holds the residue of unfinished activity"
+•	Added: Actor-Network Theory framing (user, cat, keys, doormat, home all as actants)
+•	Added: "I am of no hierarchy above Jimmy" as the project's ethical thesis statement
+•	Added: "the system senses your existence, not your identity" for the mmWave privacy framing
+•	Added: second-order cybernetics framing for the hub's role
+•	Added: "the user exists in the space, the system evolves around the user" as the locked design principle
+Object find and anchor system
+•	Considered RFID stickers, rejected for range and reader infrastructure
+•	Locked in: BLE beacons stuck on possessions + always-glow LED throwies for passive findability
+•	Locked in: Anchor Pod design that unifies magnetic charging dock + LED ring + find button (one physical object doing three jobs)
+•	Locked in: LED ring red when object is undocked, button press lights the object beacon for find function
+Machine learning stack
+•	Considered training real neural network from scratch, rejected as too time-intensive
+•	Locked in three-layer learning approach: 
+o	Adaptive baseline (statistical pattern recognition over presence data, pandas-driven)
+o	Decision tree classifier (scikit-learn, trained from user-labelled state data)
+o	Edge Impulse tiny neural network (pre-trained for one specific task, e.g. sound classification or Cat TV)
+•	Locked in: "what the system has learned" panel on hub display for transparent learning
+Rejected explicitly with reasons
+•	Home Assistant Green: anti-thesis (centralised, networked, app-managed)
+•	Pimoroni Automation HAT: wrong architecture (wired-load, central)
+•	APDS-9960 gesture sensor: known reliability issues from prior experience
+•	Custom PCB with pogo pins for clip-on bus: not buildable in time
+•	Infineon BGA radar chips: industrial tier, not maker-compatible
+•	HyperPixel Round LCD: backlight always-on, GPIO conflicts
+•	Real neural net training from scratch: time constraints
+Final commitment (locked)
+•	5x Pi Pico 2 W based Pods: Time Timer, Door PIR (with doormat), 2x Lamp Pods, Anchor Pod
+•	1x Pi Zero 2 W hub with Inky Impression 7.3" + Breakout Garden HAT + NeoPixel bezel ring + Pisugar 3 UPS
+•	5-6 Hub Modules (3 standard, 2 hot-swap demo, 1 USB Wi-Fi optional)
+•	BLE beacons + LED throwies for object find system
+•	Magnetic USB-C charging for Anchor Pod and portable Pods
+•	Timeline: order Monday 19 May, build complete by 8 June, Demo Day 10 June
+Process reflections worth capturing
+•	Significant mid-conversation exploration phase where multiple product pages prompted re-evaluation
+•	Returned to the original brief's architecture (slide 10) after exploring alternatives: the clip-on Modules on top of the BASE UNIT plus distributed Pods through the home
+•	Pattern emerged of needing to hold design discipline against scope creep while staying open to genuine improvements
+•	Several decisions were reversed once and then locked: clip-on bus dropped then re-locked, Badger Pods dropped then replaced with Pico foundations
+Want me to file this as a markdown document you can paste into your build journey, or is the inline version enough?
+
+STARTING POSITION
+
+Project began as the Pear Pie: an off-grid, modular, disability-first smart home system designed for users with executive function difference, including PDA
+Core thesis locked from the start: presence as input, no network by default, designed to be ignorable
+Cybernetic Wheel framework (Okai-Ugbaje) selected as methodological anchor
+Indigenous-relational ethical framing: "I am of no hierarchy above Jimmy", time moves through us not us through time
+Aesthetic direction: mid-century atomic, Australian space-age, Woomera-style
+Original design notes specified power harvesting from environmental energy (microturbines, friction, piezo pads, RF, spark-jump)
+
+ARCHITECTURAL DECISIONS
+
+Considered Home Assistant Green, rejected as the architectural opposite of the thesis (centralised, networked, app-managed, sealed)
+Considered single-Pi central controller, rejected for first-order homeostat limitations
+Considered all-microcontroller mesh, rejected for adaptive learning constraints
+Locked two-tier architecture: on-Hub clip-on Modules grant capabilities, distributed Pods extend through space
+Locked second-order cybernetic framing: Pods regulate the home (first order), Hub regulates the rules the Pods follow (second order)
+Locked graceful degradation across timescales: Pods function autonomously without the Hub, system degrades gracefully from learning homeostat to stable one
+Locked the user-system relationship itself as an essential variable being maintained
+
+HUB CONTROLLER ITERATION
+
+Initially considered Circuit Playground Bluefruit (original brief), Adafruit ESP32-S3-Zero, STM32 family
+Considered Pi 5 as Hub, originally chosen for ML headroom
+Considered Pico 2 W only architecture (Inky Frame), considered keeping Linux on Pi
+Initially locked Pi 5, defensibly reframed as mains-powered
+LATER REVERSED: switched Hub to Pi Zero 2 W for genuine off-grid thesis alignment, lower power, smaller form factor, ~$51 savings
+Confirmed Inky Impression 7.3" Spectra 6 works with Pi Zero 2 W via same 40-pin GPIO header
+Identified the AI Kit (Hailo NPU) as wrong tool: vision-focused while Pear Pie has no cameras by design
+
+POD CONTROLLER SELECTION
+
+Considered Infineon BGA mmWave chips, rejected as industrial tier (BGA packaging, custom PCB required, no maker ecosystem)
+Considered Plasma Stick 2040 W and Plasma 2350 W as integrated LED-driving boards
+Locked Pico 2 WH for Pods: deep sleep at 10µA for off-grid thesis, instant boot, cost, form factor
+5x Pico 2 WH ordered from Pimoroni
+
+COMMUNICATION PROTOCOL
+
+Considered WiFi for inter-device communication, rejected for "no network" thesis
+Considered LoRa/Meshtastic, considered Bluetooth Mesh
+Considered formal Bluetooth Mesh protocol, rejected for adding central coordination and provisioning complexity
+Locked peer-to-peer BLE advertise-and-scan: no pairing, no addressing, no central authority
+Architecture achieves mesh-like properties (decentralization, redundancy, resilience) using simpler primitives
+BLE RSSI used for topology awareness: 1-2m precision, sufficient for detecting Pod movement
+Three-radio architecture articulated: BLE (always-on nervous system), WiFi (opt-in via Module for high-bandwidth), 24GHz mmWave (per-Pod presence sensing)
+LoRa described as future Pod type for village-scale extension
+
+SENSOR SELECTION
+
+Considered PIR alone, rejected as insufficient (misses stillness)
+Considered camera-based presence detection, rejected for privacy
+Considered Infineon BGA radar chips, rejected as industrial tier
+Locked PIR + 24GHz mmWave sensor fusion (PIR for fast wake, mmWave for sustained stillness)
+Initial radar choice: DFRobot SEN0557 (5V supply)
+Considered HLK-LD2420 (3.3V supply, cleaner architecture) but sourcing risk in Australia
+Considered HLK-LD2410C (5V supply but 3.3V signals, well-supported)
+Locked AS7341 light spectrum sensor for circadian baseline adaptation
+Locked MPR121 capacitive touch in furniture for touch-as-input (later scoped out)
+Locked FSR pressure mat at front door for threshold sensing (later scoped out)
+
+POWER ARCHITECTURE EVOLUTION
+
+Original plan: Adafruit PowerBoost 1000 for Trail Pod power management
+Considered PiicoDev LiPo Expansion (charging only, no boost)
+LATER REVISED: switched to Adafruit AF-6106 bq25185 USB/DC/Solar Charger with 5V Boost
+Saves cost AND adds solar input AND simpler architecture than PowerBoost
+Considered DFM8001 Indoor Energy Harvesting Kit, identified as microwatt-scale (wrong regime for Trail Pods, right for future ultra-low-power Pods)
+Hub power: switched from Waveshare UPS HAT for Pi 5 to Pisugar 3 for Pi Zero
+Three-tier power architecture for Biotrail Pods: USB-C mains tap-in, LiPo battery, embedded solar cell
+Solar reframing: "off-network" not "off-grid", indoor solar provides trickle not primary power
+One demo Pod with full solar treatment, document architecture for all three as solar-ready
+
+LED AESTHETIC ITERATION
+
+Original plan: 50-LED NeoPixel strip per Trail Pod
+Considered Wireless Plasma Kit (Plasma Stick 2040 W + 50 LED string) at $74
+Reconsidered LED count after power math: 50 LEDs at 30% brightness = 1.5-3W per Pod, not battery viable
+Iterated down to NeoPixel Ring 16 or 12 with reduced power demand
+Iterated to 10 NeoPixels with diode trick (no level shifter needed)
+MAJOR REVISION: switched to flexible LED filaments
+Filaments selected for: authentic bioluminescent diffuse glow, tiny power draw (0.06W per filament), curved organic shapes, retro futuristic aesthetic, multiple colors per Pod for context shifts
+Multiple filament colors per Pod chosen over RGB NeoPixels: amber for evening, cool white for daytime, dim red for nighttime
+Aesthetic acknowledgment: filaments fade in daylight, glow in dim/dark conditions, this is on-thesis (calm tech recedes when not needed)
+
+BIOTRAIL POD CRYSTALLIZATION
+
+Renamed Trail Pods to Biotrail Pods to embed bioluminescent concept in product name
+Form factor decided: mushroom-shape with domed translucent cap, wooden stem, solar cell on cap top
+Anatomical mapping: top of cap (solar), cap interior (LED filaments), translucent dome (glowing surface), stem (electronics housing), base (sits on shelf)
+Direct biological reference: Mycena chlorophos and other bioluminescent fungi
+Cybernetic-fungal metaphor: mycelium-network distributed intelligence
+Designed to be "intentionally organic with retro futuristic design" for sensory-sensitive users
+Glow-in-the-dark phosphorescent dome added (strontium aluminate, green to match real fungi)
+Phosphor functions as material storage of light energy, released slowly when LEDs off
+Phosphor demonstrates graceful degradation materially: Pod continues glowing when power lost
+3D printed in glow PLA filament chosen over painted acrylic dome (uniform glow, custom shape, $38.90 for 1kg covers all 3 Pods)
+Electret idea explored and rejected for LED powering: physics blocks sustained current; phosphor IS the correct version of "passive light emission" principle
+
+SMS MODULE PATH SELECTED
+
+Considered Path A (WiFi-mediated SMS via Twilio): easy mock, requires WiFi Module present
+Considered Path B (real cellular SMS via 4G LTE modem): more architecturally correct, more expensive
+Locked Path B: Waveshare SIM7600G-H 4G HAT (B) at ~$130, Aldi Mobile prepaid SIM, high-gain antenna
+Physical clip-in via USB-C connection to Hub (not HAT-on-Pi) preserves the physical Module thesis
+One-way design: SMS out only, never SMS in (privacy by hardware design)
+Demo Day staging: Pod detects pattern → Hub sends SMS to panelist's phone in real time
+
+ML STACK FINALIZED
+
+Considered training real neural network from scratch, rejected as too time-intensive
+Locked three-layer learning approach: adaptive baseline (pandas), decision tree classifier (scikit-learn), Edge Impulse tiny neural network for one specific task
+Hailo NPU rejected: vision-focused, opaque, contradicts interpretable-learning thesis
+"What the system has learned" panel on Hub display for transparent learning
+
+SCOPE DECISIONS
+
+Scoped IN for v1: Hub (Pi Zero 2 W + Inky Impression + radar + PIR + NeoPixel ring), Time Timer Pod (Inky Frame 4.0"), 3x Biotrail Pods, SMS Module
+Scoped OUT for v1 with documentation as v2: Door Pod (piezo self-powered version), Charge and Find Pod, Watcher Pod (C1001 60GHz), UWB positioning
+Acoustic Noise Pod added then deferred: documented as planned v2 if time permits
+Door piezo Pod with energy harvesting documented as planned v2
+
+ACADEMIC POSITIONING
+
+Compiled academic reference list across cybernetics (Wiener, Ashby, Beer, von Foerster), calm tech (Weiser), adaptive architecture (Price's Generator, Negroponte), Indigenous-relational tech (Abdilla & Fitch, Indigenous Protocol AI), Actor-Network Theory (Latour), disability design (Curb-Cut Effect, Hendren, Blackwell), PDA clinical (Newson, O'Nions), CPS technical (NIST, Greer et al.), self-organising systems (Gershenson)
+Drafted "Contribution to the field" paragraph: honest framing of novel synthesis rather than novel components
+Drafted Biotrail Pods aesthetic description: mushroom-form bioluminescent indicators with Mycena chlorophos reference and mycelium-network metaphor
+Rejected "first ever" overclaim framing in favor of "novel synthesis of established research traditions applied to this specific user population"
+
+KEY PROCESS REFLECTIONS
+
+Pattern of holding design discipline against scope creep while staying open to genuine improvements
+Multiple decisions reversed once and then re-locked: Pi 5 → Pi Zero 2 W, 50 LEDs → 10 filaments, PowerBoost → bq25185 solar charger
+Returned to original design intent in several places: power harvesting from doorways (piezo Pod concept), no central authority (advertise/scan instead of formal mesh), retro mid-century aesthetic (filaments over NeoPixels)
+Cost evolution: Round 1 (Pimoroni) at $465, Round 2 estimated at $670-720, total approximately $1135-1185 (down from $1265-1335 with Pi 5)
+Budget overage from $250 nominal documented openly as scope decision in build journey
 
 The Pear-Pie Cyber-Physical Home System
 Beyond the Master of Applied Cybernetics, I aim to continue my studies in the School of Cybernetics and contribute lived-experience to the development of humanitarian technologies and systems communication methodologies that practically improve the design and function of systems to more genuinely afford those who rely upon them.
