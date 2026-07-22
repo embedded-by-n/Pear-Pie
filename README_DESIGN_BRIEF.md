@@ -55,6 +55,8 @@ The Pear Pie Cyber-Physical Home System is designed as an applied demonstration 
 # (Insert intended system diagram here.)(policy, service pathways, official processes)
 # (Insert experienced system diagram here.)what people actually have to navigate).
 
+# Integrating the Conceptual Framework
+
 
 # Case Study: NDIS Top-down model vs Bottom-up Model
 
@@ -62,7 +64,7 @@ The Pear Pie Cyber-Physical Home System is designed as an applied demonstration 
 
 # Design Opportunity
 
-# Pear Pie
+# Pear Pie Cyber-Physical Home System
 
 # Technical Implementation
 
