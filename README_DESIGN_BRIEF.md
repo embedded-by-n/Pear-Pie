@@ -21,7 +21,7 @@ The Pear Pie Cyber-Physical Home System is presented as an applied demonstration
 
 # 2. Lived Expertise Conceptual Framework 
 
-## 2a) Proposed Conceptual Terminology -  _Unafforded People_
+## 2a) Conceptual Terminology: _Unafforded People_
 
 _A proposed colloquial systems term that shifts responsibility away from individual deficit and towards the shared relationship between people, communities, institutions, technologies, and their environments._ 
 -
@@ -41,7 +41,7 @@ This relational framing is consistent with the theoretical foundations of Afford
 Ultimately, the purpose of introducing unafforded is not to replace existing language, but to expand it. It provides an additional way of describing experiences of exclusion that foregrounds shared responsibility for creating environments in which more people can participate, contribute, and flourish.
 
 
-## 2b) Proposed Conceptual Synthesis -  _Lived Expertise Feedback Model_
+## 2b) Conceptual Model: _Lived Expertise Feedback Model_ 
 
 _A conceptual cybernetic model that positions lived expertise as the feedback signal enabling inclusive systems to learn, adapt, and continually improve._
 -
@@ -55,7 +55,7 @@ This project proposes a cybernetic interpretation of lived expertise as the feed
 
 # (Insert the feedback loop diagram here.)
 
-## 2c) Proposed Analytical Methodology -  _Lived Expertise Systems Mapping_
+## 2c) Analytical Methodology: _Lived Expertise Systems Analysis Methodology_
 
 _A complementary systems mapping and analysis model that compares lived experience with conventional systems maps to reveal gaps between intended and experienced systems, identifying barriers and intervention opportunities._
 -
