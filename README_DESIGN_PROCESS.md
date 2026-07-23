@@ -1,3 +1,25 @@
+
+1. Realising that I went gestalt and accidently did all the workd for the research project before doing the build itself.
+2. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <img width="1202" height="572" alt="Screenshot 2026-04-01 083031" src="https://github.com/user-attachments/assets/d18fe7e9-5599-492f-ae26-aef32d8a3e8f" />
 
 <img width="487" height="355" alt="Screenshot 2026-06-05 073751" src="https://github.com/user-attachments/assets/7aaa3c25-5ce9-4e55-9cbc-f9645eba5095" />
