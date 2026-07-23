@@ -1,4 +1,4 @@
-![Description] (https://embed.kumu.io/e6a129d9d2837f78e2d4df0fe216861c)
+https://embed.kumu.io/e6a129d9d2837f78e2d4df0fe216861c
 
 # Pear-Pie Cyber-Physical Home System
 
